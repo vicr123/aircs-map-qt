@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>aircslogo.svg</file>
+        <file>Overpass-Regular.ttf</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/localdatapack">
+        <file>data/1920x1080.png</file>
+        <file>data/stations.json</file>
+        <file>data/map.svg</file>
+    </qresource>
+</RCC>

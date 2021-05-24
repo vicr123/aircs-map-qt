@@ -1,0 +1,420 @@
+{
+    "stations": {
+        "ACS": {
+            "name": "AirCS Central",
+            "cx": 86,
+            "cz": 355,
+            "platforms": {
+                "1": {
+                    "station": "LI",
+                    "blocks": 997
+                },
+                "2": {
+                    "station": "WC",
+                    "blocks": 429
+                },
+                "3": {
+                    "station": "VIC",
+                    "blocks": 1004
+                },
+                "4": {
+                    "station": "BLO",
+                    "blocks": 917
+                },
+                "5": {
+                    "station": "BBT",
+                    "blocks": 633
+                },
+                "6": {
+                    "station": "LD",
+                    "blocks": 505
+                },
+                "7": {
+                    "station": "WCA",
+                    "blocks": 590
+                },
+                "8": {
+                    "station": "BLH",
+                    "blocks": 719
+                },
+                "10": {
+                    "station": "ALI",
+                    "blocks": 1020
+                }
+            }
+        },
+        "ALI": {
+            "name": "Alee Isle",
+            "cx": -292,
+            "cz": 997,
+            "platforms": {
+                "1": {
+                    "station": "SIL",
+                    "blocks": 761
+                },
+                "2": {
+                    "station": "BCO",
+                    "blocks": 950
+                },
+                "3": {
+                    "station": "ACS",
+                    "blocks": 1020
+                },
+                "4": {
+                    "station": "BBT",
+                    "blocks": 421
+                },
+                "5": {
+                    "station": "SKY",
+                    "blocks": 330
+                }
+            }
+        },
+        "AKL": {
+            "name": "Auckland",
+            "cx": 55,
+            "cz": -212,
+            "platforms": {
+                "1": {
+                    "station": "LD",
+                    "blocks": 338
+                },
+                "2": {
+                    "station": "VEV",
+                    "blocks": 372
+                },
+                "3": {
+                    "station": "BGC",
+                    "blocks": 588
+                }
+            }
+        },
+        "BGC": {
+            "name": "BingoCity",
+            "cx": -327,
+            "cz": -406,
+            "platforms": {
+                "1": {
+                    "station": "UFO",
+                    "blocks": 733
+                },
+                "2": {
+                    "station": "AKL",
+                    "blocks": 588
+                }
+            }
+        },
+        "BBT": {
+            "name": "Birch Boat Town",
+            "cx": 61,
+            "cz": 972,
+            "platforms": {
+                "1": {
+                    "station": "SHC",
+                    "blocks": 208
+                },
+                "2": {
+                    "station": "ACS",
+                    "blocks": 633
+                },
+                "3": {
+                    "station": "ALI",
+                    "blocks": 421
+                },
+                "4": {
+                    "station": "BLO",
+                    "blocks": 338
+                }
+            }
+        },
+        "BLO": {
+            "name": "Birch Lodges",
+            "cx": 233,
+            "cz": 1125,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 917
+                },
+                "2": {
+                    "station": "BBT",
+                    "blocks": 338
+                }
+            }
+        },
+        "BLH": {
+            "name": "Blake Hospital",
+            "cx": 296,
+            "cz": -65,
+            "platforms": {
+                "1": {
+                    "station": "LD",
+                    "blocks": 358
+                },
+                "2": {
+                    "station": "VEV",
+                    "blocks": 135
+                },
+                "3": {
+                    "station": "ACS",
+                    "blocks": 719
+                }
+            }
+        },
+        "BCO": {
+            "name": "Breadcroust",
+            "cx": -975,
+            "cz": 1172,
+            "platforms": {
+                "1": {
+                    "station": "ALI",
+                    "blocks": 950
+                }
+            }
+        },
+        "LD": {
+            "name": "Legal District",
+            "cx": 104,
+            "cz": -5,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 505
+                },
+                "2": {
+                    "station": "UFO",
+                    "blocks": 230
+                },
+                "3": {
+                    "station": "AKL",
+                    "blocks": 338
+                },
+                "4": {
+                    "station": "BLH",
+                    "blocks": 358
+                }
+            }
+        },
+        "ROR": {
+            "name": "Lion Land",
+            "cx": -805,
+            "cz": -2876,
+            "platforms": {
+                "1": {
+                    "station": "VEV",
+                    "blocks": 539
+                }
+            }
+        },
+        "LI": {
+            "name": "Long Island",
+            "cx": -463,
+            "cz": 85,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 997
+                },
+                "2": {
+                    "station": "WC",
+                    "blocks": 775
+                },
+                "3": {
+                    "station": "WOVR",
+                    "blocks": 321
+                },
+                "4": {
+                    "station": "UWGK",
+                    "blocks": 145
+                }
+            }
+        },
+        "UFO": {
+            "name": "RMUFO",
+            "cx": -62,
+            "cz": -2,
+            "platforms": {
+                "1": {
+                    "station": "LD",
+                    "blocks": 230
+                },
+                "2": {
+                    "station": "BGC",
+                    "blocks": 733
+                }
+            }
+        },
+        "SIL": {
+            "name": "Silicon Valley",
+            "cx": -302,
+            "cz": 1524,
+            "platforms": {
+                "1": {
+                    "station": "ALI",
+                    "blocks": 761
+                }
+            }
+        },
+        "SKY": {
+            "name": "SkyCity",
+            "cx": -394,
+            "cz": 791,
+            "platforms": {
+                "1": {
+                    "station": "ALI",
+                    "blocks": 330
+                }
+            }
+        },
+        "UWGK": {
+            "name": "Underwater Go-Karting",
+            "cx": -362,
+            "cz": 126,
+            "platforms": {
+                "1": {
+                    "station": "LI",
+                    "blocks": 145
+                }
+            }
+        },
+        "VEV": {
+            "name": "Veronaville",
+            "cx": 349,
+            "cz": -150,
+            "platforms": {
+                "1": {
+                    "station": "BLH",
+                    "blocks": 135
+                },
+                "2": {
+                    "station": "ROR",
+                    "blocks": 539
+                },
+                "3": {
+                    "station": "AKL",
+                    "blocks": 372
+                }
+            }
+        },
+        "VIC": {
+            "name": "Victor's Interesting City",
+            "cx": -7584,
+            "cz": 941,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 1004
+                },
+                "2": {
+                    "station": "MDC",
+                    "blocks": 421
+                }
+            }
+        },
+        "WOVR": {
+            "name": "Westover",
+            "cx": -755,
+            "cz": 107,
+            "platforms": {
+                "1": {
+                    "station": "LI",
+                    "blocks": 321
+                }
+            }
+        },
+        "WC": {
+            "name": "Whale City",
+            "cx": 260,
+            "cz": 106,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 429
+                },
+                "2": {
+                    "station": "LI",
+                    "blocks": 775
+                },
+                "3": {
+                    "station": "WCA",
+                    "blocks": 163
+                },
+                "4": {
+                    "station": "WCR",
+                    "blocks": 241
+                },
+                "5": {
+                    "station": "WCC",
+                    "blocks": 214
+                },
+                "Y1": {
+                    "station": "MDC",
+                    "blocks": 675
+                }
+            }
+        },
+        "WCA": {
+            "name": "Whale City Airport",
+            "cx": 350,
+            "cz": 37,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 590
+                },
+                "2": {
+                    "station": "WC",
+                    "blocks": 163
+                }
+            }
+        },
+        "WCC": {
+            "name": "Whale City Commercial",
+            "cx": 108,
+            "cz": 111,
+            "platforms": {
+                "1": {
+                    "station": "WC",
+                    "blocks": 214
+                }
+            }
+        },
+        "WCR": {
+            "name": "Whale City Residential",
+            "cx": 194,
+            "cz": 209,
+            "platforms": {
+                "1": {
+                    "station": "WC",
+                    "blocks": 241
+                }
+            }
+        },
+        "SHC": {
+            "name": "ShiftCity",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "BBT",
+                    "blocks": 208
+                }
+            }
+        },
+        "MDC": {
+            "name": "Midcity",
+            "cx": -4454,
+            "cz": 807,
+            "platforms": {
+                "1": {
+                    "station": "VIC",
+                    "blocks": 421
+                },
+                "Y1": {
+                    "station": "WC",
+                    "blocks": 675
+                }
+            }
+        }
+    }
+}

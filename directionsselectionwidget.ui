@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DirectionsSelectionWidget</class>
+ <widget class="QWidget" name="DirectionsSelectionWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="StationEntryBox" name="departure">
+     <property name="placeholderText">
+      <string>How do I get from...</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="StationEntryBox" name="destination">
+     <property name="placeholderText">
+      <string>to...</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="addStopButton">
+     <property name="text">
+      <string>Add another stop</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>StationEntryBox</class>
+   <extends>QLineEdit</extends>
+   <header>stationentrybox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
