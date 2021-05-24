@@ -52,13 +52,20 @@ FORMS += \
     stationpage.ui \
     topwidget.ui
 
+TRANSLATIONS += \
+    translations/vi_VN.ts \
+    translations/nl_NL.ts \
+    translations/de_DE.ts \
+    translations/pt_BR.ts
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    resources.qrc
+    resources.qrc \
+    translations.qrc
 
 !wasm {
     RESOURCES += datapack.qrc

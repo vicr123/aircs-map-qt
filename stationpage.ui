@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string notr="true">Form</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
@@ -32,7 +32,7 @@
    <item>
     <widget class="QLabel" name="pictureLabel">
      <property name="text">
-      <string>Picture goes here</string>
+      <string notr="true">Picture goes here</string>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -50,7 +50,7 @@
       </font>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string notr="true">TextLabel</string>
      </property>
      <property name="margin">
       <number>9</number>

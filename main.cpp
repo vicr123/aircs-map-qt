@@ -21,6 +21,7 @@
 
 #include <QApplication>
 #include <QFontDatabase>
+#include <QTranslator>
 
 int main(int argc, char* argv[]) {
     QApplication a(argc, argv);
@@ -28,6 +29,10 @@ int main(int argc, char* argv[]) {
     QFontDatabase::addApplicationFont(":/Overpass-Regular.ttf");
 
     a.setFont(QFont("Overpass", 15));
+
+    QTranslator* translator = new QTranslator();
+    translator->load(QLocale(), "", "", ":/translations");
+    a.installTranslator(translator);
 
     QPalette pal;
     pal.setColor(QPalette::Window, QColor(255, 255, 255, 200));
