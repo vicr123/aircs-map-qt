@@ -75,7 +75,6 @@ void StationEntryBox::focusOutEvent(QFocusEvent* event) {
 
     if (!d->completer->popup()->currentIndex().isValid()) {
         if (d->completer->setCurrentRow(0)) d->completer->currentIndex().data(Qt::UserRole).toString();
-
     } else {
         this->setText(d->completer->popup()->currentIndex().data(Qt::UserRole).toString());
     }

@@ -20,10 +20,11 @@
 #include "directionsselectionwidget.h"
 #include "ui_directionsselectionwidget.h"
 
+#include <QToolButton>
 #include "datamanager.h"
 
 struct DirectionsSelectionWidgetPrivate {
-
+    QList<StationEntryBox*> extraWaypoints;
 };
 
 DirectionsSelectionWidget::DirectionsSelectionWidget(QWidget* parent) :
@@ -43,7 +44,9 @@ void DirectionsSelectionWidget::doFindDirections() {
     stations.append(DataManager::stationForName(ui->departure->text()));
     stations.append(DataManager::stationForName(ui->destination->text()));
 
-    //TODO: waypoints
+    for (StationEntryBox* waypointBox : d->extraWaypoints) {
+        stations.append(DataManager::stationForName(waypointBox->text()));
+    }
 
     if (stations.contains(nullptr)) return;
 
@@ -55,6 +58,36 @@ void DirectionsSelectionWidget::on_departure_textChanged(const QString& arg1) {
 }
 
 void DirectionsSelectionWidget::on_destination_textChanged(const QString& arg1) {
+    doFindDirections();
+}
+
+void DirectionsSelectionWidget::on_addStopButton_clicked() {
+    int row = d->extraWaypoints.count();
+
+    StationEntryBox* box = new StationEntryBox(this);
+    box->setPlaceholderText(tr("then..."));
+    connect(box, &StationEntryBox::textChanged, this, [ = ] {
+        doFindDirections();
+    });
+    d->extraWaypoints.append(box);
+
+    QToolButton* removeButton = new QToolButton();
+    removeButton->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+    connect(removeButton, &QToolButton::clicked, this, [ = ] {
+        d->extraWaypoints.removeOne(box);
+        ui->waypointsLayout->removeWidget(box);
+        ui->waypointsLayout->removeWidget(removeButton);
+
+        box->deleteLater();
+        removeButton->deleteLater();
+
+        doFindDirections();
+    });
+
+    ui->waypointsLayout->addWidget(box, row, 0);
+    ui->waypointsLayout->addWidget(removeButton, row, 1);
+    box->setFocus();
+
     doFindDirections();
 }
 

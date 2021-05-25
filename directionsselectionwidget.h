@@ -43,6 +43,8 @@ class DirectionsSelectionWidget : public QWidget {
 
         void on_destination_textChanged(const QString& arg1);
 
+        void on_addStopButton_clicked();
+
     private:
         Ui::DirectionsSelectionWidget* ui;
         DirectionsSelectionWidgetPrivate* d;

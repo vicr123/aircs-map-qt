@@ -46,18 +46,15 @@ DirectionsPage::DirectionsPage(QWidget* parent) :
         }
         qDebug();
 
+        QList<Station*> finalRoute;
         for (int i = 0; i < stations.length() - 1; i++) {
             Station* departure = stations.at(i);
             Station* destination = stations.at(i + 1);
 
             qDebug() << departure->shortcode() << "->" << destination->shortcode();
-            QList<Station*> route = DataManager::calculateRoute(departure->shortcode(), destination->shortcode());
-//            for (Station* station : route) {
-//                qDebug() << station->shortcode();
-//            }
-
-            d->resultsModel->setDirectionsResults(route);
+            finalRoute.append(DataManager::calculateRoute(departure->shortcode(), destination->shortcode()));
         }
+        d->resultsModel->setDirectionsResults(finalRoute);
     });
 }
 

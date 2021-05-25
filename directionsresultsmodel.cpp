@@ -59,15 +59,33 @@ QVariant DirectionsResultsModel::data(const QModelIndex& index, int role) const 
     if (index.row() != d->stations.length() - 1) after = d->stations.value(index.row() + 1);
     if (!s) return QVariant();
 
-    if (role == Qt::DisplayRole) {
-        return s->stationName();
-    } else if (role == SecondaryTextRole) {
-        if (after) {
-            return tr("Take Platform %1").arg(s->platformForConnection(after->shortcode()));
-        } else {
-            return tr("Arrive at the destination");
+    switch (role) {
+        case Qt::DisplayRole:
+            return s->stationName();
+        case SecondaryTextRole:
+            if (after) {
+                if (after == s) {
+                    return tr("Arrive at the waypoint");
+                } else {
+                    return tr("Take Platform %1").arg(s->platformForConnection(after->shortcode()));
+                }
+            } else {
+                return tr("Arrive at the destination");
+            }
+        case StationTokenSizeRole:
+            return QSize(16, 16);
+        case ConnectionsRole: {
+            uint connections = 0;
+            if (before && before != s) connections |= 0x1;
+            if (after && after != s) connections |= 0x2;
+            return connections;
         }
+        case BeforeLineColorRole:
+            return QColor(Qt::black);
+        case AfterLineColorRole:
+            return QColor(Qt::black);
     }
+
     return QVariant();
 }
 
@@ -77,8 +95,47 @@ DirectionsResultsDelegate::DirectionsResultsDelegate(QObject* parent) {
 }
 
 void DirectionsResultsDelegate::paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const {
+    QRect indicatorRect = option.rect;
+    indicatorRect.moveLeft(9);
+    indicatorRect.setWidth(24);
+
+    painter->setRenderHint(QPainter::Antialiasing);
+
+    uint connections = index.data(DirectionsResultsModel::ConnectionsRole).toUInt();
+    if (connections & 0x1) {
+        QRect lineRect = indicatorRect;
+        lineRect.setWidth(12);
+        lineRect.moveCenter(indicatorRect.center());
+        lineRect.setBottom(indicatorRect.center().y());
+
+        painter->setPen(Qt::transparent);
+        painter->setBrush(index.data(DirectionsResultsModel::BeforeLineColorRole).value<QColor>());
+        painter->drawRect(lineRect);
+    }
+    if (connections & 0x2) {
+        QRect lineRect = indicatorRect;
+        lineRect.setWidth(12);
+        lineRect.moveCenter(indicatorRect.center());
+        lineRect.setTop(indicatorRect.center().y());
+        lineRect.setBottom(indicatorRect.bottom());
+
+        painter->setPen(Qt::transparent);
+        painter->setBrush(index.data(DirectionsResultsModel::BeforeLineColorRole).value<QColor>());
+        painter->drawRect(lineRect);
+    }
+
+    QRect stationRect;
+    stationRect.setSize(index.data(DirectionsResultsModel::StationTokenSizeRole).toSize());
+    stationRect.moveCenter(indicatorRect.center());
+
+    painter->setPen(QPen(Qt::black, 8));
+    painter->setBrush(Qt::white);
+    painter->drawRoundedRect(stationRect, 8, 8);
+
+    painter->setPen(option.palette.color(QPalette::WindowText));
+
     QRect titleRect = option.rect;
-    titleRect.setLeft(9);
+    titleRect.setLeft(indicatorRect.right() + 9);
     titleRect.moveTop(titleRect.top() + 9);
     titleRect.setHeight(QFontMetrics(titleFont(option.font)).height());
 

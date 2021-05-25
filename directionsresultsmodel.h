@@ -33,7 +33,11 @@ class DirectionsResultsModel : public QAbstractListModel {
         ~DirectionsResultsModel();
 
         enum Roles {
-            SecondaryTextRole = Qt::UserRole
+            SecondaryTextRole = Qt::UserRole,
+            StationTokenSizeRole,
+            ConnectionsRole,
+            BeforeLineColorRole,
+            AfterLineColorRole
         };
 
         void setDirectionsResults(QList<Station*> stations);
