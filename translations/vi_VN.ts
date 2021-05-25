@@ -12,12 +12,17 @@
 <context>
     <name>DirectionsResultsModel</name>
     <message>
-        <location filename="../directionsresultsmodel.cpp" line="66"/>
+        <location filename="../directionsresultsmodel.cpp" line="68"/>
+        <source>Arrive at the waypoint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../directionsresultsmodel.cpp" line="70"/>
         <source>Take Platform %1</source>
         <translation>Tàu trên sân ga %1</translation>
     </message>
     <message>
-        <location filename="../directionsresultsmodel.cpp" line="68"/>
+        <location filename="../directionsresultsmodel.cpp" line="73"/>
         <source>Arrive at the destination</source>
         <translation>Đến điểm đến</translation>
     </message>
@@ -38,6 +43,11 @@
         <location filename="../directionsselectionwidget.ui" line="37"/>
         <source>Add another stop</source>
         <translation>Thêm điểm dừng</translation>
+    </message>
+    <message>
+        <location filename="../directionsselectionwidget.cpp" line="68"/>
+        <source>then...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

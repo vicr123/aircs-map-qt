@@ -1,5 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>translations/vi_VN.qm</file>
+        <file>translations/nl_NL.qm</file>
+        <file>translations/pt_BR.qm</file>
+        <file>translations/de_DE.qm</file>
     </qresource>
 </RCC>
