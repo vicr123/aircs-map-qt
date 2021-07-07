@@ -15,7 +15,7 @@
                 },
                 "3": {
                     "station": "VIC",
-                    "blocks": 1004
+                    "blocks": 126
                 },
                 "4": {
                     "station": "BLO",
@@ -66,6 +66,32 @@
                 },
                 "5": {
                     "station": "SKY",
+                    "blocks": 330
+                }
+            }
+        },
+        "ATI": {
+            "name": "Anatoli Park & Ride",
+            "cx": 756,
+            "cz": 1176,
+            "platforms": {
+                "1": {
+                    "station": "BLO",
+                    "blocks": 635
+                },
+                "2": {
+                    "station": "ATIA",
+                    "blocks": 330
+                }
+            }
+        },
+        "ATIA": {
+            "name": "Anatoli International Airport",
+            "cx": 979,
+            "cz": 1226,
+            "platforms": {
+                "1": {
+                    "station": "ATI",
                     "blocks": 330
                 }
             }
@@ -139,6 +165,10 @@
                 "2": {
                     "station": "BBT",
                     "blocks": 338
+                },
+                "3": {
+                    "station": "ATI",
+                    "blocks": 635
                 }
             }
         },
@@ -229,6 +259,21 @@
                 }
             }
         },
+        "MDC": {
+            "name": "Midcity",
+            "cx": -4454,
+            "cz": 807,
+            "platforms": {
+                "1": {
+                    "station": "VIC",
+                    "blocks": 421
+                },
+                "Y1": {
+                    "station": "WC",
+                    "blocks": 1079
+                }
+            }
+        },
         "UFO": {
             "name": "RMUFO",
             "cx": -62,
@@ -241,6 +286,17 @@
                 "2": {
                     "station": "BGC",
                     "blocks": 733
+                }
+            }
+        },
+        "SHC": {
+            "name": "ShiftCity",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "BBT",
+                    "blocks": 208
                 }
             }
         },
@@ -354,7 +410,7 @@
             }
         },
         "WCA": {
-            "name": "Whale City Airport",
+            "name": "Whale City Airport Terminal 1",
             "cx": 350,
             "cz": 37,
             "platforms": {
@@ -365,6 +421,10 @@
                 "2": {
                     "station": "WC",
                     "blocks": 163
+                },
+                "3": {
+                    "station": "WCAB",
+                    "blocks": 435
                 }
             }
         },
@@ -390,29 +450,14 @@
                 }
             }
         },
-        "SHC": {
-            "name": "ShiftCity",
-            "cx": null,
-            "cz": null,
+        "WCAB": {
+            "name": "Whale City Airport Terminal 2",
+            "cx": 450,
+            "cz": 333,
             "platforms": {
                 "1": {
-                    "station": "BBT",
-                    "blocks": 208
-                }
-            }
-        },
-        "MDC": {
-            "name": "Midcity",
-            "cx": -4454,
-            "cz": 807,
-            "platforms": {
-                "1": {
-                    "station": "VIC",
-                    "blocks": 421
-                },
-                "Y1": {
-                    "station": "WC",
-                    "blocks": 675
+                    "station": "WCA",
+                    "blocks": 435
                 }
             }
         }
