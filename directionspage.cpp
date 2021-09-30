@@ -62,3 +62,15 @@ DirectionsPage::~DirectionsPage() {
     delete d;
     delete ui;
 }
+
+void DirectionsPage::pushStation(Station* station) {
+    ui->directionsSelectionWidget->pushStation(station);
+}
+
+void DirectionsPage::setFromStation(Station* station) {
+    ui->directionsSelectionWidget->setFromStation(station);
+}
+
+void DirectionsPage::setToStation(Station* station) {
+    ui->directionsSelectionWidget->setToStation(station);
+}

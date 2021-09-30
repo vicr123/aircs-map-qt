@@ -63,6 +63,10 @@ void Sidebar::clear() {
     while (ui->stackedWidget->count() > 1) pop();
 }
 
+DirectionsPage* Sidebar::topDirections() {
+    return qobject_cast<DirectionsPage*>(ui->stackedWidget->widget(ui->stackedWidget->count() - 1));
+}
+
 void Sidebar::paintEvent(QPaintEvent* event) {
     QWidget::paintEvent(event);
 

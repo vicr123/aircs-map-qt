@@ -21,6 +21,7 @@
 #include "ui_mainwidget.h"
 
 #include <QVariantAnimation>
+#include "directionspage.h"
 #include "mapwidget.h"
 #include "sidebar.h"
 #include "splashwidget.h"
@@ -31,6 +32,7 @@ const int SIDEBAR_WIDTH = 500;
 struct MainWidgetPrivate {
     MapWidget* map;
     Sidebar* sidebar;
+    bool sidebarVisible = false;
 
     SplashWidget* splash;
     int readyCount = 0;
@@ -53,11 +55,24 @@ MainWidget::MainWidget(QWidget* parent)
     d->sidebar->move(-d->sidebar->width(), ui->topWidget->height());
 
     connect(d->map, &MapWidget::stationClicked, this, [ = ](QString station) {
-        d->sidebar->pushStation(station);
-        showSidebar();
+        if (d->sidebar->topDirections() && d->sidebarVisible) {
+            d->sidebar->topDirections()->pushStation(DataManager::station(station));
+        } else {
+            d->sidebar->pushStation(station);
+            showSidebar();
+        }
     });
     connect(d->map, &MapWidget::emptyClick, this, [ = ] {
         hideSidebar();
+    });
+    connect(d->map, &MapWidget::directions, this, [ = ](QString station, bool from) {
+        if (!d->sidebar->topDirections()) d->sidebar->pushDirections();
+        showSidebar();
+        if (from) {
+            d->sidebar->topDirections()->setFromStation(DataManager::station(station));
+        } else {
+            d->sidebar->topDirections()->setToStation(DataManager::station(station));
+        }
     });
 
     d->splash = new SplashWidget(this);
@@ -105,6 +120,7 @@ void MainWidget::showSidebar() {
     });
     connect(anim, &QVariantAnimation::finished, anim, &QVariantAnimation::deleteLater);
     anim->start();
+    d->sidebarVisible = true;
 }
 
 void MainWidget::hideSidebar() {
@@ -118,6 +134,7 @@ void MainWidget::hideSidebar() {
     });
     connect(anim, &QVariantAnimation::finished, anim, &QVariantAnimation::deleteLater);
     anim->start();
+    d->sidebarVisible = false;
 }
 
 void MainWidget::resizeEvent(QResizeEvent* event) {

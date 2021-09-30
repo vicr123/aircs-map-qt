@@ -78,5 +78,4 @@ void StationEntryBox::focusOutEvent(QFocusEvent* event) {
     } else {
         this->setText(d->completer->popup()->currentIndex().data(Qt::UserRole).toString());
     }
-
 }

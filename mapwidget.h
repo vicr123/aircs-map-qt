@@ -33,6 +33,8 @@ class MapWidget : public QWidget {
         void stationClicked(QString station);
         void emptyClick();
 
+        void directions(QString station, bool from);
+
         void ready();
         void loadError();
 
@@ -52,6 +54,7 @@ class MapWidget : public QWidget {
         void keyReleaseEvent(QKeyEvent* event);
         void paintEvent(QPaintEvent* event);
         void wheelEvent(QWheelEvent* event);
+        void contextMenuEvent(QContextMenuEvent* event);
 };
 
 #endif // MAPWIDGET_H

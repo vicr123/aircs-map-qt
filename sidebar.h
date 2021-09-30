@@ -26,6 +26,7 @@ namespace Ui {
     class Sidebar;
 }
 
+class DirectionsPage;
 class Sidebar : public QWidget {
         Q_OBJECT
 
@@ -38,6 +39,8 @@ class Sidebar : public QWidget {
         void pop();
         void popIfNotDirections();
         void clear();
+
+        DirectionsPage* topDirections();
 
     private:
         Ui::Sidebar* ui;

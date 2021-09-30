@@ -23,6 +23,9 @@
 #include <QSvgRenderer>
 #include <QMouseEvent>
 #include <QVariantAnimation>
+#include <QMenu>
+#include <QLocale>
+#include "station.h"
 #include "datamanager.h"
 #include "datagatherer.h"
 
@@ -96,6 +99,7 @@ QPointF MapWidget::toSvgCoords(QPointF widgetCoords) {
 }
 
 QRectF MapWidget::stationCoords(QString station) {
+    if (!d->renderer.elementExists(station)) return QRectF();
     return toWidgetCoords(d->renderer.transformForElement(station).map(d->renderer.boundsOnElement(station)).boundingRect());
 }
 
@@ -179,16 +183,29 @@ void MapWidget::wheelEvent(QWheelEvent* event) {
     double factor = 1.0 + 10 * (event->angleDelta().y() / 12000.0);
 
     QRectF renderRect = d->boundsAnim->endValue().toRectF();
-    QPointF initialPoint = toSvgCoords(event->position());
-
-    QPointF offset = initialPoint - (initialPoint * factor);
+    QPointF offset = (renderRect.topLeft() - event->position()) * factor + event->position(); // - (initialPoint * factor);
 
     renderRect.setSize(renderRect.size() * factor);
-    renderRect.translate(offset);
+    renderRect.moveTopLeft(offset);
 
 
     d->boundsAnim->setStartValue(d->boundsAnim->currentValue());
     d->boundsAnim->setEndValue(renderRect);
     d->boundsAnim->setDuration(200);
     d->boundsAnim->start();
+}
+
+void MapWidget::contextMenuEvent(QContextMenuEvent* event) {
+    if (!d->pointedStation.isEmpty()) {
+        d->dragging = false;
+        QMenu* menu = new QMenu(this);
+        menu->addSection(tr("For station %1").arg(QLocale().quoteString(DataManager::station(d->pointedStation)->stationName())));
+        menu->addAction(tr("Directions from here"), [ = ] {
+            emit directions(d->pointedStation, true);
+        });
+        menu->addAction(tr("Directions to here"), [ = ] {
+            emit directions(d->pointedStation, false);
+        });
+        menu->popup(event->globalPos());
+    }
 }

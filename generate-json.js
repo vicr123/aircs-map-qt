@@ -20,7 +20,7 @@ let request = (url) => {
                     }).then(res).catch(rej);
                 }
     
-                res(JSON.parse(str));
+                res(JSON.parse(str.substr(47).slice(0, -2)));
             })
         }).end();
     });
@@ -30,28 +30,30 @@ let request = (url) => {
 let endData = {};
 
 (async () => {
-    for (let sheet = 1; sheet < 3; sheet++) {
+    for (let sheet of ["Stations", "Platforms", "Amenities"]) {
         let data = await request({
-            host: "spreadsheets.google.com",
-            path: `/feeds/cells/1KCrVmLrHPoyrF_7onE10wE8CdloQrHFbOcuzHb51BC8/${sheet}/public/full?alt=json`
+            host: "docs.google.com",
+            path: `/spreadsheets/d/1KCrVmLrHPoyrF_7onE10wE8CdloQrHFbOcuzHb51BC8/gviz/tq?tqx=out:json&sheet=${sheet}`
         });
     
         let rows = [];
-        let cellsArray = [...data.feed.entry].filter(cell => cell["gs$cell"].row != '1');
-        for (let cell of cellsArray) {
-            let row = parseInt(cell["gs$cell"].row);
-            if (!rows[row]) rows[row] = [];
-            rows[row][parseInt(cell["gs$cell"].col)] = cell["gs$cell"]["$t"];
-        }
-        console.log(rows);
+//        let cellsArray = [...data.feed.entry].filter(cell => cell["gs$cell"].row != '1');
+//        for (let cell of cellsArray) {
+//            let row = parseInt(cell["gs$cell"].row);
+//            if (!rows[row]) rows[row] = [];
+//            rows[row][parseInt(cell["gs$cell"].col)] = cell["gs$cell"]["$t"];
+//        }
+//        console.log(rows);
+         rows = data.table.rows.map(rowObject => rowObject.c.map(cell => cell?.v || ""));
+         console.log(rows);
 
         switch (sheet) {
-            case 1: { //Stations
+            case "Stations": { //Stations
                 endData.stations = rows.reduce((acc, row) => {
                     return {
                         ...acc,
-                        [row[1]]: {
-                            name: row[2],
+                        [row[0]]: {
+                            name: row[1],
                             cx: parseInt(row[3]),
                             cz: parseInt(row[4]),
                             platforms: {}
@@ -60,16 +62,17 @@ let endData = {};
                 }, {})
                 break;
             }
-            case 2: { //Platforms
+            case "Platforms": { //Platforms
                 rows.forEach(row => {
-                    if (row[1] && row[2] && row[3]) endData.stations[row[1]].platforms[row[2]] = {
-                        station: row[3],
-                        blocks: parseInt(row[6])
+                    if (row[0] && row[1] && row[2]) endData.stations[row[0]].platforms[row[1]] = {
+                        station: row[2],
+                        blocks: parseInt(row[5])
                     }
                 });
             }
         }
     }
 
+     console.log(endData);
     fs.writeFileSync("data/stations.json", JSON.stringify(endData, null, 4));
 })();

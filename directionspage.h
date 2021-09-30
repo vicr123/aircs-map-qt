@@ -26,6 +26,7 @@ namespace Ui {
     class DirectionsPage;
 }
 
+class Station;
 struct DirectionsPagePrivate;
 class DirectionsPage : public QWidget {
         Q_OBJECT
@@ -33,6 +34,10 @@ class DirectionsPage : public QWidget {
     public:
         explicit DirectionsPage(QWidget* parent = nullptr);
         ~DirectionsPage();
+
+        void pushStation(Station* station);
+        void setFromStation(Station* station);
+        void setToStation(Station* station);
 
     private:
         Ui::DirectionsPage* ui;

@@ -39,6 +39,33 @@ DirectionsSelectionWidget::~DirectionsSelectionWidget() {
     delete d;
 }
 
+void DirectionsSelectionWidget::pushStation(Station* station) {
+    QList<StationEntryBox*> entryBoxes = d->extraWaypoints;
+    entryBoxes.prepend(ui->destination);
+    entryBoxes.prepend(ui->departure);
+
+    for (StationEntryBox* box : entryBoxes) {
+        if (box->hasFocus()) {
+            box->setText(station->stationName());
+            return;
+        }
+    }
+    for (StationEntryBox* box : entryBoxes) {
+        if (!DataManager::stationForName(box->text())) {
+            box->setText(station->stationName());
+            return;
+        }
+    }
+}
+
+void DirectionsSelectionWidget::setFromStation(Station* station) {
+    ui->departure->setText(station->stationName());
+}
+
+void DirectionsSelectionWidget::setToStation(Station* station) {
+    ui->destination->setText(station->stationName());
+}
+
 void DirectionsSelectionWidget::doFindDirections() {
     QList<Station*> stations;
     stations.append(DataManager::stationForName(ui->departure->text()));

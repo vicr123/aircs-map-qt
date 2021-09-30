@@ -44,6 +44,7 @@ Station* DataManager::station(QString station) {
 }
 
 Station* DataManager::stationForName(QString station) {
+    if (station.isEmpty()) return nullptr;
     for (Station* s : instance()->d->stations.values()) {
         if (s->stationName() == station) return s;
     }
@@ -58,7 +59,7 @@ QList<Station*> DataManager::calculateRoute(QString from, QString to) {
     };
 
     QList<Node*> nodes;
-    QMap<Station*, Node*> stationNodes;
+    QHash<Station*, Node*> stationNodes;
 
     for (QString station : stations()) {
         Node* n = new Node();
@@ -80,6 +81,12 @@ QList<Station*> DataManager::calculateRoute(QString from, QString to) {
         if (top->station->shortcode() == to) {
             QList<Station*> stations;
 
+            if (top->via == nullptr) {
+                //Could not find a route!
+                qDeleteAll(stationNodes);
+                return QList<Station*>();
+            }
+
             //We found it!
             do {
                 stations.prepend(top->station);
@@ -88,7 +95,7 @@ QList<Station*> DataManager::calculateRoute(QString from, QString to) {
             stations.prepend(top->station);
 
 
-            qDeleteAll(stationNodes.values());
+            qDeleteAll(stationNodes);
             return stations;
         }
 
@@ -103,7 +110,7 @@ QList<Station*> DataManager::calculateRoute(QString from, QString to) {
         }
     }
 
-    qDeleteAll(stationNodes.values());
+    qDeleteAll(stationNodes);
     return QList<Station*>();
 }
 

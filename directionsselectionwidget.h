@@ -35,6 +35,10 @@ class DirectionsSelectionWidget : public QWidget {
         explicit DirectionsSelectionWidget(QWidget* parent = nullptr);
         ~DirectionsSelectionWidget();
 
+        void pushStation(Station* station);
+        void setFromStation(Station* station);
+        void setToStation(Station* station);
+
     signals:
         void findDirections(QList<Station*> waypoints);
 
