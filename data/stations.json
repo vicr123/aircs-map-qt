@@ -71,6 +71,10 @@
                 "3": {
                     "station": "ACS",
                     "blocks": 1854
+                },
+                "4": {
+                    "station": "STA",
+                    "blocks": 603
                 }
             }
         },
@@ -171,10 +175,6 @@
                 "2": {
                     "station": "AAR",
                     "blocks": 656
-                },
-                "4": {
-                    "station": "STA",
-                    "blocks": 603
                 }
             }
         },
@@ -388,7 +388,7 @@
             "platforms": {}
         },
         "NCT": {
-            "name": "New Clygro Town",
+            "name": "",
             "cx": null,
             "cz": null,
             "platforms": {
@@ -403,7 +403,7 @@
             }
         },
         "PND": {
-            "name": "Palinode",
+            "name": "New Clygro Town",
             "cx": -7988,
             "cz": 561,
             "platforms": {
@@ -811,7 +811,7 @@
             "cz": 1569,
             "platforms": {
                 "1": {
-                    "station": "ATIA",
+                    "station": "AAR",
                     "blocks": 603
                 },
                 "8": {
