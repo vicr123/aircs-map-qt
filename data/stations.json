@@ -57,8 +57,8 @@
         },
         "AAR": {
             "name": "AirCS Arena",
-            "cx": null,
-            "cz": null,
+            "cx": 743,
+            "cz": 1514,
             "platforms": {
                 "1": {
                     "station": "ATI",
@@ -75,6 +75,10 @@
                 "4": {
                     "station": "STA",
                     "blocks": 603
+                },
+                "5": {
+                    "station": "UOA",
+                    "blocks": 661
                 }
             }
         },
@@ -154,12 +158,16 @@
                     "blocks": 635
                 },
                 "2": {
-                    "station": "ATIA",
-                    "blocks": 330
+                    "station": "AAR",
+                    "blocks": 448
                 },
                 "4": {
                     "station": "NCT",
                     "blocks": 1331
+                },
+                "5": {
+                    "station": "UOA",
+                    "blocks": 1062
                 }
             }
         },
@@ -307,6 +315,10 @@
                 "2": {
                     "station": "NCT",
                     "blocks": 1363
+                },
+                "AQ1": {
+                    "station": "STA",
+                    "blocks": 145
                 }
             }
         },
@@ -314,7 +326,12 @@
             "name": "Iverycity",
             "cx": null,
             "cz": null,
-            "platforms": {}
+            "platforms": {
+                "1": {
+                    "station": "UOA",
+                    "blocks": 424
+                }
+            }
         },
         "LD": {
             "name": "Legal District",
@@ -367,17 +384,17 @@
             "cx": -4454,
             "cz": 807,
             "platforms": {
-                "B1": {
-                    "station": "BGL",
-                    "blocks": 1196
-                },
                 "Y1": {
                     "station": "WC",
-                    "blocks": 675
+                    "blocks": 360
                 },
                 "N1": {
                     "station": "VIC",
                     "blocks": 421
+                },
+                "B1": {
+                    "station": "BGL",
+                    "blocks": 1196
                 }
             }
         },
@@ -388,7 +405,7 @@
             "platforms": {}
         },
         "NCT": {
-            "name": "",
+            "name": "New Clygro Town",
             "cx": null,
             "cz": null,
             "platforms": {
@@ -403,7 +420,7 @@
             }
         },
         "PND": {
-            "name": "New Clygro Town",
+            "name": "Palinode",
             "cx": -7988,
             "cz": 561,
             "platforms": {
@@ -411,17 +428,21 @@
                     "station": "VIC",
                     "blocks": 779
                 },
-                "B1": {
-                    "station": "ACS",
-                    "blocks": 8300
+                "Y1": {
+                    "station": "MTL",
+                    "blocks": 317
+                },
+                "A1": {
+                    "station": "RPO",
+                    "blocks": 506
                 },
                 "AQ1": {
                     "station": "ROR",
                     "blocks": 884
                 },
-                "A1": {
-                    "station": "RPO",
-                    "blocks": 506
+                "B1": {
+                    "station": "ACS",
+                    "blocks": 8300
                 }
             }
         },
@@ -458,17 +479,17 @@
             "cx": -805,
             "cz": -2876,
             "platforms": {
-                "AQ1": {
-                    "station": "PND",
-                    "blocks": 884
+                "A1": {
+                    "station": "ROAR",
+                    "blocks": 152
                 },
                 "B1": {
                     "station": "VEV",
                     "blocks": 539
                 },
-                "A1": {
-                    "station": "ROAR",
-                    "blocks": 152
+                "AQ1": {
+                    "station": "PND",
+                    "blocks": 884
                 }
             }
         },
@@ -480,6 +501,10 @@
                 "1": {
                     "station": "BBT",
                     "blocks": 208
+                },
+                "AQ1": {
+                    "station": "STA",
+                    "blocks": 50
                 }
             }
         },
@@ -573,17 +598,17 @@
             "cx": -7584,
             "cz": 941,
             "platforms": {
-                "N1": {
-                    "station": "ACS",
-                    "blocks": 1004
+                "N2": {
+                    "station": "MDC",
+                    "blocks": 421
                 },
                 "O1": {
                     "station": "PND",
                     "blocks": 779
                 },
-                "N2": {
-                    "station": "MDC",
-                    "blocks": 421
+                "N1": {
+                    "station": "ACS",
+                    "blocks": 1004
                 }
             }
         },
@@ -614,7 +639,7 @@
                 },
                 "Y1": {
                     "station": "MDC",
-                    "blocks": 675
+                    "blocks": 360
                 }
             }
         },
@@ -701,6 +726,10 @@
                 "3": {
                     "station": "SIL",
                     "blocks": 698
+                },
+                "4": {
+                    "station": "PLC",
+                    "blocks": 916
                 }
             }
         },
@@ -763,9 +792,14 @@
         },
         "PLC": {
             "name": "PLC Central",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
+            "cx": -1027,
+            "cz": 2259,
+            "platforms": {
+                "1": {
+                    "station": "MOD",
+                    "blocks": 916
+                }
+            }
         },
         "BGL": {
             "name": "Botanical Gardens Linda",
@@ -814,9 +848,25 @@
                     "station": "AAR",
                     "blocks": 603
                 },
+                "2": {
+                    "station": "STA",
+                    "blocks": 16
+                },
+                "3": {
+                    "station": "STA",
+                    "blocks": 16
+                },
                 "8": {
                     "station": "SIL",
                     "blocks": 775
+                },
+                "AQ2": {
+                    "station": "SHC",
+                    "blocks": 50
+                },
+                "AQ3": {
+                    "station": "INK",
+                    "blocks": 145
                 }
             }
         },
@@ -828,8 +878,37 @@
                 "1": {
                     "station": "ECO",
                     "blocks": 1596
+                },
+                "Y1": {
+                    "station": "PND",
+                    "blocks": 317
                 }
             }
+        },
+        "UOA": {
+            "name": "University of Anatoli",
+            "cx": 1016,
+            "cz": 1905,
+            "platforms": {
+                "1": {
+                    "station": "IVC",
+                    "blocks": 424
+                },
+                "2": {
+                    "station": "AAR",
+                    "blocks": 661
+                },
+                "3": {
+                    "station": "ATI",
+                    "blocks": 1062
+                }
+            }
+        },
+        "": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
         }
     }
 }
