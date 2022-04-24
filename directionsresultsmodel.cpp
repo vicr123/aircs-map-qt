@@ -62,16 +62,22 @@ QVariant DirectionsResultsModel::data(const QModelIndex& index, int role) const 
     switch (role) {
         case Qt::DisplayRole:
             return s->stationName();
-        case SecondaryTextRole:
+        case SecondaryTextRole: {
+            QStringList parts;
             if (after) {
                 if (after == s) {
-                    return tr("Arrive at the waypoint");
+                    parts.append(tr("Arrive at the waypoint"));
+                    parts.append(tr("Total Leg Time %1").arg(QTime::fromMSecsSinceStartOfDay(index.data(CumulativeDurationRole).toUInt()).toString("mm:ss")));
                 } else {
-                    return tr("Take Platform %1").arg(s->platformForConnection(after->shortcode()));
+                    parts.append(tr("Take Platform %1").arg(s->platformForConnection(after->shortcode())));
+                    parts.append(tr("ETA %1").arg(s->eta(s->platformForConnection(after->shortcode())).toString("mm:ss")));
                 }
             } else {
-                return tr("Arrive at the destination");
+                parts.append(tr("Arrive at the destination"));
+                parts.append(tr("Total Leg Time %1").arg(QTime::fromMSecsSinceStartOfDay(index.data(CumulativeDurationRole).toUInt()).toString("mm:ss")));
             }
+            return parts.join(" · ");
+        }
         case StationTokenSizeRole:
             return QSize(16, 16);
         case ConnectionsRole: {
@@ -79,6 +85,16 @@ QVariant DirectionsResultsModel::data(const QModelIndex& index, int role) const 
             if (before && before != s) connections |= 0x1;
             if (after && after != s) connections |= 0x2;
             return connections;
+        }
+        case CumulativeDurationRole: {
+            uint cumulativeDuration = 0;
+            if (before && before != s) {
+                cumulativeDuration += this->data(this->index(index.row() - 1), CumulativeDurationRole).toUInt();
+            }
+            if (after) {
+                cumulativeDuration += s->eta(s->platformForConnection(after->shortcode())).msecsSinceStartOfDay();
+            }
+            return cumulativeDuration;
         }
         case BeforeLineColorRole:
             return QColor(Qt::black);

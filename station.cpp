@@ -91,6 +91,11 @@ int Station::distance(QString platform) {
     return d->platformDistances.value(platform);
 }
 
+QTime Station::eta(QString platform)
+{
+    return QTime::fromMSecsSinceStartOfDay(this->distance(platform) / 8 * 1000);
+}
+
 QString Station::platformForConnection(QString connection) {
     return d->platformDestinations.key(connection);
 }

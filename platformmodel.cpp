@@ -81,7 +81,7 @@ QVariant PlatformModel::data(const QModelIndex& index, int role) const {
             case 1:
                 return DataManager::station(d->station->connection(platform))->stationName();
             case 2:
-                return QTime::fromMSecsSinceStartOfDay(d->station->distance(platform) / 8 * 1000).toString("mm:ss");
+                return d->station->eta(platform).toString("mm:ss");
         }
     }
 

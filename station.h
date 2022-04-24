@@ -37,6 +37,7 @@ class Station : public QObject {
         QString platformName(QString platform);
         QString connection(QString platform);
         int distance(QString platform);
+        QTime eta(QString platform);
         QString platformForConnection(QString connection);
 
     signals:

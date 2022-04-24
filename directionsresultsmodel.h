@@ -36,6 +36,7 @@ class DirectionsResultsModel : public QAbstractListModel {
             SecondaryTextRole = Qt::UserRole,
             StationTokenSizeRole,
             ConnectionsRole,
+            CumulativeDurationRole,
             BeforeLineColorRole,
             AfterLineColorRole
         };
