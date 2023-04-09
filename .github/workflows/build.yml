@@ -46,7 +46,7 @@ jobs:
           version: '6.5.0'
           host: 'linux'
           target: 'desktop'
-          arch: 'wasm_multithread'
+          arch: 'wasm_singlethread'
           modules: 'qtcharts qtdatavis3d qtgrpc qthttpserver qtimageformats qtlottie qtmultimedia qtquick3dphysics qtscxml qtspeech qtvirtualkeyboard qtwebchannel qtwebsockets qt5compat qtquick3d qtquicktimeline qtshadertools'
           cache: true
       - name: Configure and Build
