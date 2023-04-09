@@ -25,29 +25,28 @@ jobs:
       - name: Setup emsdk
         uses: mymindstorm/setup-emsdk@v11
         with:
-          version: 3.1.25
+          version: 1.39.8
           actions-cache-folder: 'emsdk-cache'
       - name: Install Qt Desktop
         uses: jurplel/install-qt-action@v3
         with:
           aqtversion: '==3.1.*'
           py7zrversion: '>=0.20.2'
-          version: '6.5.0'
+          version: '5.15.2'
           host: 'linux'
           target: 'desktop'
           arch: 'gcc_64'
-          modules: 'qt3d qtcharts qtconnectivity qtdatavis3d qtgrpc qthttpserver qtimageformats qtlanguageserver qtlocation qtlottie qtmultimedia qtnetworkauth qtpdf qtpositioning qtquick3dphysics qtquickeffectmaker qtremoteobjects qtscxml qtsensors qtserialbus qtserialport qtspeech qtvirtualkeyboard qtwebchannel qtwebengine qtwebsockets qtwebview debug_info qt5compat qtquick3d qtquicktimeline qtshadertools qtwaylandcompositor'
           cache: true
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
         with:
           aqtversion: '==3.1.*'
           py7zrversion: '>=0.20.2'
-          version: '6.5.0'
+          version: '5.15.2'
           host: 'linux'
           target: 'desktop'
-          arch: 'wasm_singlethread'
-          modules: 'qtcharts qtdatavis3d qtgrpc qthttpserver qtimageformats qtlottie qtmultimedia qtquick3dphysics qtscxml qtspeech qtvirtualkeyboard qtwebchannel qtwebsockets qt5compat qtquick3d qtquicktimeline qtshadertools'
+          arch: 'wasm_32'
+          modules: 'qtcharts qtdatavis3d qtlottie qtnetworkauth qtpurchasing qtquicktimeline qtscript qtvirtualkeyboard qtwebglplugin'
           cache: true
       - name: Configure and Build
         run: |
