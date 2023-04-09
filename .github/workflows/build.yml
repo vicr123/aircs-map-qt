@@ -33,7 +33,7 @@ jobs:
           arch: 'wasm_multithread'
           modules: 'qtcharts qtdatavis3d qtgrpc qthttpserver qtimageformats qtlottie qtmultimedia qtquick3dphysics qtscxml qtspeech qtvirtualkeyboard qtwebchannel qtwebsockets qt5compat qtquick3d qtquicktimeline qtshadertools'
       - name: Configure and Build
-        runs: |
+        run: |
           mkdir build
           cd build
           qmake ../aircs-map-qt.pro
