@@ -22,21 +22,18 @@ jobs:
         with:
           persist-credentials: false
           submodules: true
+      - uses: actions/setup-node@v3
+        name: Set up node.js
+        with:
+          node-version: 16
+      - name: Acquire latest station information
+        run: |
+          node generate-json.js
       - name: Setup emsdk
         uses: mymindstorm/setup-emsdk@v11
         with:
           version: 1.39.8
           actions-cache-folder: 'emsdk-cache'
-      # - name: Install Qt Desktop
-      #   uses: jurplel/install-qt-action@v3
-      #   with:
-      #     aqtversion: '==3.1.*'
-      #     py7zrversion: '>=0.20.2'
-      #     version: '5.15.2'
-      #     host: 'linux'
-      #     target: 'desktop'
-      #     arch: 'gcc_64'
-      #     cache: true
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
         with:
