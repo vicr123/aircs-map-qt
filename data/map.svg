@@ -105,8 +105,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4"
-     inkscape:cx="123.625"
-     inkscape:cy="107.875"
+     inkscape:cx="104.875"
+     inkscape:cy="129.375"
      inkscape:document-units="px"
      inkscape:current-layer="map"
      inkscape:document-rotation="0"
@@ -1012,6 +1012,10 @@
          d="m 6.0854127,16.265279 h 4.8947923 l 0.79375,0.79375 2e-6,3.174999 -3.4395838,3.439583 H -10.847919 l -5.291667,-5.291667 h -29.633335"
          id="path14814"
          sodipodi:nodetypes="cccccccc" />
+      <path
+         style="fill:none;stroke:#4a296b;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -45.772928,18.911113 h 4.101042 l 1.5875,1.587498 v 1.322917 l 1.058334,1.058333 h 12.7 l 2.38125,2.38125 v 10.451045"
+         id="path18650" />
       <path
          style="fill:none;stroke:#00bd96;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m -2.7781299,31.743404 v -4.101042 l 3.70416673,-3.704167 10.05416917,-2e-6 0.79375,-0.79375 v -1.719789"
@@ -4556,10 +4560,6 @@
            x="24.473743"
            y="2.7779169"
            ry="0.25440353" />
-        <path
-           style="fill:none;stroke:#4a296b;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-           d="m 24.076868,3.5716677 h 4.101042 l 1.5875,1.5874987 v 1.3229167 l 1.058334,1.0583334 h 12.7 l 2.38125,2.38125 V 20.372711"
-           id="path18650" />
       </g>
       <g
          id="g9623"
@@ -5372,7 +5372,7 @@ KIBBUTZ"
            d="m 39.80961,1.4552088 h 0.02036 c 0.14094,0 0.254404,0.113464 0.254404,0.2544035 v 0.020359 c 0,0.1409396 -0.113464,0.2544036 -0.254404,0.2544036 h -0.02036 c -0.14094,0 -0.254404,-0.113464 -0.254404,-0.2544036 v -0.020359 c 0,-0.1409395 0.113464,-0.2544035 0.254404,-0.2544035 z" />
       </g>
       <g
-         id="WCA-8-2"
+         id="TFS"
          transform="translate(-63.764592,33.330904)">
         <g
            aria-label="FERRET SETTLEMENT,
