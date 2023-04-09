@@ -105,10 +105,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6568543"
-     inkscape:cx="205.85646"
-     inkscape:cy="64.611882"
+     inkscape:cx="397.30562"
+     inkscape:cy="48.525203"
      inkscape:document-units="px"
-     inkscape:current-layer="map"
+     inkscape:current-layer="BXF"
      inkscape:document-rotation="0"
      showgrid="true"
      units="px"
@@ -4169,6 +4169,21 @@ INT'NL AIRPORT"
            id="awdadw-1-76"
            style="fill:#ffffff;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round"
            d="m 24.728361,3.0427082 h 0.02036 c 0.140939,0 0.254403,0.1134639 0.254403,0.2544035 v 0.2849435 c 0,0.1409395 -0.113464,0.2544035 -0.254403,0.2544035 h -0.02036 c -0.14094,0 -0.254404,-0.113464 -0.254404,-0.2544035 V 3.2971117 c 0,-0.1409396 0.113464,-0.2544035 0.254404,-0.2544035 z" />
+        <g
+           id="g4022-8"
+           transform="translate(18.520829,-7.9375006)">
+          <path
+             id="rect3984-4"
+             style="fill:#0000c8;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 5.8208332,13.49375 h 1.0583333 v 1.058333 H 5.8208332 Z" />
+          <a
+             id="a4005-3">
+            <path
+               id="path3986-1"
+               style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"
+               d="m 6.5971274,13.714466 a 0.05879622,0.05879622 0 0 0 -0.0055,4.58e-4 0.05879622,0.05879622 0 0 0 -0.03376,0.01723 l -0.14079,0.14056 -0.215204,-0.07189 a 0.05879622,0.05879622 0 0 0 -0.02595,-0.0028 0.05879622,0.05879622 0 0 0 -0.04777,0.03996 0.05879622,0.05879622 0 0 0 0.03721,0.07464 l 0.158704,0.05306 -0.197978,0.197519 -0.09003,-0.03009 a 0.05879622,0.05879622 0 0 0 -0.02687,-0.0025 0.05879622,0.05879622 0 0 0 -0.04777,0.03996 0.05879622,0.05879622 0 0 0 0.03744,0.07464 l 0.04387,0.01447 a 0.05879622,0.05879622 0 0 0 0.01608,0.05397 0.05879622,0.05879622 0 0 0 0.05443,0.01585 l 0.01493,0.04502 a 0.05879622,0.05879622 0 0 0 0.07372,0.03652 0.05879622,0.05879622 0 0 0 0.03744,-0.07395 l -0.02986,-0.09072 0.197978,-0.197979 0.05329,0.159393 a 0.05879622,0.05879622 0 0 0 0.07464,0.03744 0.05879622,0.05879622 0 0 0 0.03629,-0.07464 l -0.07143,-0.215204 0.141019,-0.140789 a 0.05879622,0.05879622 0 0 0 0,-0.08245 0.05879622,0.05879622 0 0 0 -0.0441,-0.01769 z" />
+          </a>
+        </g>
       </g>
       <g
          id="STA"
@@ -5822,7 +5837,7 @@ POLYPOINT
            d="m 24.728361,3.3072922 h 0.02036 c 0.140939,0 0.254403,0.113464 0.254403,0.2544036 v 0.020359 c 0,0.1409395 -0.113464,0.2544035 -0.254403,0.2544035 h -0.02036 c -0.14094,0 -0.254404,-0.113464 -0.254404,-0.2544035 v -0.020359 c 0,-0.1409396 0.113464,-0.2544036 0.254404,-0.2544036 z" />
       </g>
       <g
-         id="BEL"
+         id="BEE"
          transform="translate(-66.939595,3.168404)">
         <g
            aria-label="BELINDAN
