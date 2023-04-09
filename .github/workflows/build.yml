@@ -48,26 +48,33 @@ jobs:
           arch: 'wasm_32'
           modules: 'qtcharts qtdatavis3d qtlottie qtnetworkauth qtpurchasing qtquicktimeline qtscript qtvirtualkeyboard qtwebglplugin'
           cache: true
-      - name: Configure and Build
+      - name: Configure
         run: |
           mkdir build
           cd build
           qmake ../aircs-map-qt.pro
+      - name: Build
+        run: |
+          cd build
           make
+      - name: Clean
+        run: |
+          cd build
+          rm *.cpp *.h *.o Makefile
       - uses: actions/upload-pages-artifact@v1
         with:
           path: build/
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   if: github.ref == 'refs/heads/master'
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   permissions:
-  #     pages: write
-  #     id-token: write
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v1
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/master'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
