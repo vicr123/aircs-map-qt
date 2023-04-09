@@ -22,7 +22,12 @@ jobs:
         with:
           persist-credentials: false
           submodules: true
-      - name: Install Qt
+      - name: Setup emsdk
+        uses: mymindstorm/setup-emsdk@v11
+        with:
+          version: 3.1.25
+          actions-cache-folder: 'emsdk-cache'
+      - name: Install Qt Desktop
         uses: jurplel/install-qt-action@v3
         with:
           aqtversion: '==3.1.*'
