@@ -66,7 +66,7 @@ let endData = {};
                 rows.forEach(row => {
                     if (row[0] && row[1] && row[2]) endData.stations[row[0]].platforms[row[1]] = {
                         station: row[2],
-                        blocks: parseInt(row[7])
+                        blocks: parseInt(row[8])
                     }
                 });
             }
