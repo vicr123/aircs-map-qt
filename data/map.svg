@@ -5,7 +5,7 @@
    viewBox="0 0 166.95229 73.554373"
    version="1.1"
    id="svg905"
-   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    sodipodi:docname="map.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -104,18 +104,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568543"
-     inkscape:cx="286.7318"
-     inkscape:cy="46.757436"
+     inkscape:zoom="8.0000001"
+     inkscape:cx="156.5625"
+     inkscape:cy="100.5625"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="map"
      inkscape:document-rotation="0"
      showgrid="true"
      units="px"
-     inkscape:window-width="2560"
-     inkscape:window-height="1404"
-     inkscape:window-x="3840"
-     inkscape:window-y="725"
+     inkscape:window-width="3840"
+     inkscape:window-height="2101"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -130,7 +130,11 @@
        id="grid1468"
        enabled="true"
        originx="71.702275"
-       originy="13.493958" />
+       originy="13.493958"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
     <inkscape:grid
        type="xygrid"
        id="grid1470"
@@ -138,7 +142,11 @@
        originx="71.834567"
        empspacing="1"
        dotted="true"
-       enabled="true" />
+       enabled="true"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
   </sodipodi:namedview>
   <metadata
      id="metadata902">
@@ -845,11 +853,16 @@
        id="map"
        transform="translate(-1.3229205,0.2711837)">
       <path
+         style="fill:none;stroke:#3f26c5;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -7.1437742,11.502779 h -8.3343738 l -0.529166,-0.529167 -9.524991,1e-6 -1.5875,-1.5875002 -0.0064,-10.8255331"
+         id="path39758"
+         sodipodi:nodetypes="cccccc" />
+      <path
          style="fill:none;fill-opacity:1;stroke:#7e1d11;stroke-width:0.26458334;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.0583334,0.26458335;stroke-dashoffset:0;stroke-opacity:1"
          d="m -12.567733,-13.103472 h 5.0270838 l 3.4395834,3.1750004 h 3.70416673"
          id="path97382" />
       <path
-         style="fill:none;fill-opacity:1;stroke:#646464;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.264583, 0.264583;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#646464;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.265,0.265;stroke-dashoffset:0;stroke-opacity:1"
          d="m -19.050026,-10.986805 h 3.307292 l 2.116667,-2.116666 1.058334,0"
          id="path66225-4"
          sodipodi:nodetypes="cccc" />
@@ -905,12 +918,7 @@
          id="path62759" />
       <path
          style="fill:none;stroke:#646464;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.264583, 0.264583;stroke-dashoffset:0;stroke-opacity:1"
-         d="m -21.431273,10.973612 h 5.423959 l 0.529166,0.529167 1.322915,0"
-         id="path62805"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="fill:none;stroke:#646464;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.264583, 0.264583;stroke-dashoffset:0;stroke-opacity:1"
-         d="m -27.119815,4.8881955 10e-7,-10.31875"
+         d="M -27.119814,-1.2711797 V -5.4305545"
          id="path62761"
          sodipodi:nodetypes="cc" />
       <path
@@ -1673,11 +1681,6 @@
          d="m -32.543763,11.238194 14.022907,2e-6 2.645834,2.645834 12.5677084,-10e-7 1.455208,-1.058334 H 17.065625 l 1.5875,-1.5875 h 2.513537"
          id="path2294"
          sodipodi:nodetypes="cccccccc" />
-      <path
-         style="fill:none;stroke:#3f26c5;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="m -21.563564,10.973613 h -3.968741 l -1.5875,-1.5875002 -9e-6,-4.4979171"
-         id="path39758"
-         sodipodi:nodetypes="cccc" />
       <path
          style="fill:none;stroke:#67b272;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.05833, 0.264583;stroke-dashoffset:0;stroke-opacity:1"
          d="m -31.485427,17.852779 h 2.778125 l 6.350006,-6.350002 h 0.661458"
@@ -3689,8 +3692,7 @@
          id="SPA"
          transform="translate(-43.127108,-14.55868)">
         <g
-           aria-label="SENPEKEN
-AIRPORT"
+           aria-label="SENPEKEN AIRPORT"
            id="text1484-2-7-5-30-8-1-6-03"
            style="font-size:0.780902px;line-height:0.6;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582">
           <path
@@ -3805,8 +3807,7 @@ AIRPORT"
          id="RFX"
          transform="translate(-38.893771,7.9309041)">
         <g
-           aria-label="SEVEN ELEVEN
-RAINFOREST"
+           aria-label="SEVEN ELEVEN RAINFOREST"
            id="text1484-2-7-5-30-8-1-6-31"
            style="font-size:0.780902px;line-height:0.6;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582">
           <path
@@ -3892,8 +3893,7 @@ RAINFOREST"
          id="TTU"
          transform="translate(-52.652104,-6.885763)">
         <g
-           aria-label="TURING
-TOWN"
+           aria-label="TURING TOWN"
            id="text1484-2-7-5-30-8-7-96"
            style="font-size:0.780902px;line-height:0.6;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582">
           <path
@@ -5996,8 +5996,7 @@ TOWN"
          id="SEP"
          transform="translate(-66.660186,-3.166299)">
         <g
-           aria-label="SEPTEMBER
-SANDS"
+           aria-label="SEPTEMBER SANDS"
            id="text1484-2-7-5-30-8-7-4"
            style="font-size:0.780902px;line-height:0.6;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582">
           <path
@@ -6438,8 +6437,7 @@ SANDS"
          id="RED"
          transform="translate(11.377064,11.635071)">
         <g
-           aria-label="RED ISLAND
-CITY"
+           aria-label="RED ISLAND CITY"
            id="text1484-2-7-5-30-8-7-88"
            style="font-size:0.780902px;line-height:0.6;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582">
           <path
@@ -6600,8 +6598,7 @@ CITY"
          id="CDY"
          transform="translate(-5.8208541,25.657988)">
         <g
-           aria-label="CHOMEDEY
-"
+           aria-label="CHOMEDEY "
            id="text1484-2-7-5-30-8-1-6-60"
            style="font-size:0.780902px;line-height:0.6;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582">
           <path
