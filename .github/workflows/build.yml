@@ -30,7 +30,7 @@ jobs:
         run: |
           node generate-json.js
       - name: Setup emsdk
-        uses: mymindstorm/setup-emsdk@v11
+        uses: mymindstorm/setup-emsdk@v14
         with:
           version: 1.39.8
           actions-cache-folder: 'emsdk-cache'
