@@ -1,0 +1,2581 @@
+{
+    "stations": {
+        "AAR": {
+            "name": "AirCS Arena",
+            "cx": null,
+            "cz": 743,
+            "platforms": {
+                "1": {
+                    "station": "ATI",
+                    "blocks": 448
+                },
+                "2": {
+                    "station": "ATIA",
+                    "blocks": 656
+                },
+                "3": {
+                    "station": "ACS",
+                    "blocks": 1483
+                },
+                "4": {
+                    "station": "STA",
+                    "blocks": 603
+                },
+                "5": {
+                    "station": "UOA",
+                    "blocks": 661
+                }
+            }
+        },
+        "ACS": {
+            "name": "AirCS Central",
+            "cx": null,
+            "cz": 86,
+            "platforms": {
+                "1": {
+                    "station": "LI",
+                    "blocks": 997
+                },
+                "2": {
+                    "station": "WC",
+                    "blocks": 429
+                },
+                "3": {
+                    "station": "VIC",
+                    "blocks": 1004
+                },
+                "4": {
+                    "station": "BLO",
+                    "blocks": 917
+                },
+                "5": {
+                    "station": "BBT",
+                    "blocks": 633
+                },
+                "6": {
+                    "station": "LD",
+                    "blocks": 505
+                },
+                "7": {
+                    "station": "WCA",
+                    "blocks": 590
+                },
+                "8": {
+                    "station": "BLH",
+                    "blocks": 719
+                },
+                "9": {
+                    "station": "AAR",
+                    "blocks": 1483
+                },
+                "10": {
+                    "station": "ALI",
+                    "blocks": 1028
+                },
+                "11": {
+                    "station": "INK",
+                    "blocks": 779
+                },
+                "13": {
+                    "station": "PND",
+                    "blocks": 8300
+                },
+                "Y1": {
+                    "station": "LON",
+                    "blocks": 133
+                },
+                "X": {
+                    "station": "ALT",
+                    "blocks": 633
+                },
+                "XI": {
+                    "station": "INK",
+                    "blocks": 275
+                },
+                "I": {
+                    "station": "SFC",
+                    "blocks": 182
+                },
+                "III": {
+                    "station": "CTN",
+                    "blocks": 1654
+                }
+            }
+        },
+        "AEC": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "AKI": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "AKL": {
+            "name": "Auckland",
+            "cx": null,
+            "cz": 55,
+            "platforms": {
+                "1": {
+                    "station": "LD",
+                    "blocks": 338
+                },
+                "2": {
+                    "station": "VEV",
+                    "blocks": 372
+                },
+                "3": {
+                    "station": "BGC",
+                    "blocks": 588
+                }
+            }
+        },
+        "AKY": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "ALI": {
+            "name": "Alee Isle",
+            "cx": null,
+            "cz": -292,
+            "platforms": {
+                "B2": {
+                    "station": "MOD",
+                    "blocks": 1327
+                },
+                "A1": {
+                    "station": "ACS",
+                    "blocks": 1028
+                },
+                "B3": {
+                    "station": "BCO",
+                    "blocks": 964
+                },
+                "B4": {
+                    "station": "SIL",
+                    "blocks": 751
+                },
+                "B1": {
+                    "station": "NXU",
+                    "blocks": 699
+                },
+                "B6": {
+                    "station": "SEI",
+                    "blocks": 611
+                },
+                "A2": {
+                    "station": "BBT",
+                    "blocks": 437
+                },
+                "B7": {
+                    "station": "SKY",
+                    "blocks": 321
+                },
+                "B5": {
+                    "station": "FVW",
+                    "blocks": 317
+                }
+            }
+        },
+        "ALT": {
+            "name": "Alee Town",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 633
+                },
+                "3": {
+                    "station": "FVW",
+                    "blocks": 278
+                }
+            }
+        },
+        "ANK": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "APS": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "ASA": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "ATI": {
+            "name": "Anatoli Park & Ride",
+            "cx": null,
+            "cz": 756,
+            "platforms": {
+                "1": {
+                    "station": "ATIA",
+                    "blocks": 330
+                },
+                "2": {
+                    "station": "AAR",
+                    "blocks": 448
+                },
+                "3": {
+                    "station": "UOA",
+                    "blocks": 1062
+                },
+                "B2": {
+                    "station": "NCT",
+                    "blocks": 1331
+                },
+                "B1": {
+                    "station": "BLO",
+                    "blocks": 635
+                }
+            }
+        },
+        "ATIA": {
+            "name": "Anatoli International Airport",
+            "cx": null,
+            "cz": 979,
+            "platforms": {
+                "1": {
+                    "station": "ATI",
+                    "blocks": 330
+                },
+                "2": {
+                    "station": "AAR",
+                    "blocks": 656
+                }
+            }
+        },
+        "BAP": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "BAX": {
+            "name": "Baxford Central",
+            "cx": null,
+            "cz": -7013,
+            "platforms": {
+                "1": {
+                    "station": "SNK",
+                    "blocks": 319
+                },
+                "2": {
+                    "station": "TQM",
+                    "blocks": 711
+                },
+                "3": {
+                    "station": "NXF",
+                    "blocks": 442
+                },
+                "N3": {
+                    "station": "KMD",
+                    "blocks": 398
+                },
+                "N1": {
+                    "station": "MTL",
+                    "blocks": 1055
+                },
+                "N2": {
+                    "station": "TRI",
+                    "blocks": 702
+                }
+            }
+        },
+        "BBT": {
+            "name": "Birch Boat Town",
+            "cx": null,
+            "cz": 61,
+            "platforms": {
+                "1": {
+                    "station": "SHC",
+                    "blocks": 208
+                },
+                "2": {
+                    "station": "ACS",
+                    "blocks": 633
+                },
+                "3": {
+                    "station": "ALI",
+                    "blocks": 437
+                },
+                "4": {
+                    "station": "BLO",
+                    "blocks": 338
+                }
+            }
+        },
+        "BCO": {
+            "name": "Breadcroust",
+            "cx": null,
+            "cz": -975,
+            "platforms": {
+                "1": {
+                    "station": "ALI",
+                    "blocks": 964
+                }
+            }
+        },
+        "BDR": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "BDV": {
+            "name": "Baldivis",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "T2": {
+                    "station": "SPT",
+                    "blocks": 1228
+                },
+                "T1": {
+                    "station": "TTU",
+                    "blocks": 1237
+                },
+                "A1": {
+                    "station": "TRI",
+                    "blocks": 453
+                }
+            }
+        },
+        "BEE": {
+            "name": "Belindan Slopes",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "A2": {
+                    "station": "BEL",
+                    "blocks": 640
+                },
+                "A3": {
+                    "station": "SEP",
+                    "blocks": 787
+                },
+                "A1": {
+                    "station": "PND",
+                    "blocks": 1241
+                }
+            }
+        },
+        "BEL": {
+            "name": "Bell Tower",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "BGL",
+                    "blocks": 922
+                },
+                "2": {
+                    "station": "BEE",
+                    "blocks": 640
+                },
+                "3": {
+                    "station": "TTU",
+                    "blocks": 458
+                }
+            }
+        },
+        "BFW": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "BGC": {
+            "name": "BingoCity",
+            "cx": null,
+            "cz": -327,
+            "platforms": {
+                "1": {
+                    "station": "UFO",
+                    "blocks": 733
+                },
+                "2": {
+                    "station": "AKL",
+                    "blocks": 588
+                }
+            }
+        },
+        "BGL": {
+            "name": "Botanical Gardens Linda",
+            "cx": null,
+            "cz": -5471,
+            "platforms": {
+                "1": {
+                    "station": "MDC",
+                    "blocks": 1196
+                },
+                "2": {
+                    "station": "BEL",
+                    "blocks": 922
+                },
+                "3": {
+                    "station": "RFX",
+                    "blocks": 964
+                },
+                "4": {
+                    "station": "NEW",
+                    "blocks": 766
+                }
+            }
+        },
+        "BHM": {
+            "name": "Bohemia Junction",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "BIL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "BLH": {
+            "name": "Blake Hospital",
+            "cx": null,
+            "cz": 296,
+            "platforms": {
+                "1": {
+                    "station": "LD",
+                    "blocks": 358
+                },
+                "2": {
+                    "station": "VEV",
+                    "blocks": 135
+                },
+                "3": {
+                    "station": "ACS",
+                    "blocks": 719
+                }
+            }
+        },
+        "BLO": {
+            "name": "Birch Lodges",
+            "cx": null,
+            "cz": 233,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 917
+                },
+                "2": {
+                    "station": "BBT",
+                    "blocks": 338
+                },
+                "3": {
+                    "station": "ATI",
+                    "blocks": 635
+                }
+            }
+        },
+        "BWA": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "BXF": {
+            "name": "Baxford International Terminal 1",
+            "cx": null,
+            "cz": -6926,
+            "platforms": {
+                "1": {
+                    "station": "TQM",
+                    "blocks": 403
+                },
+                "2": {
+                    "station": "PPS",
+                    "blocks": 1112
+                },
+                "3": {
+                    "station": "TRI",
+                    "blocks": 194
+                },
+                "4": {
+                    "station": "BXFB",
+                    "blocks": 129
+                }
+            }
+        },
+        "BXFB": {
+            "name": "Baxford International Terminal 2",
+            "cx": null,
+            "cz": -7172,
+            "platforms": {
+                "1": {
+                    "station": "BXF",
+                    "blocks": 129
+                },
+                "2": {
+                    "station": "MTL",
+                    "blocks": 612
+                }
+            }
+        },
+        "CCW": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "CDY": {
+            "name": "Chomedey",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "CHL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "CLP": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "CLW": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "CPL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "CTA": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "CTN": {
+            "name": "Crosstown",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "AQB1": {
+                    "station": "VZN",
+                    "blocks": 351
+                },
+                "AQA1": {
+                    "station": "FFY",
+                    "blocks": 641
+                },
+                "Y1": {
+                    "station": "PFN",
+                    "blocks": 692
+                },
+                "D1": {
+                    "station": "ACS",
+                    "blocks": 1654
+                }
+            }
+        },
+        "CTV": {
+            "name": "Contemporary Valley",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "A1": {
+                    "station": "DCI",
+                    "blocks": 1044
+                },
+                "N1": {
+                    "station": "ACS",
+                    "blocks": 300
+                }
+            }
+        },
+        "CVL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "DCI": {
+            "name": "Derek City",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "A1": {
+                    "station": "CTV",
+                    "blocks": 1044
+                },
+                "B1": {
+                    "station": "VDA",
+                    "blocks": 605
+                },
+                "A2": {
+                    "station": "PND",
+                    "blocks": 245
+                }
+            }
+        },
+        "DCY": {
+            "name": "Delancy",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "Y1": {
+                    "station": "WDT",
+                    "blocks": 445
+                },
+                "N1": {
+                    "station": "RED",
+                    "blocks": 554
+                }
+            }
+        },
+        "DLA": {
+            "name": "Dlphecity Airport",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "DLK",
+                    "blocks": 486
+                },
+                "2": {
+                    "station": "DLP",
+                    "blocks": 172
+                },
+                "3": {
+                    "station": "YAV",
+                    "blocks": 683
+                }
+            }
+        },
+        "DLI": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "DLK": {
+            "name": "Old Kibbutz",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "2": {
+                    "station": "DLA",
+                    "blocks": 486
+                }
+            }
+        },
+        "DLO": {
+            "name": "Southorn",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "YAV",
+                    "blocks": 919
+                },
+                "2": {
+                    "station": "MDB",
+                    "blocks": 782
+                },
+                "N1": {
+                    "station": "DLP",
+                    "blocks": 264
+                },
+                "N2": {
+                    "station": "RED",
+                    "blocks": 114
+                },
+                "N3": {
+                    "station": "ETD",
+                    "blocks": 691
+                }
+            }
+        },
+        "DLP": {
+            "name": "Dlphecity",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "LLD",
+                    "blocks": 573
+                },
+                "2": {
+                    "station": "DLA",
+                    "blocks": 172
+                },
+                "N2": {
+                    "station": "KMD",
+                    "blocks": 2271
+                },
+                "N1": {
+                    "station": "DLO",
+                    "blocks": 264
+                }
+            }
+        },
+        "DOK": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "DT": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "ECO": {
+            "name": "Energy Cove",
+            "cx": null,
+            "cz": -1230,
+            "platforms": {
+                "1": {
+                    "station": "SLP",
+                    "blocks": 614
+                },
+                "2": {
+                    "station": "MTL",
+                    "blocks": 1596
+                },
+                "3": {
+                    "station": "MOD",
+                    "blocks": 893
+                },
+                "4": {
+                    "station": "SEI",
+                    "blocks": 1337
+                }
+            }
+        },
+        "EGL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "ETD": {
+            "name": "Estend",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "B1": {
+                    "station": "DLO",
+                    "blocks": 691
+                }
+            }
+        },
+        "FFY": {
+            "name": "Firefly",
+            "cx": null,
+            "cz": -3828,
+            "platforms": {
+                "6": {
+                    "station": "KTY",
+                    "blocks": 1046
+                },
+                "7": {
+                    "station": "MDC",
+                    "blocks": 1050
+                },
+                "AQ1": {
+                    "station": "FQC",
+                    "blocks": 860
+                },
+                "AQ2": {
+                    "station": "CTN",
+                    "blocks": 641
+                }
+            }
+        },
+        "FKT": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "FQC": {
+            "name": "Forêt Quebec",
+            "cx": null,
+            "cz": -1380,
+            "platforms": {
+                "3": {
+                    "station": "TAL",
+                    "blocks": 405
+                },
+                "Y1": {
+                    "station": "SEI",
+                    "blocks": 674
+                },
+                "AQ1": {
+                    "station": "FFY",
+                    "blocks": 860
+                }
+            }
+        },
+        "FVL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "FVW": {
+            "name": "Fairview",
+            "cx": null,
+            "cz": -215,
+            "platforms": {
+                "1": {
+                    "station": "ALI",
+                    "blocks": 318
+                },
+                "5": {
+                    "station": "ALT",
+                    "blocks": 278
+                }
+            }
+        },
+        "FWH": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "GAO": {
+            "name": "Shishiro",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "Y1": {
+                    "station": "SPK",
+                    "blocks": 218
+                }
+            }
+        },
+        "HTN": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "IGK": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "IGN": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "III": {
+            "name": "Incredibly Cold Environment",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "MSS",
+                    "blocks": 648
+                }
+            }
+        },
+        "IMR": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "INK": {
+            "name": "Inkytown",
+            "cx": null,
+            "cz": 533,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 779
+                },
+                "2": {
+                    "station": "NCT",
+                    "blocks": 1090
+                },
+                "3": {
+                    "station": "ACS",
+                    "blocks": 275
+                },
+                "AQ1": {
+                    "station": "STA",
+                    "blocks": 145
+                }
+            }
+        },
+        "IVC": {
+            "name": "Iverycity",
+            "cx": null,
+            "cz": 1269,
+            "platforms": {
+                "1": {
+                    "station": "UOA",
+                    "blocks": 424
+                }
+            }
+        },
+        "IVL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "KAY": {
+            "name": "Kasky",
+            "cx": null,
+            "cz": 894,
+            "platforms": {
+                "1": {
+                    "station": "VEV",
+                    "blocks": 629
+                }
+            }
+        },
+        "KMD": {
+            "name": "KuddelMuddel",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "4": {
+                    "station": "TFS",
+                    "blocks": 130
+                },
+                "N2": {
+                    "station": "DLP",
+                    "blocks": 2271
+                },
+                "N3": {
+                    "station": "BAX",
+                    "blocks": 1651
+                },
+                "N1": {
+                    "station": "VIC",
+                    "blocks": 323
+                }
+            }
+        },
+        "KNU": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "KTY": {
+            "name": "Katyusha",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "OSFT",
+                    "blocks": 478
+                },
+                "5": {
+                    "station": "FFY",
+                    "blocks": 1046
+                },
+                "6": {
+                    "station": "MDC",
+                    "blocks": 392
+                }
+            }
+        },
+        "LD": {
+            "name": "Legal District",
+            "cx": null,
+            "cz": 104,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 505
+                },
+                "2": {
+                    "station": "UFO",
+                    "blocks": 230
+                },
+                "3": {
+                    "station": "AKL",
+                    "blocks": 338
+                },
+                "4": {
+                    "station": "BLH",
+                    "blocks": 358
+                }
+            }
+        },
+        "LHH": {
+            "name": "Longhorn Hills",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "Y1": {
+                    "station": "SEI",
+                    "blocks": 501
+                }
+            }
+        },
+        "LI": {
+            "name": "Long Island",
+            "cx": null,
+            "cz": -463,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 997
+                },
+                "2": {
+                    "station": "WC",
+                    "blocks": 775
+                },
+                "3": {
+                    "station": "WOVR",
+                    "blocks": 321
+                },
+                "4": {
+                    "station": "UWGK",
+                    "blocks": 145
+                }
+            }
+        },
+        "LLD": {
+            "name": "Love Land",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "2": {
+                    "station": "DLP",
+                    "blocks": 573
+                }
+            }
+        },
+        "LON": {
+            "name": "Londinium",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "Y1": {
+                    "station": "ACS",
+                    "blocks": 133
+                }
+            }
+        },
+        "LRL": {
+            "name": "landrepeatland",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "LVN": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "MDA": {
+            "name": "Midcity Airport",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "MDC",
+                    "blocks": 278
+                }
+            }
+        },
+        "MDB": {
+            "name": "Midbar",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "DLO",
+                    "blocks": 782
+                }
+            }
+        },
+        "MDC": {
+            "name": "Midcity",
+            "cx": null,
+            "cz": -4454,
+            "platforms": {
+                "Y1": {
+                    "station": "WC",
+                    "blocks": 360
+                },
+                "A3": {
+                    "station": "FFY",
+                    "blocks": 1050
+                },
+                "A1": {
+                    "station": "SLP",
+                    "blocks": 515
+                },
+                "A2": {
+                    "station": "KTY",
+                    "blocks": 392
+                },
+                "B1": {
+                    "station": "BGL",
+                    "blocks": 1196
+                },
+                "N1": {
+                    "station": "VIC",
+                    "blocks": 421
+                },
+                "B2": {
+                    "station": "MDA",
+                    "blocks": 278
+                },
+                "A4": {
+                    "station": "TKI",
+                    "blocks": 1187
+                },
+                "B3": {
+                    "station": "TKI",
+                    "blocks": 1267
+                }
+            }
+        },
+        "MDN": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "MOD": {
+            "name": "Hebrith",
+            "cx": null,
+            "cz": -932,
+            "platforms": {
+                "1": {
+                    "station": "ALI",
+                    "blocks": 1327
+                },
+                "2": {
+                    "station": "SIL",
+                    "blocks": 698
+                },
+                "3": {
+                    "station": "ECO",
+                    "blocks": 893
+                },
+                "4": {
+                    "station": "PLC",
+                    "blocks": 916
+                },
+                "5": {
+                    "station": "SEI",
+                    "blocks": 706
+                }
+            }
+        },
+        "MRD": {
+            "name": "Mordecai",
+            "cx": null,
+            "cz": -5724,
+            "platforms": {
+                "1": {
+                    "station": "SNK",
+                    "blocks": 500
+                },
+                "2": {
+                    "station": "NXF",
+                    "blocks": 266
+                }
+            }
+        },
+        "MSA": {
+            "name": "MESS Airport",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "MSS",
+                    "blocks": 198
+                }
+            }
+        },
+        "MSS": {
+            "name": "MESS",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "III",
+                    "blocks": 648
+                },
+                "2": {
+                    "station": "MSA",
+                    "blocks": 198
+                },
+                "Y1": {
+                    "station": "ROR",
+                    "blocks": 165
+                }
+            }
+        },
+        "MTL": {
+            "name": "Motley Island",
+            "cx": null,
+            "cz": -8720,
+            "platforms": {
+                "1": {
+                    "station": "ECO",
+                    "blocks": 1596
+                },
+                "2": {
+                    "station": "TRI",
+                    "blocks": 374
+                },
+                "3": {
+                    "station": "BAX",
+                    "blocks": 1055
+                },
+                "4": {
+                    "station": "BXFB",
+                    "blocks": 612
+                },
+                "Y1": {
+                    "station": "PND",
+                    "blocks": 317
+                }
+            }
+        },
+        "MUR": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCA": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCB": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCD": {
+            "name": "New Canadelgium",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCH": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCM": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCN": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCO": {
+            "name": "NCC Central Orb",
+            "cx": null,
+            "cz": 2048,
+            "platforms": {}
+        },
+        "NCP": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCR": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCS": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCT": {
+            "name": "New Clygro Town",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "ATI",
+                    "blocks": 1331
+                },
+                "2": {
+                    "station": "INK",
+                    "blocks": 1090
+                }
+            }
+        },
+        "NCTS": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCU": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NCW": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NEW": {
+            "name": "New City",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "C1": {
+                    "station": "BGL",
+                    "blocks": 766
+                }
+            }
+        },
+        "NHC": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NHP": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NIE": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NSW": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NVY": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "NWC": {
+            "name": "",
+            "cx": null,
+            "cz": 1454,
+            "platforms": {}
+        },
+        "NXF": {
+            "name": "Nextford",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "MRD",
+                    "blocks": 266
+                },
+                "2": {
+                    "station": "PPN",
+                    "blocks": 815
+                },
+                "3": {
+                    "station": "BAX",
+                    "blocks": 442
+                }
+            }
+        },
+        "NXU": {
+            "name": "Nexus Underground",
+            "cx": null,
+            "cz": -147,
+            "platforms": {
+                "1": {
+                    "station": "ALI",
+                    "blocks": 699
+                }
+            }
+        },
+        "OBV": {
+            "name": "Observation Deck",
+            "cx": null,
+            "cz": -76,
+            "platforms": {
+                "1": {
+                    "station": "UFO",
+                    "blocks": 79
+                }
+            }
+        },
+        "OMN": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "OSFT": {
+            "name": "Old Shiftania",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "KTY",
+                    "blocks": 478
+                }
+            }
+        },
+        "OVL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "OWO": {
+            "name": "Lower Furryburg",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "PND",
+                    "blocks": 1059
+                },
+                "2": {
+                    "station": "UWU",
+                    "blocks": 442
+                }
+            }
+        },
+        "PFN": {
+            "name": "Puffinsburg",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "B1": {
+                    "station": "WDT",
+                    "blocks": 831
+                },
+                "Y1": {
+                    "station": "CTN",
+                    "blocks": 692
+                }
+            }
+        },
+        "PHL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "PIL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "PKI": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "PLC": {
+            "name": "PLC Central",
+            "cx": null,
+            "cz": -1027,
+            "platforms": {
+                "1": {
+                    "station": "MOD",
+                    "blocks": 916
+                }
+            }
+        },
+        "PLK": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "PLM": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "PLN": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "PND": {
+            "name": "Palinode",
+            "cx": null,
+            "cz": -7988,
+            "platforms": {
+                "AQ1": {
+                    "station": "ROR",
+                    "blocks": 884
+                },
+                "B1": {
+                    "station": "ACS",
+                    "blocks": 8300
+                },
+                "Y1": {
+                    "station": "MTL",
+                    "blocks": 317
+                },
+                "A5": {
+                    "station": "DCI",
+                    "blocks": 245
+                },
+                "A4": {
+                    "station": "RFX",
+                    "blocks": 459
+                },
+                "A3": {
+                    "station": "BEE",
+                    "blocks": 1241
+                },
+                "A1": {
+                    "station": "VIC",
+                    "blocks": 779
+                },
+                "A2": {
+                    "station": "RPO",
+                    "blocks": 506
+                }
+            }
+        },
+        "PPN": {
+            "name": "North Polypoint",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "2": {
+                    "station": "PPS",
+                    "blocks": 928
+                }
+            }
+        },
+        "PPS": {
+            "name": "South Polypoint",
+            "cx": null,
+            "cz": -4132,
+            "platforms": {
+                "1": {
+                    "station": "BXF",
+                    "blocks": 1112
+                },
+                "2": {
+                    "station": "PPN",
+                    "blocks": 928
+                },
+                "A1": {
+                    "station": "VDN",
+                    "blocks": 823
+                },
+                "A2": {
+                    "station": "SPT",
+                    "blocks": 1503
+                }
+            }
+        },
+        "QRC": {
+            "name": "Quartercity",
+            "cx": null,
+            "cz": -2542,
+            "platforms": {
+                "1": {
+                    "station": "WOVR",
+                    "blocks": 719
+                },
+                "2": {
+                    "station": "TKI",
+                    "blocks": 1595
+                }
+            }
+        },
+        "RCO": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "RED": {
+            "name": "Red Island City",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "N3": {
+                    "station": "DCY",
+                    "blocks": 554
+                },
+                "N1": {
+                    "station": "ROR",
+                    "blocks": 337
+                },
+                "N2": {
+                    "station": "DLO",
+                    "blocks": 114
+                }
+            }
+        },
+        "REDI": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "RFX": {
+            "name": "Seven Eleven Rainforest",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "BGL",
+                    "blocks": 964
+                },
+                "2": {
+                    "station": "PND",
+                    "blocks": 459
+                }
+            }
+        },
+        "ROAR": {
+            "name": "Lion Land Airport",
+            "cx": null,
+            "cz": -891,
+            "platforms": {
+                "1": {
+                    "station": "ROR",
+                    "blocks": 152
+                }
+            }
+        },
+        "ROR": {
+            "name": "Lion Land",
+            "cx": null,
+            "cz": -805,
+            "platforms": {
+                "1": {
+                    "station": "VEV",
+                    "blocks": 539
+                },
+                "2": {
+                    "station": "YAV",
+                    "blocks": 623
+                },
+                "3": {
+                    "station": "RED",
+                    "blocks": 337
+                },
+                "AQ1": {
+                    "station": "PND",
+                    "blocks": 884
+                },
+                "Y1": {
+                    "station": "MSS",
+                    "blocks": 165
+                },
+                "A1": {
+                    "station": "ROAR",
+                    "blocks": 152
+                }
+            }
+        },
+        "RPO": {
+            "name": "Rogueport",
+            "cx": null,
+            "cz": -8104,
+            "platforms": {
+                "1": {
+                    "station": "PND",
+                    "blocks": 506
+                }
+            }
+        },
+        "SCC": {
+            "name": "Summasol City Central",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "WDT",
+                    "blocks": 1143
+                }
+            }
+        },
+        "SEI": {
+            "name": "SEI Central Station",
+            "cx": null,
+            "cz": -353,
+            "platforms": {
+                "1": {
+                    "station": "ALI",
+                    "blocks": 611
+                },
+                "3": {
+                    "station": "SIL",
+                    "blocks": 291
+                },
+                "4": {
+                    "station": "MOD",
+                    "blocks": 707
+                },
+                "Y2": {
+                    "station": "FQC",
+                    "blocks": 674
+                },
+                "Y1": {
+                    "station": "LHH",
+                    "blocks": 501
+                },
+                "B1": {
+                    "station": "ECO",
+                    "blocks": 1337
+                }
+            }
+        },
+        "SEP": {
+            "name": "September Sands",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "BEE",
+                    "blocks": 787
+                }
+            }
+        },
+        "SFC": {
+            "name": "Sunflower City",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 182
+                }
+            }
+        },
+        "SFN": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SHB": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SHC": {
+            "name": "ShiftCity",
+            "cx": null,
+            "cz": 180,
+            "platforms": {
+                "1": {
+                    "station": "BBT",
+                    "blocks": 208
+                },
+                "AQ1": {
+                    "station": "STA",
+                    "blocks": 50
+                }
+            }
+        },
+        "SIL": {
+            "name": "Silicon Valley",
+            "cx": null,
+            "cz": -302,
+            "platforms": {
+                "1": {
+                    "station": "ALI",
+                    "blocks": 751
+                },
+                "2": {
+                    "station": "MOD",
+                    "blocks": 698
+                },
+                "3": {
+                    "station": "STA",
+                    "blocks": 775
+                },
+                "4": {
+                    "station": "SEI",
+                    "blocks": 291
+                },
+                "5": {
+                    "station": "WTL",
+                    "blocks": 297
+                }
+            }
+        },
+        "SKM": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SKY": {
+            "name": "SkyCity",
+            "cx": null,
+            "cz": -394,
+            "platforms": {
+                "1": {
+                    "station": "ALI",
+                    "blocks": 321
+                }
+            }
+        },
+        "SLP": {
+            "name": "Sulópolis",
+            "cx": null,
+            "cz": -2785,
+            "platforms": {
+                "1": {
+                    "station": "ECO",
+                    "blocks": 614
+                },
+                "2": {
+                    "station": "MDC",
+                    "blocks": 515
+                }
+            }
+        },
+        "SML": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SMT": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SNK": {
+            "name": "Snicket",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "MRD",
+                    "blocks": 500
+                },
+                "2": {
+                    "station": "BAX",
+                    "blocks": 319
+                }
+            }
+        },
+        "SNS": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SNW": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SPA": {
+            "name": "Senpeken Airport",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "SPK",
+                    "blocks": 341
+                }
+            }
+        },
+        "SPH": {
+            "name": "Sophie City",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "A1": {
+                    "station": "TKI",
+                    "blocks": 418
+                },
+                "B1": {
+                    "station": "TKI",
+                    "blocks": 475
+                }
+            }
+        },
+        "SPI": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SPK": {
+            "name": "Senpeken",
+            "cx": null,
+            "cz": -1220,
+            "platforms": {
+                "Y1": {
+                    "station": "GAO",
+                    "blocks": 218
+                },
+                "A2": {
+                    "station": "YAV",
+                    "blocks": 898
+                },
+                "A1": {
+                    "station": "VDN",
+                    "blocks": 761
+                },
+                "A3": {
+                    "station": "SPA",
+                    "blocks": 341
+                }
+            }
+        },
+        "SPT": {
+            "name": "Spatula",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "TTU",
+                    "blocks": 4153
+                },
+                "A2": {
+                    "station": "BDV",
+                    "blocks": 1228
+                },
+                "B2": {
+                    "station": "VDN",
+                    "blocks": 2275
+                },
+                "B1": {
+                    "station": "PPS",
+                    "blocks": 1503
+                }
+            }
+        },
+        "SRC": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SSA": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SSP": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SST": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "STA": {
+            "name": "Vremya",
+            "cx": null,
+            "cz": 228,
+            "platforms": {
+                "1": {
+                    "station": "AAR",
+                    "blocks": 603
+                },
+                "2": {
+                    "station": "STA",
+                    "blocks": 16
+                },
+                "3": {
+                    "station": "STA",
+                    "blocks": 16
+                },
+                "8": {
+                    "station": "SIL",
+                    "blocks": 775
+                },
+                "AQ1": {
+                    "station": "VEV",
+                    "blocks": 156
+                },
+                "AQ3": {
+                    "station": "INK",
+                    "blocks": 145
+                },
+                "AQ2": {
+                    "station": "SHC",
+                    "blocks": 50
+                }
+            }
+        },
+        "SVL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SWI": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "SWN": {
+            "name": "Slowtown",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "TAL": {
+            "name": "Tightly Arranged Long Locations",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "B1": {
+                    "station": "FQC",
+                    "blocks": 405
+                }
+            }
+        },
+        "TFS": {
+            "name": "The Ferret Settlement",
+            "cx": null,
+            "cz": -7396,
+            "platforms": {
+                "1": {
+                    "station": "KMD",
+                    "blocks": 130
+                }
+            }
+        },
+        "TKI": {
+            "name": "Tenkai",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "B1": {
+                    "station": "SPH",
+                    "blocks": 418
+                },
+                "A1": {
+                    "station": "SPH",
+                    "blocks": 475
+                },
+                "A2": {
+                    "station": "MDC",
+                    "blocks": 1187
+                },
+                "B2": {
+                    "station": "MDC",
+                    "blocks": 1267
+                },
+                "A3": {
+                    "station": "QRC",
+                    "blocks": 1595
+                }
+            }
+        },
+        "TKO": {
+            "name": "Tanuko",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "TQM": {
+            "name": "Torque Mall",
+            "cx": null,
+            "cz": -6867,
+            "platforms": {
+                "1": {
+                    "station": "BAX",
+                    "blocks": 711
+                },
+                "2": {
+                    "station": "BXF",
+                    "blocks": 403
+                }
+            }
+        },
+        "TRI": {
+            "name": "Treasure Island",
+            "cx": null,
+            "cz": -6837,
+            "platforms": {
+                "1": {
+                    "station": "MTL",
+                    "blocks": 374
+                },
+                "2": {
+                    "station": "BAX",
+                    "blocks": 702
+                },
+                "3": {
+                    "station": "BXF",
+                    "blocks": 194
+                },
+                "4": {
+                    "station": "BDV",
+                    "blocks": 453
+                }
+            }
+        },
+        "TSG": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "TTU": {
+            "name": "Turing Town",
+            "cx": null,
+            "cz": -5360,
+            "platforms": {
+                "1": {
+                    "station": "BEL",
+                    "blocks": 458
+                },
+                "2": {
+                    "station": "BDV",
+                    "blocks": 1237
+                },
+                "3": {
+                    "station": "SPT",
+                    "blocks": 4153
+                }
+            }
+        },
+        "UAI": {
+            "name": "University of Alee Isle",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "UFO": {
+            "name": "RMUFO",
+            "cx": null,
+            "cz": -62,
+            "platforms": {
+                "1": {
+                    "station": "LD",
+                    "blocks": 230
+                },
+                "2": {
+                    "station": "BGC",
+                    "blocks": 733
+                },
+                "3": {
+                    "station": "OBV",
+                    "blocks": 79
+                }
+            }
+        },
+        "UKR": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "UOA": {
+            "name": "University of Anatoli",
+            "cx": null,
+            "cz": 1016,
+            "platforms": {
+                "1": {
+                    "station": "IVC",
+                    "blocks": 424
+                },
+                "2": {
+                    "station": "AAR",
+                    "blocks": 661
+                },
+                "3": {
+                    "station": "ATI",
+                    "blocks": 1062
+                }
+            }
+        },
+        "UWGK": {
+            "name": "Underwater Go-Karting",
+            "cx": null,
+            "cz": -362,
+            "platforms": {
+                "1": {
+                    "station": "LI",
+                    "blocks": 145
+                }
+            }
+        },
+        "UWU": {
+            "name": "Upper Furryburg",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "OWO",
+                    "blocks": 442
+                }
+            }
+        },
+        "VDA": {
+            "name": "Vista del Arroyo",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "B1": {
+                    "station": "DCI",
+                    "blocks": 605
+                }
+            }
+        },
+        "VDN": {
+            "name": "Verdon",
+            "cx": null,
+            "cz": -2914,
+            "platforms": {
+                "1": {
+                    "station": "SPK",
+                    "blocks": 761
+                },
+                "2": {
+                    "station": "PPS",
+                    "blocks": 823
+                },
+                "3": {
+                    "station": "SPT",
+                    "blocks": 2275
+                }
+            }
+        },
+        "VEV": {
+            "name": "Veronaville",
+            "cx": null,
+            "cz": 349,
+            "platforms": {
+                "1": {
+                    "station": "BLH",
+                    "blocks": 135
+                },
+                "2": {
+                    "station": "ROR",
+                    "blocks": 539
+                },
+                "3": {
+                    "station": "AKL",
+                    "blocks": 372
+                },
+                "4": {
+                    "station": "KAY",
+                    "blocks": 629
+                },
+                "AQ1": {
+                    "station": "STA",
+                    "blocks": 156
+                }
+            }
+        },
+        "VIC": {
+            "name": "Victor's Interesting City",
+            "cx": null,
+            "cz": -7584,
+            "platforms": {
+                "1": {
+                    "station": "PND",
+                    "blocks": 779
+                },
+                "N1": {
+                    "station": "ACS",
+                    "blocks": 1004
+                },
+                "N3": {
+                    "station": "KMD",
+                    "blocks": 423
+                },
+                "N2": {
+                    "station": "MDC",
+                    "blocks": 421
+                }
+            }
+        },
+        "VYX": {
+            "name": "Vyxalla",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "VZN": {
+            "name": "Vosazen",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "AQ1": {
+                    "station": "CTN",
+                    "blocks": 351
+                }
+            }
+        },
+        "WC": {
+            "name": "Whale City",
+            "cx": null,
+            "cz": 260,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 429
+                },
+                "2": {
+                    "station": "LI",
+                    "blocks": 775
+                },
+                "3": {
+                    "station": "WCA",
+                    "blocks": 163
+                },
+                "4": {
+                    "station": "WCR",
+                    "blocks": 241
+                },
+                "5": {
+                    "station": "WCC",
+                    "blocks": 214
+                },
+                "Y1": {
+                    "station": "MDC",
+                    "blocks": 360
+                }
+            }
+        },
+        "WCA": {
+            "name": "Whale City Airport Terminal 1",
+            "cx": null,
+            "cz": 350,
+            "platforms": {
+                "1": {
+                    "station": "ACS",
+                    "blocks": 590
+                },
+                "2": {
+                    "station": "WC",
+                    "blocks": 163
+                },
+                "3": {
+                    "station": "WCAB",
+                    "blocks": 435
+                }
+            }
+        },
+        "WCAB": {
+            "name": "Whale City Airport Terminal 2",
+            "cx": null,
+            "cz": 450,
+            "platforms": {
+                "1": {
+                    "station": "WCA",
+                    "blocks": 435
+                }
+            }
+        },
+        "WCC": {
+            "name": "Whale City Commercial",
+            "cx": null,
+            "cz": 108,
+            "platforms": {
+                "1": {
+                    "station": "WC",
+                    "blocks": 214
+                }
+            }
+        },
+        "WCH": {
+            "name": "Whale City Heights",
+            "cx": null,
+            "cz": 256,
+            "platforms": {
+                "1": {
+                    "station": "WC",
+                    "blocks": 331
+                }
+            }
+        },
+        "WCL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "WCR": {
+            "name": "Whale City Residential",
+            "cx": null,
+            "cz": 194,
+            "platforms": {
+                "1": {
+                    "station": "WC",
+                    "blocks": 241
+                }
+            }
+        },
+        "WDT": {
+            "name": "Waddle Dee Town",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "SCC",
+                    "blocks": 1143
+                },
+                "2": {
+                    "station": "PFN",
+                    "blocks": 831
+                },
+                "Y1": {
+                    "station": "DCY",
+                    "blocks": 445
+                }
+            }
+        },
+        "WIL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "WOVR": {
+            "name": "Westover",
+            "cx": null,
+            "cz": -755,
+            "platforms": {
+                "1": {
+                    "station": "LI",
+                    "blocks": 321
+                },
+                "2": {
+                    "station": "QRC",
+                    "blocks": 719
+                }
+            }
+        },
+        "WRA": {
+            "name": "Wairua",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "WSW": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "WTL": {
+            "name": "Wetlands",
+            "cx": null,
+            "cz": null,
+            "platforms": {
+                "1": {
+                    "station": "SIL",
+                    "blocks": 297
+                }
+            }
+        },
+        "WVL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        },
+        "YAV": {
+            "name": "Yavno City",
+            "cx": null,
+            "cz": 350,
+            "platforms": {
+                "1": {
+                    "station": "DLO",
+                    "blocks": 919
+                },
+                "A3": {
+                    "station": "SPK",
+                    "blocks": 898
+                },
+                "A2": {
+                    "station": "DLA",
+                    "blocks": 683
+                },
+                "N1": {
+                    "station": "ROR",
+                    "blocks": 623
+                }
+            }
+        },
+        "YLL": {
+            "name": "",
+            "cx": null,
+            "cz": null,
+            "platforms": {}
+        }
+    }
+}

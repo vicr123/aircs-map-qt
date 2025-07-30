@@ -1,0 +1,37 @@
+﻿.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100lvh;
+    width: 100lvw;
+}
+
+.topBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    background: bisque;
+}
+
+.container main {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.topBar input {
+    display: flex;
+    flex-grow: 1;
+}
+
+.topBar button {
+    margin: 10px;
+}
+.topBar .logo {
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+}
