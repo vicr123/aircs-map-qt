@@ -17,10 +17,7 @@
     background: bisque;
 }
 
-.container main {
-    flex-grow: 1;
-    width: 100%;
-}
+
 
 .topBar input {
     display: flex;
@@ -34,4 +31,29 @@
     padding: 10px;
     height: 100%;
     box-sizing: border-box;
+}
+
+.mapContainer {
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Starting state: no rotation */
+    }
+    to {
+        transform: rotate(360deg); /* Ending state: full 360-degree rotation */
+    }
+}
+
+.map {
+    position: absolute;
+    scale: 2.310;
+    animation-name: spin;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
