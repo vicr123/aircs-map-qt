@@ -54,8 +54,8 @@ let endData = {};
                         ...acc,
                         [row[0]]: {
                             name: row[1],
-                            cx: parseInt(row[3]),
-                            cz: parseInt(row[4]),
+                            cx: parseInt(row[4]),
+                            cz: parseInt(row[5]),
                             platforms: {}
                         }
                     }
