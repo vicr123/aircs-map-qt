@@ -34,20 +34,17 @@
 }
 
 .mapContainer {
-    flex-grow: 1;
+    height: 100%;
     width: 100%;
     position: relative;
     overflow: hidden;
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg); /* Starting state: no rotation */
-    }
-    to {
-        transform: rotate(360deg); /* Ending state: full 360-degree rotation */
-    }
+.mainContainer {
+    flex-grow: 1;
+    width: 100%;
 }
+
 
 .map {
     position: absolute;

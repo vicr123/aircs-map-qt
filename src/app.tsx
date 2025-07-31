@@ -7,11 +7,13 @@ export function App() {
     return (
         <div class="container">
             <div class="topBar">
-                <button>Directions</button>
+                <img className="logo" src="/src/assets/aircslogo.svg" alt="AirCS Logo"/>
                 <input value={st}></input>
-                <img class="logo" src="/src/assets/aircslogo.svg" alt="AirCS Logo"/>
+                <button>Get Directions</button>
             </div>
-            <Map setSt={setSt}/>
+            <div class="mainContainer">
+                <Map setSt={setSt}/>
+            </div>
         </div>
     );
 }
