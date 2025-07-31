@@ -1,38 +1,44 @@
-﻿import {useEffect, useMemo, useRef, useState} from "preact/hooks";
+﻿import {useEffect, useMemo, useRef} from "preact/hooks";
 import type {RefObject} from "preact";
 
-function Svg({ref: obj}: {ref: RefObject<HTMLObjectElement>}) {
-    function loadEv() {
-        const svg = obj.current!.contentDocument!;
+function Svg({divRef, onNodeClicked}: {divRef: RefObject<HTMLDivElement>, onNodeClicked: (s: string) => void}) {
+    useEffect(() => {
+        (async () => {
+            const req = await fetch("map.svg");
+            const data = await req.text();
+            const parse = new DOMParser().parseFromString(data, "image/svg+xml") as XMLDocument;
+            if (parse.firstElementChild instanceof SVGSVGElement) {
+                parse.firstElementChild.id = "map";
+                return parse.firstElementChild;
+            }
+            throw new Error("Failed to parse image");
+        })().then(svg => {
+            if (divRef.current !== null) {
+                for (const i of ["AAR", "ACS"]) {
+                    console.log(svg.getElementById(i));
+                    (svg.getElementById(i) as SVGGElement).style.cursor = "pointer";
+                    svg.getElementById(i)?.addEventListener("click", () => onNodeClicked(i));
 
-        console.log(svg.getElementById("ACS"));
+                }
+                if (divRef.current.firstElementChild !== null)
+                    divRef.current.firstElementChild.replaceWith(svg);
+                else
+                    divRef.current!.appendChild(svg);
+            }
+        });
+    });
 
-        for (const i of ["ACS", "AAR"]) {
-            svg.getElementById(i)!.addEventListener("click", (e) => {
-                console.log(i);
-            });
-        }
-
-        svg.addEventListener("click", (e) => {console.log(e)});
-    }
-
-    return <object ref={obj} className="map" data="map.svg" type="image/svg+xml" aria-description="AirCS Map"
-                   onLoad={loadEv} onClick={() => console.log("a")}/>;
+    return <div className="map" style={{transform: "scale(2)"}} ref={divRef}/>
 }
 
-export function Map() {
-    const obj = useRef<HTMLObjectElement>(null);
-    const svg = useMemo(() => Svg({ref: obj}), []);
-    const [st, setSt] = useState(2);
+export function Map({setSt}: {setSt: (s: string) => void}) {
+    const divRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        obj.current!.style.transform = `scale(${st})`;
-    }, [st]);
-
-    return <div className="mapContainer" children={svg} onClickCapture={a} />;
-
-    function a() {
-        console.log(st);
-        return setSt(st + 0.1);
+    function onNodeClicked(str: string) {
+        console.log(str);
+        setSt(str);
     }
+
+    const svg = useMemo(() => Svg({divRef, onNodeClicked}), []);
+    return <main class="mapContainer" children={svg} />;
 }
