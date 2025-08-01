@@ -1,13 +1,12 @@
 :root {
-  color-scheme: only light;
-  color: black;
-  background-color: ghostwhite;
+    color-scheme: only light;
+    color: black;
+    background-color: ghostwhite;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
 }
 
 body {
-  margin: 0;
+    margin: 0;
 }
-

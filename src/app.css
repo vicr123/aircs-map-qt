@@ -7,45 +7,8 @@
     width: 100lvw;
 }
 
-.topBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-    align-items: center;
-    background: bisque;
-}
-
-
-
-.topBar input {
-    display: flex;
-    flex-grow: 1;
-}
-
-.topBar button {
-    margin: 10px;
-}
-.topBar .logo {
-    padding: 10px;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.mapContainer {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
 .mainContainer {
     flex-grow: 1;
     width: 100%;
 }
 
-
-.map {
-    position: absolute;
-}

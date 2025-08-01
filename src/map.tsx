@@ -1,26 +1,34 @@
-﻿import {useEffect, useMemo, useRef, useState} from "preact/hooks";
+﻿import { useEffect, useMemo, useRef, useState } from "preact/hooks";
+import type { Stations } from "./stations";
+import "./map.css"
 
-export function Map({setSt}: { setSt: (s: string) => void }) {
+export function Map({ setSt, stations }: { setSt: (s: string) => void, stations: Stations }) {
     const [pan, setPan] = useState([0, 0]);
     const [scale, setScale] = useState(5);
     const [isPanning, setIsPanning] = useState(false);
-
-    const onNodeClicked = (_e: MouseEvent, str: string) => {
-        console.log(str);
-        setSt(str);
-    };
+    const distancePanned = useRef(0);
 
     const handleMouseDown = (_e: MouseEvent) => {
         setIsPanning(true);
+        distancePanned.current = 0;
     };
 
     const handleMouseMove = (e: MouseEvent) => {
-        if (!isPanning) return;
+        if (!isPanning) 
+            return;
         setPan(prevPan => [prevPan[0] + e.movementX, prevPan[1] + e.movementY]);
+        distancePanned.current += Math.abs(e.movementX) + Math.abs(e.movementY);
     };
 
     const handleMouseUp = () => {
         setIsPanning(false);
+    };
+
+    
+    const onNodeClicked = (_e: MouseEvent, str: string) => {
+        if (distancePanned.current > 10) 
+            return;
+        setSt(str);
     };
 
     const handleWheel = (e: WheelEvent) => {
@@ -44,19 +52,21 @@ export function Map({setSt}: { setSt: (s: string) => void }) {
         setPan([newPanX, newPanY]);
     };
 
-    const svg = useMemo(() => Svg({onNodeClicked}), []);
+    const svg = useMemo(() => Svg({ onNodeClicked, stations }), []);
     return <main class="mapContainer" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}
-                 onMouseMove={handleMouseMove} onWheel={handleWheel}>
+        onMouseMove={handleMouseMove} onWheel={handleWheel} onMouseLeave={handleMouseUp}>
         <div class="map" children={svg} style={{
             left: `${pan[0]}px`,
             top: `${pan[1]}px`,
-            transform: `scale(${scale})`
-        }}/>
+            transform: `scale(${scale})`,
+            cursor: isPanning ? "grabbing" : "unset",
+        }} />
     </main>;
 }
 
-function Svg({onNodeClicked}: {
-    onNodeClicked: (e: MouseEvent, s: string) => void
+function Svg({ onNodeClicked, stations }: {
+    onNodeClicked: (e: MouseEvent, s: string) => void,
+    stations: Stations
 }) {
     const divRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -71,10 +81,12 @@ function Svg({onNodeClicked}: {
             throw new Error("Failed to parse image");
         })().then(svg => {
             if (divRef.current !== null) {
-                for (const i of ["AAR", "ACS"]) {
-                    console.log(svg.getElementById(i));
-                    (svg.getElementById(i) as SVGGElement).style.cursor = "pointer";
-                    svg.getElementById(i)?.addEventListener("click", (e) => onNodeClicked(e as MouseEvent, i));
+                for (const [i, _v] of Object.entries(stations.stations)) {
+                    const el = svg.getElementById(i);
+                    if (el === null)
+                        continue;
+                    (el as SVGGElement).style.cursor = "pointer";
+                    el.addEventListener("click", (e) => onNodeClicked(e as MouseEvent, i));
 
                 }
                 if (divRef.current.firstElementChild !== null)
@@ -85,5 +97,5 @@ function Svg({onNodeClicked}: {
         });
     });
 
-    return <div ref={divRef}/>
+    return <div ref={divRef} />
 }
