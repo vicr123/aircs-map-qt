@@ -49,7 +49,7 @@ export function Map({ setSt, stations }: { setSt: (s: string) => void, stations:
         const newPanY = mouseY - worldY * newScale;
 
         setScale(newScale);
-        setPan([newPanX, newPanY]);
+        setPan([newPanX, newPanY].map(Math.round));
     };
 
     const svg = useMemo(() => Svg({ onNodeClicked, stations }), []);

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: Overpass;
+    src: url("assets/Overpass-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: Overpass, sans-serif;
+}
+
 :root {
     color-scheme: only light;
     color: black;
