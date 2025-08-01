@@ -6,13 +6,17 @@ import { useStations } from "./stations.ts";
 
 export function App() {
     const [st, setSt] = useState<string>("");
+    const [open, setOpen] = useState(false);
     const stations = useStations();
 
     return (
-        <div class="container">
+        <div class="container" onClick={() => setOpen(o => !o)}>
             <TopBar st={st} />
 
             <div class="mainContainer">
+                <div class={`sidebar ${!open ? "closed" : "open"}`}>
+                    I'm a sidebar!
+                </div>
                 {stations !== null && <Map setSt={setSt} stations={stations} />}
             </div>
         </div>
