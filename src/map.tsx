@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useRef, useState } from "preact/hooks";
+import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 import type { Stations } from "./stations";
 import "./map.css"
 
@@ -35,7 +35,7 @@ export function Map({ setSt, stations }: { setSt: (s: string) => void, stations:
         e.preventDefault();
 
         const rect = (e.currentTarget as Element)!.getBoundingClientRect();
-        const scaleFactor = 0.05;
+        const scaleFactor = e.ctrlKey ? 0.05 : 0.001;
 
         let newScale = scale * Math.exp(-e.deltaY * scaleFactor);
         if (newScale < 1)
@@ -53,7 +53,8 @@ export function Map({ setSt, stations }: { setSt: (s: string) => void, stations:
         const newPanY = mouseY - worldY * newScale;
 
         setScale(newScale);
-        setPan([newPanX, newPanY].map(Math.round));
+        setPan([newPanX, newPanY]);
+        requestAnimationFrame(() => setPan([newPanX, newPanY]));
     };
 
     const svg = useMemo(() => Svg({ onNodeClicked, stations }), []);
