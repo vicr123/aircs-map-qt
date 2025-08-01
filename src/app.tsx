@@ -15,7 +15,7 @@ export function App() {
 
             <div class="mainContainer">
                 <div class={`sidebar ${!open ? "closed" : "open"}`}>
-                    I'm a sidebar!
+                    Konqi is coming for you.
                 </div>
                 {stations !== null && <Map setSt={setSt} stations={stations} />}
             </div>

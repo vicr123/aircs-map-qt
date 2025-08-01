@@ -14,17 +14,17 @@
     display: flex;
 }
 
-
-/* Sidebar.css */
 .sidebar {
-    background-color: white;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("assets/1920x1080.png");    
+    background-position: 75% top;
+    background-size: auto 100%;
     transition: width 0.3s ease;
     overflow: hidden;
     text-wrap: nowrap;
 }
 
 .sidebar.open {
-    width: 500px;
+    width: 600px;
 }
 
 .sidebar.closed {
