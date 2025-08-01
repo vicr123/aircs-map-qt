@@ -19,7 +19,7 @@ export interface Platform {
 export function useStations() {
     const [data, setData] = useState<Stations | null>(null);
     useEffect(() => {
-        fetch("stations.json").then(req => req.json() as Promise<Stations>).then(setData);
+        fetch("/stations.json").then(req => req.json() as Promise<Stations>).then(setData);
     }, []);
     return data;
 }

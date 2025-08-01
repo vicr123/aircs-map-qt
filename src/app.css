@@ -7,7 +7,7 @@
     width: 100lvw;
 }
 
-.mainContainer {
+.mapAndSidebar {
     flex-grow: 1;
     width: 100%;
     flex-direction: row;
@@ -15,7 +15,7 @@
 }
 
 .sidebar {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("assets/1920x1080.png");    
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("assets/1920x1080.png");
     background-position: 75% top;
     background-size: auto 100%;
     transition: width 0.3s ease;

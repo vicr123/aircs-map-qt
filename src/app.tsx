@@ -10,10 +10,10 @@ export function App() {
     const stations = useStations();
 
     return (
-        <div class="container" onClick={() => setOpen(o => !o)}>
-            <TopBar st={st} />
-
-            <div class="mainContainer">
+        <div class="container">
+            <TopBar st={st}/>
+            <div onClick={() => setOpen(!open)}>#####################################</div>
+            <div class="mapAndSidebar">
                 <div class={`sidebar ${!open ? "closed" : "open"}`}>
                     Konqi is coming for you.
                 </div>
