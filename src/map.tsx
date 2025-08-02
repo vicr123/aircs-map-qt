@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "preact/hooks";
-import type { Stations } from "./stations";
+import type { StationsData } from "./stations";
 import "./map.css"
 
-export function Map({ setSt, stations, setSidebarOpen }: { setSt: (s: string) => void, stations: Stations, setSidebarOpen: (open: boolean) => void }) {
+export function Map({ setSt, data, setSidebarOpen }: { setSt: (s: string) => void, data: StationsData, setSidebarOpen: (open: boolean) => void }) {
     const [pan, setPan] = useState([0, 0]);
     const [scale, setScale] = useState(5);
     const [isPanning, setIsPanning] = useState(false);
@@ -62,7 +62,7 @@ export function Map({ setSt, stations, setSidebarOpen }: { setSt: (s: string) =>
         setPan([newPanX, newPanY]);
     };
 
-    const svg = useMemo(() => Svg({ onNodeClicked, stations }), []);
+    const svg = useMemo(() => Svg({ onNodeClicked, stations: data }), []);
     return <main class="mapContainer" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove} onWheel={handleWheel} onMouseLeave={handleMouseUp}>
         <div class="map" children={svg} style={{
@@ -76,7 +76,7 @@ export function Map({ setSt, stations, setSidebarOpen }: { setSt: (s: string) =>
 
 function Svg({ onNodeClicked, stations }: {
     onNodeClicked: (e: MouseEvent, s: string) => void,
-    stations: Stations
+    stations: StationsData
 }) {
     const divRef = useRef<HTMLDivElement>(null);
     useEffect(() => {

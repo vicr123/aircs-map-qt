@@ -25,14 +25,3 @@
 .sidebarContainer {
     padding: 10px;
 }
-
-.title {
-    font-size: 1.5em;
-    text-overflow: ellipsis;
-    border-bottom: 2px solid red;
-    margin-bottom: 10px;
-}
-
-.sidebarContainer table {
-    width: 100%;
-}

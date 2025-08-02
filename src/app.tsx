@@ -2,22 +2,22 @@ import "./app.css"
 import { Map } from "./map.tsx";
 import { useState } from "preact/hooks";
 import { TopBar } from "./top-bar.tsx";
-import { useStations } from "./stations.ts";
+import { useStationsData } from "./stations.ts";
 import { Sidebar } from "./sidebar.tsx";
 
 export function App() {
     const [st, setSt] = useState<string | null>(null);
     const [open, setOpen] = useState(false);
-    const stations = useStations();
+    const stationsData = useStationsData();
 
     return (
         <div class="container">
             <TopBar/>
 
             <div class="mapAndSidebar">
-                {stations !== null && <>
-                    <Sidebar open={open} stations={stations} selectedStation={st} />
-                    <Map setSt={setSt} stations={stations} setSidebarOpen={setOpen}/>
+                {stationsData !== null && <>
+                    <Sidebar open={open} data={stationsData} selectedStation={st} />
+                    <Map setSt={setSt} data={stationsData} setSidebarOpen={setOpen}/>
                 </>}
             </div>
         </div>

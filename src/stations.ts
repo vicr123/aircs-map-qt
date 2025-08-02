@@ -1,6 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 
-export interface Stations {
+export interface StationsData {
     stations: Record<string, Station>;
 }
 
@@ -16,10 +16,10 @@ export interface Platform {
     blocks: number;
 }
 
-export function useStations() {
-    const [data, setData] = useState<Stations | null>(null);
+export function useStationsData() {
+    const [data, setData] = useState<StationsData | null>(null);
     useEffect(() => {
-        fetch("/stations.json").then(req => req.json() as Promise<Stations>).then(setData);
+        fetch("/stations.json").then(req => req.json() as Promise<StationsData>).then(setData);
     }, []);
     return data;
 }
