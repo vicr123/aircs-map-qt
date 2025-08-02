@@ -54,7 +54,6 @@ export function Map({ setSt, stations }: { setSt: (s: string) => void, stations:
 
         setScale(newScale);
         setPan([newPanX, newPanY]);
-        requestAnimationFrame(() => setPan([newPanX, newPanY]));
     };
 
     const svg = useMemo(() => Svg({ onNodeClicked, stations }), []);
@@ -64,9 +63,7 @@ export function Map({ setSt, stations }: { setSt: (s: string) => void, stations:
             left: `${pan[0]}px`,
             top: `${pan[1]}px`,
             transform: `scale(${scale})`,
-            cursor: isPanning ? "grabbing" : "unset",
-            maxWidth: "0",
-            maxHeight: "0",
+            cursor: isPanning ? "grabbing" : "unset"
         }}/>
     </main>;
 }
