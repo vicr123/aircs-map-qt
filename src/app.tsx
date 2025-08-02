@@ -13,6 +13,7 @@ export function App() {
     return (
         <div class="container">
             <TopBar st={st} onGetDir={() => setOpen(!open)}/>
+
             <div class="mapAndSidebar">
                 <Sidebar open={open}/>
                 {stations !== null && <Map setSt={setSt} stations={stations} />}

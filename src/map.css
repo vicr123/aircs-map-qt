@@ -9,5 +9,6 @@
     position: absolute;
     max-width: 0;
     max-height: 0;
-    
+    width: 0;
+    height: 0;
 }

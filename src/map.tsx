@@ -79,7 +79,6 @@ function Svg({ onNodeClicked, stations }: {
             const data = await req.text();
             const parse = new DOMParser().parseFromString(data, "image/svg+xml") as XMLDocument;
             if (parse.firstElementChild instanceof SVGSVGElement) {
-                parse.firstElementChild.id = "map";
                 return parse.firstElementChild;
             }
             throw new Error("Failed to parse image");
@@ -96,18 +95,23 @@ function Svg({ onNodeClicked, stations }: {
 
             for (const [i, _v] of Object.entries(stations.stations)) {
                 const el = svg.getElementById(i);
-                if (el === null)
+                if (!(el instanceof SVGGElement))
                     continue;
-                (el as SVGGElement).style.cursor = "pointer";
+                el.style.cursor = "pointer";
                 el.addEventListener("click", (e) => onNodeClicked(e as MouseEvent, i));
 
             }
+
             if (divRef.current.firstElementChild !== null)
                 divRef.current.firstElementChild.replaceWith(svg);
             else
                 divRef.current!.appendChild(svg);
             
         });
+
+        return () => {
+            console.warn("I shouldn't be unmounted!");
+        }
     });
 
     return <div ref={divRef} />
