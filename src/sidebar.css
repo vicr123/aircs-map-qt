@@ -1,23 +1,38 @@
 .sidebar {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("assets/1920x1080.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("assets/1920x1080.png");
     background-position: 75% top;
     background-size: auto 100%;
-    transition: 0.3s ease;
-    transition-property: width, min-width;
-    overflow: hidden;
+    transition: 0.3s ease width;
+    overflow-x: hidden;
+    overflow-y: scroll;
     text-wrap: nowrap;
+    text-overflow: ellipsis;
     position: absolute;
-    height: 100%;
     z-index: 1;
+    border-inline-end: 1px solid rgba(0, 0, 0, 0.5);
+    height: 100%;
+    box-sizing: content-box;
 }
 
 .sidebar.open {
-    min-width: 200px;
-    width: 30%;
-    max-width: 500px;
+    width: 400px;
 }
 
 .sidebar.closed {
     width: 0;
-    min-width: 0;
+}
+
+.sidebarContainer {
+    padding: 10px;
+}
+
+.title {
+    font-size: 1.5em;
+    text-overflow: ellipsis;
+    border-bottom: 2px solid red;
+    margin-bottom: 10px;
+}
+
+.sidebarContainer table {
+    width: 100%;
 }

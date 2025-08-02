@@ -5,7 +5,8 @@
     width: 100%;
     box-sizing: border-box;
     align-items: center;
-    background: bisque;
+    background: #fbfbfb;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .topBar input {

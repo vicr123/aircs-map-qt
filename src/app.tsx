@@ -6,17 +6,19 @@ import { useStations } from "./stations.ts";
 import { Sidebar } from "./sidebar.tsx";
 
 export function App() {
-    const [st, setSt] = useState<string>("");
+    const [st, setSt] = useState<string | null>(null);
     const [open, setOpen] = useState(false);
     const stations = useStations();
 
     return (
         <div class="container">
-            <TopBar st={st} onGetDir={() => setOpen(!open)}/>
+            <TopBar/>
 
             <div class="mapAndSidebar">
-                <Sidebar open={open}/>
-                {stations !== null && <Map setSt={setSt} stations={stations} />}
+                {stations !== null && <>
+                    <Sidebar open={open} stations={stations} selectedStation={st} />
+                    <Map setSt={setSt} stations={stations} setSidebarOpen={setOpen}/>
+                </>}
             </div>
         </div>
     );

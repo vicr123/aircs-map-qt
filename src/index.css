@@ -12,7 +12,7 @@
 :root {
     color-scheme: only light;
     color: black;
-    background-color: ghostwhite;
+    background-color: white;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -20,4 +20,42 @@
 
 body {
     margin: 0;
+}
+
+button,
+input {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 3px;
+    appearance: none;
+    font-size: 16px;
+    padding: 3px 7px;
+    border-style: solid;
+}
+
+button {
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #c9c9c9;
+    border-color: transparent;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #646464;
+}
+
+td,
+th {
+    text-align: center;
+    padding: 4px 8px;
+    border-bottom: 1px solid #646464;
+}
+
+thead th {
+    background-color: #646464;
+    color: white;
 }

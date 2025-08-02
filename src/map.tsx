@@ -2,15 +2,17 @@ import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 import type { Stations } from "./stations";
 import "./map.css"
 
-export function Map({ setSt, stations }: { setSt: (s: string) => void, stations: Stations }) {
+export function Map({ setSt, stations, setSidebarOpen }: { setSt: (s: string) => void, stations: Stations, setSidebarOpen: (open: boolean) => void }) {
     const [pan, setPan] = useState([0, 0]);
     const [scale, setScale] = useState(5);
     const [isPanning, setIsPanning] = useState(false);
     const distancePanned = useRef(0);
+    const clickedStation = useRef(false);
 
     const handleMouseDown = (_e: MouseEvent) => {
         setIsPanning(true);
         distancePanned.current = 0;
+        clickedStation.current = false;
     };
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -22,12 +24,16 @@ export function Map({ setSt, stations }: { setSt: (s: string) => void, stations:
 
     const handleMouseUp = () => {
         setIsPanning(false);
+        if (!clickedStation.current)
+            setSidebarOpen(false);
     };
 
     
     const onNodeClicked = (_e: MouseEvent, str: string) => {
         if (distancePanned.current > 10) 
             return;
+        setSidebarOpen(true);
+        clickedStation.current = true;
         setSt(str);
     };
 
