@@ -7,6 +7,9 @@
    id="svg905"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
    sodipodi:docname="map.svg"
+   inkscape:export-filename="/home/victor/Documents/map.png"
+   inkscape:export-xdpi="783.07904"
+   inkscape:export-ydpi="783.07904"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -104,9 +107,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="85.625"
-     inkscape:cy="103.375"
+     inkscape:zoom="32"
+     inkscape:cx="465.32813"
+     inkscape:cy="52.296875"
      inkscape:document-units="px"
      inkscape:current-layer="map"
      inkscape:document-rotation="0"
@@ -124,7 +127,8 @@
      lock-margins="true"
      inkscape:pagecheckerboard="0"
      inkscape:showpageshadow="0"
-     inkscape:deskcolor="#d1d1d1">
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:export-bgcolor="#ffffffff">
     <inkscape:grid
        type="xygrid"
        id="grid1468"
@@ -851,7 +855,14 @@
     </g>
     <g
        id="map"
-       transform="translate(-1.3229205,0.2711837)">
+       transform="translate(-1.3229205,0.2711837)"
+       inkscape:export-filename="/home/victor/Documents/map.png"
+       inkscape:export-xdpi="783.08002"
+       inkscape:export-ydpi="783.08002">
+      <path
+         style="fill:none;stroke:#00b287;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="M 56.75292,4.4911133 V 3.3004882 l -5.027086,-5.0270834 v -1.4552084"
+         id="path5" />
       <path
          style="fill:none;stroke:#0064ff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 23.283332,32.934028 h 11.1125 l 1.98417,-1.984581 v -8.334375 l 4.7625,-4.7625 2.05e-4,-4.762294 -2.116666,-2.116667 h -8.069793"
@@ -7012,10 +7023,14 @@
            id="text1484-2-7-5-30-8-7-8"
            style="font-size:0.780902px;line-height:0.6;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582"
            aria-label="SOUTHORN" />
-        <path
-           id="rect1480-1-4-4-4-6-0-333"
-           style="fill:#ffffff;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round"
-           d="m 39.274086,1.4552085 h 0.297656 c 0.137418,0 0.248047,0.1106289 0.248047,0.2480468 v 0.033073 c 0,0.1374179 -0.110629,0.2480467 -0.248047,0.2480467 h -0.297656 c -0.137418,0 -0.248047,-0.1106288 -0.248047,-0.2480467 v -0.033073 c 0,-0.1374179 0.110629,-0.2480468 0.248047,-0.2480468 z" />
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="rect1480-1-4-4-4-6-0-62-1"
+           height="0.52916652"
+           x="38.761456"
+           y="1.4552089"
+           ry="0.25011376"
+           width="1.0583346" />
       </g>
       <g
          id="MRD"
@@ -7029,6 +7044,29 @@
            id="rect1480-1-4-4-4-6-0-611"
            style="fill:#ffffff;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round"
            d="m 39.545031,1.4450293 h 0.02036 c 0.14094,0 0.254404,0.113464 0.254404,0.2544035 v 0.020359 c 0,0.1409396 -0.113464,0.2544036 -0.254404,0.2544036 h -0.02036 c -0.14094,0 -0.254404,-0.113464 -0.254404,-0.2544036 v -0.020359 c 0,-0.1409395 0.113464,-0.2544035 0.254404,-0.2544035 z" />
+      </g>
+      <g
+         id="WCA-8-6"
+         transform="translate(11.906046,-4.2401371)">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.780902px;line-height:0.6;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582"
+           x="40.40472"
+           y="1.9931078"
+           id="text1484-2-7-5-30-8-7-75"><tspan
+             sodipodi:role="line"
+             x="40.40472"
+             y="1.9931078"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.780902px;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582"
+             id="tspan2071-3-8-4-2-5">ESTEND</tspan></text>
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="rect1480-1-4-4-4-6-0-62"
+           height="0.52916628"
+           x="39.555206"
+           y="1.4552088"
+           ry="0.25440353"
+           width="0.5291667" />
       </g>
     </g>
     <g
