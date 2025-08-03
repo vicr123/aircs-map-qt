@@ -36,10 +36,17 @@ export function App({ stationsData }: { stationsData: StationsData }) {
         setFocused(0);
     };
 
+    const onTopbarStationSet = (x: string) => {
+        setSidebar({ type: "station", selected: x });
+    };
+
     return (
         <StationsDataContext value={stationsData}>
             <div class="container">
-                <TopBar onGetDirection={onGetDirection} />
+                <TopBar
+                    onGetDirection={onGetDirection}
+                    onStationSet={onTopbarStationSet}
+                />
 
                 <div class="mapAndSidebar">
                     <Sidebar

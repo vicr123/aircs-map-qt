@@ -9,8 +9,12 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.topBar input {
+.topBar form {
     flex-grow: 1;
+}
+
+.topBar input {
+    width: 100%;
 }
 
 .topBar button {
