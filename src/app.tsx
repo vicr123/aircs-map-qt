@@ -1,5 +1,5 @@
-import "./app.css"
-import { Map } from "./map.tsx";
+import "./app.css";
+import { MapElement } from "./map.tsx";
 import { useState } from "preact/hooks";
 import { TopBar } from "./top-bar.tsx";
 import { useStationsData } from "./stations.ts";
@@ -12,13 +12,23 @@ export function App() {
 
     return (
         <div class="container">
-            <TopBar/>
+            <TopBar />
 
             <div class="mapAndSidebar">
-                {stationsData !== null && <>
-                    <Sidebar open={open} data={stationsData} selectedStation={st} />
-                    <Map setSt={setSt} data={stationsData} setSidebarOpen={setOpen}/>
-                </>}
+                {stationsData !== null && (
+                    <>
+                        <Sidebar
+                            open={open}
+                            data={stationsData}
+                            selectedStation={st}
+                        />
+                        <MapElement
+                            setSt={setSt}
+                            data={stationsData}
+                            setSidebarOpen={setOpen}
+                        />
+                    </>
+                )}
             </div>
         </div>
     );

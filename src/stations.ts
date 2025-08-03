@@ -19,7 +19,9 @@ export interface Platform {
 export function useStationsData() {
     const [data, setData] = useState<StationsData | null>(null);
     useEffect(() => {
-        fetch("/stations.json").then(req => req.json() as Promise<StationsData>).then(setData);
+        fetch("/stations.json")
+            .then((req) => req.json() as Promise<StationsData>)
+            .then(setData);
     }, []);
     return data;
 }
