@@ -1,5 +1,20 @@
-input {
-    margin: 5px 0px 5px 0px;
+.route {
+    display: flex;
+    flex-direction: column;
+}
+
+.routeInputs {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 5px 0px;
+}
+
+.routeInputs input {
+    flex-grow: 1;
+}
+
+.routeInputs button {
+    margin-inline-start: 5px;
 }
 
 .focused {

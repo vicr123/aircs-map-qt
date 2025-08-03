@@ -29,3 +29,16 @@
     display: flex;
     flex-direction: column;
 }
+
+.sidebarTitle {
+    font-size: 1.5em;
+    text-overflow: ellipsis;
+    border-bottom: 2px solid red;
+    font-style: normal;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.sidebarTable {
+    width: 100%;
+}

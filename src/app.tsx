@@ -16,10 +16,14 @@ export function App({ stationsData }: { stationsData: StationsData }) {
             if (id === null) {
                 setSidebar(null);
             } else if (sidebar !== null && sidebar.type === "directions") {
-                const route = [...sidebar.route];
-                route[focused] = id;
-                setFocused((focused) => focused + 1);
-                setSidebar({ type: "directions", route });
+                if (focused < sidebar.route.length) {
+                    const route = [...sidebar.route];
+                    route[focused] = id;
+                    setFocused((focused) =>
+                        Math.min(focused + 1, route.length - 1),
+                    );
+                    setSidebar({ type: "directions", route });
+                }
             } else {
                 setSidebar({ type: "station", selected: id });
             }
@@ -28,25 +32,27 @@ export function App({ stationsData }: { stationsData: StationsData }) {
     );
 
     const onGetDirection = () => {
-        setSidebar({ type: "directions", route: [] });
+        setSidebar({ type: "directions", route: ["", ""] });
         setFocused(0);
     };
 
     return (
         <StationsDataContext value={stationsData}>
-            <StationsDatalist id={"stationsDatalist"}/>
             <div class="container">
                 <TopBar onGetDirection={onGetDirection} />
 
                 <div class="mapAndSidebar">
                     <Sidebar
                         display={sidebar}
+                        setDisplay={setSidebar}
                         focused={focused}
                         setFocused={setFocused}
                     />
                     <SvgMap onStationClick={onStationClick} />
                 </div>
             </div>
+
+            <StationsDatalist id="stationsDatalist" />
         </StationsDataContext>
     );
 }

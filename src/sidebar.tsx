@@ -9,10 +9,12 @@ export type Display =
 
 export function Sidebar({
     display,
+    setDisplay,
     setFocused,
     focused,
 }: {
     display: Display | null;
+    setDisplay: (d: StateUpdater<Display | null>) => void;
     setFocused: (s: StateUpdater<number>) => void;
     focused: number;
 }) {
@@ -25,6 +27,7 @@ export function Sidebar({
         child = (
             <Route
                 route={display.route}
+                setRoute={(r) => setDisplay({ ...display, route: r })}
                 setFocused={setFocused}
                 focused={focused}
             />

@@ -27,8 +27,8 @@ input {
     border: 0;
     background-color: transparent;
     padding: 0;
-    border: 1px solid rgba(0, 0, 0, 1);
-    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
     appearance: none;
     font-size: 16px;
     padding: 3px 7px;
@@ -37,10 +37,14 @@ input {
 
 button {
     display: inline-flex;
-    justify-content: end;
-    align-items: center;
+    justify-content: center;
+    align-items: baseline;
     background-color: #c9c9c9;
     border-color: transparent;
+}
+
+button:active {
+    background-color: #b9b9b9;
 }
 
 input {
