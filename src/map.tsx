@@ -1,13 +1,18 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "preact/hooks";
-import type { StationsData } from "./stations";
+import {
+    useCallback,
+    useContext,
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+} from "preact/hooks";
+import { StationsDataContext, type StationsData } from "./stations";
 import "./map.css";
 import type { RefObject } from "preact";
 
 export function SvgMap({
-    data,
     onStationClick,
 }: {
-    data: StationsData;
     onStationClick: (s: string | null) => void;
 }) {
     const [pan, setPan] = useState([0, 0]);
@@ -15,7 +20,7 @@ export function SvgMap({
     const [isPanning, setIsPanning] = useState(false);
     const distancePanned = useRef(0);
     const clickedStation = useRef(false);
-
+    const data = useContext(StationsDataContext);
     const handleMouseDown = (_e: MouseEvent) => {
         setIsPanning(true);
         distancePanned.current = 0;
@@ -38,7 +43,7 @@ export function SvgMap({
     };
 
     const handleClick = useCallback(() => {
-        if (!clickedStation.current) {
+        if (!clickedStation.current && distancePanned.current < 10) {
             onStationClick(null);
         }
     }, [onStationClick]);
@@ -52,7 +57,7 @@ export function SvgMap({
             }
             clickedStation.current = true;
             onStationClick(str);
-        }
+        };
     }, [onStationClick]);
 
     const handleWheel = (e: WheelEvent) => {

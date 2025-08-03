@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks";
+import { createContext } from "preact";
 
 export interface StationsData {
     stations: Record<string, Station>;
@@ -16,12 +16,21 @@ export interface Platform {
     blocks: number;
 }
 
-export function useStationsData() {
-    const [data, setData] = useState<StationsData | null>(null);
-    useEffect(() => {
-        fetch("/stations.json")
-            .then((req) => req.json() as Promise<StationsData>)
-            .then(setData);
-    }, []);
+export async function fetchStationsData() {
+    const req = await fetch("/stations.json");
+    const data = (await req.json()) as StationsData;
+    const toDelete = [];
+    for (const [k, v] of Object.entries(data.stations)) {
+        if (v.name.trim() === "") {
+            toDelete.push(k);
+        }
+    }
+    for (const k of toDelete) {
+        delete data.stations[k];
+    }
     return data;
 }
+
+export const StationsDataContext = createContext<StationsData>({
+    stations: {},
+});

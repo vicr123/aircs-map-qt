@@ -2,45 +2,51 @@ import "./app.css";
 import { SvgMap } from "./map.tsx";
 import { useCallback, useState } from "preact/hooks";
 import { TopBar } from "./top-bar.tsx";
-import { useStationsData } from "./stations.ts";
+import { StationsDataContext, type StationsData } from "./stations.ts";
 import { type Display, Sidebar } from "./sidebar.tsx";
+import { StationsDatalist } from "./stations-datalist.tsx";
 
-export function App() {
-    const [sidebar, setSidebar] = useState<Display | null>(() => null);
+export function App({ stationsData }: { stationsData: StationsData }) {
+    const [sidebar, setSidebar] = useState<Display | null>(null);
+    const [focused, setFocused] = useState<number>(0);
 
-    const onStationClick = useCallback((id: string | null) => {
-        console.log(sidebar);
-        if (id === null) {
-            setSidebar(null);
-        } else if (sidebar !== null && sidebar.type === "directions") {
-            const route = [...sidebar.route, id];
-            setSidebar({ type: "directions", route });
-        } else {
-            setSidebar({ type: "station", selected: id });
-        }
-    }, [sidebar]);
+    const onStationClick = useCallback(
+        (id: string | null) => {
+            console.log(sidebar);
+            if (id === null) {
+                setSidebar(null);
+            } else if (sidebar !== null && sidebar.type === "directions") {
+                const route = [...sidebar.route];
+                route[focused] = id;
+                setFocused((focused) => focused + 1);
+                setSidebar({ type: "directions", route });
+            } else {
+                setSidebar({ type: "station", selected: id });
+            }
+        },
+        [sidebar, focused],
+    );
 
     const onGetDirection = () => {
         setSidebar({ type: "directions", route: [] });
+        setFocused(0);
     };
 
-    const stationsData = useStationsData();
-
     return (
-        <div class="container">
-            <TopBar onGetDirection={onGetDirection} />
+        <StationsDataContext value={stationsData}>
+            <StationsDatalist id={"stationsDatalist"}/>
+            <div class="container">
+                <TopBar onGetDirection={onGetDirection} />
 
-            <div class="mapAndSidebar">
-                {stationsData !== null && (
-                    <>
-                        <Sidebar display={sidebar} data={stationsData} />
-                        <SvgMap
-                            data={stationsData}
-                            onStationClick={onStationClick}
-                        />
-                    </>
-                )}
+                <div class="mapAndSidebar">
+                    <Sidebar
+                        display={sidebar}
+                        focused={focused}
+                        setFocused={setFocused}
+                    />
+                    <SvgMap onStationClick={onStationClick} />
+                </div>
             </div>
-        </div>
+        </StationsDataContext>
     );
 }

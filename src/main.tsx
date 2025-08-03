@@ -1,5 +1,7 @@
 import { render } from "preact";
 import { App } from "./app.tsx";
 import "./index.css";
+import { fetchStationsData } from "./stations.ts";
 
-render(<App />, document.getElementById("app")!);
+const data = await fetchStationsData();
+render(<App stationsData={data} />, document.getElementById("app")!);

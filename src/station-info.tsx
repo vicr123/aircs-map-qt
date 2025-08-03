@@ -1,5 +1,6 @@
+import { useContext } from "preact/hooks";
 import "./station-info.css";
-import type { StationsData } from "./stations";
+import { StationsDataContext } from "./stations";
 
 function formatNumber(n: number) {
     return n < 10 ? "0" + n.toString() : n.toString();
@@ -12,13 +13,8 @@ function eta(blocks: number) {
     return `${formatNumber(minutes)}:${formatNumber(seconds)}`;
 }
 
-export function StationInfo({
-    data,
-    selectedStation,
-}: {
-    data: StationsData;
-    selectedStation: string;
-}) {
+export function StationInfo({ selectedStation }: { selectedStation: string }) {
+    const data = useContext(StationsDataContext);
     const selected = data.stations[selectedStation];
 
     return (
