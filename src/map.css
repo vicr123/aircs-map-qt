@@ -5,7 +5,7 @@
     overflow: hidden;
 }
 
-.map {
+.positionMap {
     position: absolute;
     max-width: 0;
     max-height: 0;

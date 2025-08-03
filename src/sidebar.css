@@ -6,7 +6,7 @@
     background-size: auto 100%;
     transition: 0.3s ease width;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     text-wrap: nowrap;
     text-overflow: ellipsis;
     position: absolute;

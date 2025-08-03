@@ -1,15 +1,14 @@
-import { useEffect, useMemo, useRef, useState } from "preact/hooks";
+import { useCallback, useEffect, useMemo, useRef, useState } from "preact/hooks";
 import type { StationsData } from "./stations";
 import "./map.css";
+import type { RefObject } from "preact";
 
-export function MapElement({
-    setSt,
+export function SvgMap({
     data,
-    setSidebarOpen,
+    onStationClick,
 }: {
-    setSt: (s: string) => void;
     data: StationsData;
-    setSidebarOpen: (open: boolean) => void;
+    onStationClick: (s: string | null) => void;
 }) {
     const [pan, setPan] = useState([0, 0]);
     const [scale, setScale] = useState(5);
@@ -36,15 +35,25 @@ export function MapElement({
 
     const handleMouseUp = () => {
         setIsPanning(false);
-        if (!clickedStation.current) setSidebarOpen(false);
     };
 
-    const onNodeClicked = (_e: MouseEvent, str: string) => {
-        if (distancePanned.current > 10) return;
-        setSidebarOpen(true);
-        clickedStation.current = true;
-        setSt(str);
-    };
+    const handleClick = useCallback(() => {
+        if (!clickedStation.current) {
+            onStationClick(null);
+        }
+    }, [onStationClick]);
+
+    const onNodeClicked = useRef((_e: MouseEvent, _s: string) => {});
+
+    useEffect(() => {
+        onNodeClicked.current = (_e: MouseEvent, str: string) => {
+            if (distancePanned.current > 10) {
+                return;
+            }
+            clickedStation.current = true;
+            onStationClick(str);
+        }
+    }, [onStationClick]);
 
     const handleWheel = (e: WheelEvent) => {
         e.preventDefault();
@@ -72,7 +81,10 @@ export function MapElement({
         setPan([newPanX, newPanY]);
     };
 
-    const svg = useMemo(() => Svg({ onNodeClicked, stations: data }), []);
+    const svg = useMemo(
+        () => <Svg onNodeClicked={onNodeClicked} data={data} />,
+        [],
+    );
     return (
         <main
             class="mapContainer"
@@ -81,9 +93,10 @@ export function MapElement({
             onMouseMove={handleMouseMove}
             onWheel={handleWheel}
             onMouseLeave={handleMouseUp}
+            onClick={handleClick}
         >
             <div
-                class="map"
+                class="positionMap"
                 children={svg}
                 style={{
                     left: `${pan[0]}px`,
@@ -98,10 +111,10 @@ export function MapElement({
 
 function Svg({
     onNodeClicked,
-    stations,
+    data,
 }: {
-    onNodeClicked: (e: MouseEvent, s: string) => void;
-    stations: StationsData;
+    onNodeClicked: RefObject<(e: MouseEvent, s: string) => void>;
+    data: StationsData;
 }) {
     const divRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -112,7 +125,7 @@ function Svg({
                 data,
                 "image/svg+xml",
             ) as XMLDocument;
-            
+
             if (parse.firstElementChild instanceof SVGSVGElement) {
                 return parse.firstElementChild;
             }
@@ -124,19 +137,19 @@ function Svg({
 
             const layer1 = svg.getElementById("layer1")!;
             for (const child of [...layer1.children]) {
-                if (child.id !== "map" && child.id !== "legend") {
+                if (child.id !== "map") {
                     layer1.removeChild(child);
                 }
             }
 
-            for (const [i, _v] of Object.entries(stations.stations)) {
-                const el = svg.getElementById(i);
+            for (const id of Object.keys(data.stations)) {
+                const el = svg.getElementById(id);
                 if (!(el instanceof SVGGElement)) {
                     continue;
                 }
                 el.style.cursor = "pointer";
                 el.addEventListener("click", (e) =>
-                    onNodeClicked(e as MouseEvent, i),
+                    onNodeClicked.current!(e as MouseEvent, id),
                 );
             }
 

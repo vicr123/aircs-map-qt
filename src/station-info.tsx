@@ -2,8 +2,7 @@ import "./station-info.css";
 import type { StationsData } from "./stations";
 
 function formatNumber(n: number) {
-    if (n < 10) return "0" + n.toString();
-    else return n.toString();
+    return n < 10 ? "0" + n.toString() : n.toString();
 }
 
 function eta(blocks: number) {
