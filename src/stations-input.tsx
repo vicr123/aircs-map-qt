@@ -11,7 +11,7 @@ export function StationsInput({
     onSubmit,
     onFocus,
     value,
-    className
+    className,
 }: {
     onSubmit?: (id: string) => void;
     value?: string;
