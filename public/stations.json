@@ -2,8 +2,8 @@
     "stations": {
         "AAR": {
             "name": "AirCS Arena",
-            "cx": null,
-            "cz": 743,
+            "cx": 743,
+            "cz": 1514,
             "platforms": {
                 "1": {
                     "station": "ATI",
@@ -29,8 +29,8 @@
         },
         "ACS": {
             "name": "AirCS Central",
-            "cx": null,
-            "cz": 86,
+            "cx": 86,
+            "cz": 355,
             "platforms": {
                 "1": {
                     "station": "LI",
@@ -116,8 +116,8 @@
         },
         "AKL": {
             "name": "Auckland",
-            "cx": null,
-            "cz": 55,
+            "cx": 55,
+            "cz": -212,
             "platforms": {
                 "1": {
                     "station": "LD",
@@ -141,8 +141,8 @@
         },
         "ALI": {
             "name": "Alee Isle",
-            "cx": null,
-            "cz": -292,
+            "cx": -292,
+            "cz": 997,
             "platforms": {
                 "B2": {
                     "station": "MOD",
@@ -217,8 +217,8 @@
         },
         "ATI": {
             "name": "Anatoli Park & Ride",
-            "cx": null,
-            "cz": 756,
+            "cx": 756,
+            "cz": 1176,
             "platforms": {
                 "1": {
                     "station": "ATIA",
@@ -244,8 +244,8 @@
         },
         "ATIA": {
             "name": "Anatoli International Airport",
-            "cx": null,
-            "cz": 979,
+            "cx": 979,
+            "cz": 1226,
             "platforms": {
                 "1": {
                     "station": "ATI",
@@ -265,8 +265,8 @@
         },
         "BAX": {
             "name": "Baxford Central",
-            "cx": null,
-            "cz": -7013,
+            "cx": -7013,
+            "cz": -8642,
             "platforms": {
                 "1": {
                     "station": "SNK",
@@ -296,8 +296,8 @@
         },
         "BBT": {
             "name": "Birch Boat Town",
-            "cx": null,
-            "cz": 61,
+            "cx": 61,
+            "cz": 972,
             "platforms": {
                 "1": {
                     "station": "SHC",
@@ -319,8 +319,8 @@
         },
         "BCO": {
             "name": "Breadcroust",
-            "cx": null,
-            "cz": -975,
+            "cx": -975,
+            "cz": 1172,
             "platforms": {
                 "1": {
                     "station": "ALI",
@@ -399,8 +399,8 @@
         },
         "BGC": {
             "name": "BingoCity",
-            "cx": null,
-            "cz": -327,
+            "cx": -327,
+            "cz": -406,
             "platforms": {
                 "1": {
                     "station": "UFO",
@@ -414,8 +414,8 @@
         },
         "BGL": {
             "name": "Botanical Gardens Linda",
-            "cx": null,
-            "cz": -5471,
+            "cx": -5471,
+            "cz": 622,
             "platforms": {
                 "1": {
                     "station": "MDC",
@@ -449,8 +449,8 @@
         },
         "BLH": {
             "name": "Blake Hospital",
-            "cx": null,
-            "cz": 296,
+            "cx": 296,
+            "cz": -65,
             "platforms": {
                 "1": {
                     "station": "LD",
@@ -468,8 +468,8 @@
         },
         "BLO": {
             "name": "Birch Lodges",
-            "cx": null,
-            "cz": 233,
+            "cx": 233,
+            "cz": 1125,
             "platforms": {
                 "1": {
                     "station": "ACS",
@@ -493,8 +493,8 @@
         },
         "BXF": {
             "name": "Baxford International Terminal 1",
-            "cx": null,
-            "cz": -6926,
+            "cx": -6926,
+            "cz": -4488,
             "platforms": {
                 "1": {
                     "station": "TQM",
@@ -516,8 +516,8 @@
         },
         "BXFB": {
             "name": "Baxford International Terminal 2",
-            "cx": null,
-            "cz": -7172,
+            "cx": -7172,
+            "cz": -4334,
             "platforms": {
                 "1": {
                     "station": "BXF",
@@ -606,6 +606,10 @@
                 "N1": {
                     "station": "ACS",
                     "blocks": 300
+                },
+                "B1": {
+                    "station": "SWN",
+                    "blocks": 670
                 }
             }
         },
@@ -749,8 +753,8 @@
         },
         "ECO": {
             "name": "Energy Cove",
-            "cx": null,
-            "cz": -1230,
+            "cx": -1230,
+            "cz": 915,
             "platforms": {
                 "1": {
                     "station": "SLP",
@@ -789,8 +793,8 @@
         },
         "FFY": {
             "name": "Firefly",
-            "cx": null,
-            "cz": -3828,
+            "cx": -3828,
+            "cz": 2463,
             "platforms": {
                 "6": {
                     "station": "KTY",
@@ -818,8 +822,8 @@
         },
         "FQC": {
             "name": "Forêt Quebec",
-            "cx": null,
-            "cz": -1380,
+            "cx": -1380,
+            "cz": 10420,
             "platforms": {
                 "3": {
                     "station": "TAL",
@@ -843,8 +847,8 @@
         },
         "FVW": {
             "name": "Fairview",
-            "cx": null,
-            "cz": -215,
+            "cx": -215,
+            "cz": 1167,
             "platforms": {
                 "1": {
                     "station": "ALI",
@@ -910,8 +914,8 @@
         },
         "INK": {
             "name": "Inkytown",
-            "cx": null,
-            "cz": 533,
+            "cx": 533,
+            "cz": 111,
             "platforms": {
                 "1": {
                     "station": "ACS",
@@ -933,8 +937,8 @@
         },
         "IVC": {
             "name": "Iverycity",
-            "cx": null,
-            "cz": 1269,
+            "cx": 1269,
+            "cz": 2011,
             "platforms": {
                 "1": {
                     "station": "UOA",
@@ -950,8 +954,8 @@
         },
         "KAY": {
             "name": "Kasky",
-            "cx": null,
-            "cz": 894,
+            "cx": 894,
+            "cz": -252,
             "platforms": {
                 "1": {
                     "station": "VEV",
@@ -1009,8 +1013,8 @@
         },
         "LD": {
             "name": "Legal District",
-            "cx": null,
-            "cz": 104,
+            "cx": 104,
+            "cz": -5,
             "platforms": {
                 "1": {
                     "station": "ACS",
@@ -1043,8 +1047,8 @@
         },
         "LI": {
             "name": "Long Island",
-            "cx": null,
-            "cz": -463,
+            "cx": -463,
+            "cz": 85,
             "platforms": {
                 "1": {
                     "station": "ACS",
@@ -1122,8 +1126,8 @@
         },
         "MDC": {
             "name": "Midcity",
-            "cx": null,
-            "cz": -4454,
+            "cx": -4454,
+            "cz": 807,
             "platforms": {
                 "Y1": {
                     "station": "WC",
@@ -1171,8 +1175,8 @@
         },
         "MOD": {
             "name": "Hebrith",
-            "cx": null,
-            "cz": -932,
+            "cx": -932,
+            "cz": 1453,
             "platforms": {
                 "1": {
                     "station": "ALI",
@@ -1198,8 +1202,8 @@
         },
         "MRD": {
             "name": "Mordecai",
-            "cx": null,
-            "cz": -5724,
+            "cx": -5724,
+            "cz": -9180,
             "platforms": {
                 "1": {
                     "station": "SNK",
@@ -1243,8 +1247,8 @@
         },
         "MTL": {
             "name": "Motley Island",
-            "cx": null,
-            "cz": -8720,
+            "cx": -8720,
+            "cz": -3468,
             "platforms": {
                 "1": {
                     "station": "ECO",
@@ -1318,8 +1322,8 @@
         },
         "NCO": {
             "name": "NCC Central Orb",
-            "cx": null,
-            "cz": 2048,
+            "cx": 2048,
+            "cz": 142,
             "platforms": {}
         },
         "NCP": {
@@ -1416,8 +1420,8 @@
         },
         "NWC": {
             "name": "",
-            "cx": null,
-            "cz": 1454,
+            "cx": 1454,
+            "cz": 579,
             "platforms": {}
         },
         "NXF": {
@@ -1431,7 +1435,7 @@
                 },
                 "2": {
                     "station": "PPN",
-                    "blocks": 815
+                    "blocks": 2447
                 },
                 "3": {
                     "station": "BAX",
@@ -1441,8 +1445,8 @@
         },
         "NXU": {
             "name": "Nexus Underground",
-            "cx": null,
-            "cz": -147,
+            "cx": -147,
+            "cz": 1467,
             "platforms": {
                 "1": {
                     "station": "ALI",
@@ -1452,8 +1456,8 @@
         },
         "OBV": {
             "name": "Observation Deck",
-            "cx": null,
-            "cz": -76,
+            "cx": -76,
+            "cz": -50,
             "platforms": {
                 "1": {
                     "station": "UFO",
@@ -1534,8 +1538,8 @@
         },
         "PLC": {
             "name": "PLC Central",
-            "cx": null,
-            "cz": -1027,
+            "cx": -1027,
+            "cz": 2259,
             "platforms": {
                 "1": {
                     "station": "MOD",
@@ -1563,8 +1567,8 @@
         },
         "PND": {
             "name": "Palinode",
-            "cx": null,
-            "cz": -7988,
+            "cx": -7988,
+            "cz": 561,
             "platforms": {
                 "AQ1": {
                     "station": "ROR",
@@ -1597,6 +1601,10 @@
                 "A2": {
                     "station": "RPO",
                     "blocks": 506
+                },
+                "B2": {
+                    "station": "OWO",
+                    "blocks": 1059
                 }
             }
         },
@@ -1605,6 +1613,10 @@
             "cx": null,
             "cz": null,
             "platforms": {
+                "1": {
+                    "station": "NXF",
+                    "blocks": 2447
+                },
                 "2": {
                     "station": "PPS",
                     "blocks": 928
@@ -1613,8 +1625,8 @@
         },
         "PPS": {
             "name": "South Polypoint",
-            "cx": null,
-            "cz": -4132,
+            "cx": -4132,
+            "cz": -6140,
             "platforms": {
                 "1": {
                     "station": "BXF",
@@ -1636,8 +1648,8 @@
         },
         "QRC": {
             "name": "Quartercity",
-            "cx": null,
-            "cz": -2542,
+            "cx": -2542,
+            "cz": -177,
             "platforms": {
                 "1": {
                     "station": "WOVR",
@@ -1697,8 +1709,8 @@
         },
         "ROAR": {
             "name": "Lion Land Airport",
-            "cx": null,
-            "cz": -891,
+            "cx": -891,
+            "cz": -2757,
             "platforms": {
                 "1": {
                     "station": "ROR",
@@ -1708,8 +1720,8 @@
         },
         "ROR": {
             "name": "Lion Land",
-            "cx": null,
-            "cz": -805,
+            "cx": -805,
+            "cz": -2876,
             "platforms": {
                 "1": {
                     "station": "VEV",
@@ -1739,8 +1751,8 @@
         },
         "RPO": {
             "name": "Rogueport",
-            "cx": null,
-            "cz": -8104,
+            "cx": -8104,
+            "cz": 958,
             "platforms": {
                 "1": {
                     "station": "PND",
@@ -1761,8 +1773,8 @@
         },
         "SEI": {
             "name": "SEI Central Station",
-            "cx": null,
-            "cz": -353,
+            "cx": -353,
+            "cz": 1340,
             "platforms": {
                 "1": {
                     "station": "ALI",
@@ -1826,8 +1838,8 @@
         },
         "SHC": {
             "name": "ShiftCity",
-            "cx": null,
-            "cz": 180,
+            "cx": 180,
+            "cz": 900,
             "platforms": {
                 "1": {
                     "station": "BBT",
@@ -1841,8 +1853,8 @@
         },
         "SIL": {
             "name": "Silicon Valley",
-            "cx": null,
-            "cz": -302,
+            "cx": -302,
+            "cz": 1524,
             "platforms": {
                 "1": {
                     "station": "ALI",
@@ -1874,8 +1886,8 @@
         },
         "SKY": {
             "name": "SkyCity",
-            "cx": null,
-            "cz": -394,
+            "cx": -394,
+            "cz": 791,
             "platforms": {
                 "1": {
                     "station": "ALI",
@@ -1885,8 +1897,8 @@
         },
         "SLP": {
             "name": "Sulópolis",
-            "cx": null,
-            "cz": -2785,
+            "cx": -2785,
+            "cz": 1178,
             "platforms": {
                 "1": {
                     "station": "ECO",
@@ -1971,8 +1983,8 @@
         },
         "SPK": {
             "name": "Senpeken",
-            "cx": null,
-            "cz": -1220,
+            "cx": -1220,
+            "cz": -5571,
             "platforms": {
                 "Y1": {
                     "station": "GAO",
@@ -2041,8 +2053,8 @@
         },
         "STA": {
             "name": "Vremya",
-            "cx": null,
-            "cz": 228,
+            "cx": 228,
+            "cz": 1569,
             "platforms": {
                 "1": {
                     "station": "AAR",
@@ -2090,7 +2102,12 @@
             "name": "Slowtown",
             "cx": null,
             "cz": null,
-            "platforms": {}
+            "platforms": {
+                "1": {
+                    "station": "CTV",
+                    "blocks": 670
+                }
+            }
         },
         "TAL": {
             "name": "Tightly Arranged Long Locations",
@@ -2105,8 +2122,8 @@
         },
         "TFS": {
             "name": "The Ferret Settlement",
-            "cx": null,
-            "cz": -7396,
+            "cx": -7396,
+            "cz": 3219,
             "platforms": {
                 "1": {
                     "station": "KMD",
@@ -2149,8 +2166,8 @@
         },
         "TQM": {
             "name": "Torque Mall",
-            "cx": null,
-            "cz": -6867,
+            "cx": -6867,
+            "cz": -5937,
             "platforms": {
                 "1": {
                     "station": "BAX",
@@ -2164,8 +2181,8 @@
         },
         "TRI": {
             "name": "Treasure Island",
-            "cx": null,
-            "cz": -6837,
+            "cx": -6837,
+            "cz": -3870,
             "platforms": {
                 "1": {
                     "station": "MTL",
@@ -2193,8 +2210,8 @@
         },
         "TTU": {
             "name": "Turing Town",
-            "cx": null,
-            "cz": -5360,
+            "cx": -5360,
+            "cz": -1780,
             "platforms": {
                 "1": {
                     "station": "BEL",
@@ -2218,8 +2235,8 @@
         },
         "UFO": {
             "name": "RMUFO",
-            "cx": null,
-            "cz": -62,
+            "cx": -62,
+            "cz": -2,
             "platforms": {
                 "1": {
                     "station": "LD",
@@ -2243,8 +2260,8 @@
         },
         "UOA": {
             "name": "University of Anatoli",
-            "cx": null,
-            "cz": 1016,
+            "cx": 1016,
+            "cz": 1905,
             "platforms": {
                 "1": {
                     "station": "IVC",
@@ -2262,8 +2279,8 @@
         },
         "UWGK": {
             "name": "Underwater Go-Karting",
-            "cx": null,
-            "cz": -362,
+            "cx": -362,
+            "cz": 126,
             "platforms": {
                 "1": {
                     "station": "LI",
@@ -2295,8 +2312,8 @@
         },
         "VDN": {
             "name": "Verdon",
-            "cx": null,
-            "cz": -2914,
+            "cx": -2914,
+            "cz": -5751,
             "platforms": {
                 "1": {
                     "station": "SPK",
@@ -2314,8 +2331,8 @@
         },
         "VEV": {
             "name": "Veronaville",
-            "cx": null,
-            "cz": 349,
+            "cx": 349,
+            "cz": -150,
             "platforms": {
                 "1": {
                     "station": "BLH",
@@ -2341,8 +2358,8 @@
         },
         "VIC": {
             "name": "Victor's Interesting City",
-            "cx": null,
-            "cz": -7584,
+            "cx": -7584,
+            "cz": 941,
             "platforms": {
                 "1": {
                     "station": "PND",
@@ -2381,8 +2398,8 @@
         },
         "WC": {
             "name": "Whale City",
-            "cx": null,
-            "cz": 260,
+            "cx": 260,
+            "cz": 106,
             "platforms": {
                 "1": {
                     "station": "ACS",
@@ -2412,8 +2429,8 @@
         },
         "WCA": {
             "name": "Whale City Airport Terminal 1",
-            "cx": null,
-            "cz": 350,
+            "cx": 350,
+            "cz": 37,
             "platforms": {
                 "1": {
                     "station": "ACS",
@@ -2431,8 +2448,8 @@
         },
         "WCAB": {
             "name": "Whale City Airport Terminal 2",
-            "cx": null,
-            "cz": 450,
+            "cx": 450,
+            "cz": 333,
             "platforms": {
                 "1": {
                     "station": "WCA",
@@ -2442,8 +2459,8 @@
         },
         "WCC": {
             "name": "Whale City Commercial",
-            "cx": null,
-            "cz": 108,
+            "cx": 108,
+            "cz": 111,
             "platforms": {
                 "1": {
                     "station": "WC",
@@ -2453,8 +2470,8 @@
         },
         "WCH": {
             "name": "Whale City Heights",
-            "cx": null,
-            "cz": 256,
+            "cx": 256,
+            "cz": 326,
             "platforms": {
                 "1": {
                     "station": "WC",
@@ -2470,8 +2487,8 @@
         },
         "WCR": {
             "name": "Whale City Residential",
-            "cx": null,
-            "cz": 194,
+            "cx": 194,
+            "cz": 209,
             "platforms": {
                 "1": {
                     "station": "WC",
@@ -2506,8 +2523,8 @@
         },
         "WOVR": {
             "name": "Westover",
-            "cx": null,
-            "cz": -755,
+            "cx": -755,
+            "cz": 107,
             "platforms": {
                 "1": {
                     "station": "LI",
@@ -2550,8 +2567,8 @@
         },
         "YAV": {
             "name": "Yavno City",
-            "cx": null,
-            "cz": 350,
+            "cx": 350,
+            "cz": -5756,
             "platforms": {
                 "1": {
                     "station": "DLO",

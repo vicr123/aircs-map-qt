@@ -1,38 +1,36 @@
 #!/usr/bin/env node
 
-const https = require("https");
-const fs = require("fs");
-const Url = require("url");
+import { request as httpsRequest } from "https";
+import { writeFileSync } from "fs";
+import { parse } from "url";
 
 let request = (url) => {
     return new Promise((res, rej) => {
-        https
-            .request(
-                {
-                    ...url,
-                },
-                (response) => {
-                    let str = "";
-                    response.on("data", (chunk) => (str += chunk));
-                    response.on("end", () => {
-                        if (
-                            response.statusCode >= 300 &&
-                            response.statusCode <= 399
-                        ) {
-                            let url = Url.parse(response.headers.location);
-                            request({
-                                host: url.host,
-                                path: url.path,
-                            })
-                                .then(res)
-                                .catch(rej);
-                        }
+        httpsRequest(
+            {
+                ...url,
+            },
+            (response) => {
+                let str = "";
+                response.on("data", (chunk) => (str += chunk));
+                response.on("end", () => {
+                    if (
+                        response.statusCode >= 300 &&
+                        response.statusCode <= 399
+                    ) {
+                        let url = parse(response.headers.location);
+                        request({
+                            host: url.host,
+                            path: url.path,
+                        })
+                            .then(res)
+                            .catch(rej);
+                    }
 
-                        res(JSON.parse(str.substr(47).slice(0, -2)));
-                    });
-                },
-            )
-            .end();
+                    res(JSON.parse(str.substr(47).slice(0, -2)));
+                });
+            },
+        ).end();
     });
 };
 
@@ -88,5 +86,5 @@ let endData = {};
     }
 
     console.log(endData);
-    fs.writeFileSync("public/stations.json", JSON.stringify(endData, null, 4));
+    writeFileSync("public/stations.json", JSON.stringify(endData, null, 4));
 })();
