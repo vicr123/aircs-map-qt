@@ -6,6 +6,7 @@ import {
     type StateUpdater,
 } from "preact/hooks";
 import { eta, StationsDataContext, type StationsData } from "./stations";
+import { StationsInput } from "./stations-input";
 
 export function Directions({
     setFocused,
@@ -36,8 +37,7 @@ export function Directions({
     );
 
     const textBoxOnChange = useCallback(
-        (e: Event, i: number) => {
-            const val = (e.target as HTMLInputElement).value;
+        (val: string, i: number) => {
             const newRoute = [...route];
             newRoute[i] = val;
             setRoute(newRoute);
@@ -53,17 +53,21 @@ export function Directions({
             <div class="route">
                 {route.map((x, i) => (
                     <div class="routeInputs">
-                        <input
-                            class={i === focused ? "focused" : ""}
+                        <StationsInput
+                            className={i === focused ? "focused" : ""}
                             onFocus={() => setFocused(i)}
                             value={x}
-                            onChange={(e) => {
-                                textBoxOnChange(e, i);
+                            onSubmit={(val) => {
+                                textBoxOnChange(val, i);
                             }}
-                            list="stationsDatalist"
-                        ></input>
+                        />
                         {i >= 2 && (
-                            <button onClick={() => xButton(i)} aria-description="Delete">🗙</button>
+                            <button
+                                onClick={() => xButton(i)}
+                                aria-description="Delete"
+                            >
+                                🗙
+                            </button>
                         )}
                     </div>
                 ))}
