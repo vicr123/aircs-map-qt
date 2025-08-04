@@ -21,7 +21,8 @@ export function SvgMap({
     const distancePanned = useRef(0);
     const clickedStation = useRef(false);
     const data = useContext(StationsDataContext);
-    const handleMouseDown = (_e: MouseEvent) => {
+
+    const handleMouseDown = () => {
         setIsPanning(true);
         distancePanned.current = 0;
         clickedStation.current = false;
@@ -38,7 +39,7 @@ export function SvgMap({
         distancePanned.current += Math.abs(e.movementX) + Math.abs(e.movementY);
     };
 
-    const handleMouseUp = () => {
+    const handleMouseUp = (_e: MouseEvent) => {
         setIsPanning(false);
     };
 

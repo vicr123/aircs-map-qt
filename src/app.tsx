@@ -12,7 +12,6 @@ export function App({ stationsData }: { stationsData: StationsData }) {
 
     const onStationClick = useCallback(
         (id: string | null) => {
-            console.log(sidebar);
             if (id === null) {
                 setSidebar(null);
             } else if (sidebar !== null && sidebar.type === "directions") {

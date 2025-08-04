@@ -31,11 +31,37 @@
 
 .pathElement {
     display: flex;
+    padding-inline-start: 5px;
     flex-direction: column;
-    margin-bottom: 7px;
+    margin: 3px 0px;
+}
+
+.path li {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.path li::before {
+    content: " ";
+    background-image: url(assets/middle.svg);
+    width: 24px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.path li:first-child:before {
+    background-image: url(assets/start.svg);
+}
+
+.path li:last-child:before {
+    background-image: url(assets/end.svg);
+
 }
 
 .path ol {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    list-style: none;
 }

@@ -80,9 +80,11 @@ function PathEl({ el }: { el: Path }) {
         infos.push(`ETA: ${eta(el.blocks)}`);
     }
     return (
-        <li class="pathElement">
-            <span class="pathStation">{data.stations[el.station].name}</span>
-            {infos.join(" ∙ ")}
+        <li>
+            <div class="pathElement">
+                <span class="pathStation">{data.stations[el.station].name}</span>
+                {infos.join(" ∙ ")}
+            </div>
         </li>
     );
 }
