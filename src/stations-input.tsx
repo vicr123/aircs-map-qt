@@ -21,7 +21,7 @@ export function StationsInput({
     const data = useContext(StationsDataContext);
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const onFormSubmit = (e: SubmitEvent) => {
+    const onInputChange = (e: Event) => {
         e.preventDefault();
         if (inputRef.current === null) {
             return;
@@ -38,16 +38,14 @@ export function StationsInput({
     };
 
     return (
-        <form onSubmit={onFormSubmit} class="stationsInputForm">
-            <input
-                type="search"
-                list="stationsDatalist"
-                value={value === undefined ? undefined : data.stations[value]?.name}
-                ref={inputRef}
-                onFocus={onFocus}
-                class={className}
-            />
-            <input type="submit" hidden />
-        </form>
+        <input
+            onChange={onInputChange}
+            type="search"
+            list="stationsDatalist"
+            value={value === undefined ? undefined : data.stations[value]?.name}
+            ref={inputRef}
+            onFocus={onFocus}
+            class={["stationsInputForm", className].join(" ")}
+        />
     );
 }
