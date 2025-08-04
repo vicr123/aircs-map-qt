@@ -35,6 +35,7 @@
     text-overflow: ellipsis;
     border-bottom: 2px solid red;
     font-style: normal;
+    font-weight: normal;
     margin: 0;
     margin-bottom: 10px;
 }

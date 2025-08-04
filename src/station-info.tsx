@@ -7,7 +7,7 @@ export function StationInfo({ selectedStation }: { selectedStation: string }) {
 
     return (
         <>
-            <div class="sidebarTitle">{selected.name}</div>
+            <h1 class="sidebarTitle">{selected.name}</h1>
             <table class="sidebarTable">
                 <thead>
                     <tr>

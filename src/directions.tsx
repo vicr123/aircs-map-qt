@@ -20,7 +20,11 @@ export function Directions({
 }) {
     const data = useContext(StationsDataContext);
 
-    const addAnotherStop = useCallback(() => setRoute([...route, ""]), [route]);
+    const addAnotherStop = useCallback(() => {
+        setRoute([...route, ""]);
+        setFocused(route.length);
+    }, [route]);
+
     const xButton = useCallback(
         (i: number) => {
             const val = [...route];
@@ -31,7 +35,17 @@ export function Directions({
         [route],
     );
 
-    const path = useMemo(() => findPathThrough(route, data), [route, data]);
+    const textBoxOnChange = useCallback(
+        (e: Event, i: number) => {
+            const val = (e.target as HTMLInputElement).value;
+            const newRoute = [...route];
+            newRoute[i] = val;
+            setRoute(newRoute);
+        },
+        [route],
+    );
+
+    const paths = useMemo(() => findPathThrough(route, data), [route, data]);
 
     return (
         <>
@@ -43,42 +57,68 @@ export function Directions({
                             class={i === focused ? "focused" : ""}
                             onFocus={() => setFocused(i)}
                             value={x}
+                            onChange={(e) => {
+                                textBoxOnChange(e, i);
+                            }}
                             list="stationsDatalist"
                         ></input>
                         {i >= 2 && (
-                            <button onClick={() => xButton(i)}>❌</button>
+                            <button onClick={() => xButton(i)} aria-description="Delete">🗙</button>
                         )}
                     </div>
                 ))}
                 <button onClick={addAnotherStop}>Add another stop</button>
             </div>
             <div class="path">
-                <Path path={path} />
+                {paths.map((path, index) => (
+                    <Path path={path} isLastLeg={index === paths.length - 1} />
+                ))}
             </div>
         </>
     );
 }
 
-function Path({ path }: { path: Path[] }) {
+function Path({ path, isLastLeg }: { path: Path[]; isLastLeg: boolean }) {
     if (path.length === 0) return null;
 
     return (
         <ol class="pathList">
-            {path.map((a) => (
-                <PathEl el={a} />
+            {path.map((a, i) => (
+                <PathEl
+                    el={a}
+                    isLastInPath={i === path.length - 1}
+                    isLastLeg={isLastLeg}
+                />
             ))}
         </ol>
     );
 }
 
-function PathEl({ el }: { el: Path }) {
+function PathEl({
+    el,
+    isLastInPath,
+    isLastLeg,
+}: {
+    el: Path;
+    isLastInPath: boolean;
+    isLastLeg: boolean;
+}) {
     const data = useContext(StationsDataContext);
-    const infos = [
-        el.via === null ? "Arrive at destination" : `Take Platform ${el.via}`,
-    ];
-    if (el.blocks !== 0) {
+
+    const infos = [];
+
+    if (isLastInPath) {
+        infos.push(isLastLeg ? "Arrive at destination" : "Arrive at waypoint");
+    } else {
+        infos.push(`Take Platform ${el.via}`);
+    }
+
+    if (isLastInPath) {
+        infos.push(`Total leg time: ${eta(el.accumulatedBlocks)}`);
+    } else {
         infos.push(`ETA: ${eta(el.blocks)}`);
     }
+
     return (
         <li class="pathListItem">
             <div class="pathElement">
@@ -93,12 +133,13 @@ function PathEl({ el }: { el: Path }) {
 
 interface Path {
     station: string;
+    accumulatedBlocks: number;
     blocks: number;
     via: string | null;
 }
 
-function findPathThrough(stations: string[], data: StationsData): Path[] {
-    const path = [];
+function findPathThrough(stations: string[], data: StationsData): Path[][] {
+    const paths = [];
     for (let i = 0; i < stations.length - 1; i++) {
         const startId = stations[i];
         const endId = stations[i + 1];
@@ -106,20 +147,10 @@ function findPathThrough(stations: string[], data: StationsData): Path[] {
             break;
         }
 
-        path.push(dijkstra(startId, endId, data));
+        paths.push(dijkstra(startId, endId, data));
     }
-    if (path.length === 0) {
-        return [];
-    }
-    return path.reduce((acc, curr) => {
-        const last = acc[acc.length - 1];
 
-        const startDist = last.blocks;
-
-        return acc.concat(
-            curr.map((x) => ({ ...x, blocks: x.blocks + startDist })).slice(1),
-        );
-    });
+    return paths;
 }
 
 function dijkstra(from: string, to: string, data: StationsData): Path[] {
@@ -177,11 +208,20 @@ function dijkstra(from: string, to: string, data: StationsData): Path[] {
     if (nodes.get(to)?.previous !== null) {
         let x: string | null = to;
         let via: string | null = null;
+        let dist = 0;
         while (x !== null) {
             const xNode = nodes.get(x);
-            path.push({ station: x, blocks: xNode!.dist, via: via });
-            via = xNode!.via;
-            x = xNode!.previous;
+            if (xNode === undefined) throw new Error("get failed");
+
+            path.push({
+                station: x,
+                accumulatedBlocks: xNode.dist,
+                blocks: dist - xNode.dist,
+                via: via,
+            });
+            via = xNode.via;
+            dist = xNode.dist;
+            x = xNode.previous;
         }
     }
     path.reverse();
