@@ -63,7 +63,7 @@ function Path({ path }: { path: Path[] }) {
     if (path.length === 0) return null;
 
     return (
-        <ol>
+        <ol class="pathList">
             {path.map((a) => (
                 <PathEl el={a} />
             ))}
@@ -80,9 +80,11 @@ function PathEl({ el }: { el: Path }) {
         infos.push(`ETA: ${eta(el.blocks)}`);
     }
     return (
-        <li>
+        <li class="pathListItem">
             <div class="pathElement">
-                <span class="pathStation">{data.stations[el.station].name}</span>
+                <span class="pathStation">
+                    {data.stations[el.station].name}
+                </span>
                 {infos.join(" ∙ ")}
             </div>
         </li>

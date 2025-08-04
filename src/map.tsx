@@ -67,7 +67,8 @@ export function SvgMap({
         const rect = (e.currentTarget as Element)!.getBoundingClientRect();
         const scaleFactor = e.ctrlKey ? 0.01 : 0.001;
 
-        let newScale = scale * Math.exp(-e.deltaY * scaleFactor * window.devicePixelRatio);
+        let newScale =
+            scale * Math.exp(-e.deltaY * scaleFactor * window.devicePixelRatio);
         if (newScale < 1) {
             newScale = 1;
         } else if (newScale > 20) {
