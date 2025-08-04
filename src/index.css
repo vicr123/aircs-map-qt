@@ -3,6 +3,7 @@
     src: url("assets/Overpass-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -10,10 +11,11 @@
     src: url("assets/Overpass-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 * {
-    font-family: Overpass, sans-serif;
+    font-family: Overpass, Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -21,7 +23,6 @@
     color: black;
     background-color: white;
 
-    font-synthesis: none;
     text-rendering: optimizeLegibility;
 }
 
