@@ -1,7 +1,7 @@
 import { type StateUpdater } from "preact/hooks";
 import "./sidebar.css";
 import { StationInfo } from "./station-info";
-import { Route } from "./route";
+import { Directions } from "./directions";
 
 export type Display =
     | { type: "station"; selected: string }
@@ -25,7 +25,7 @@ export function Sidebar({
         child = <StationInfo selectedStation={display.selected} />;
     } else if (display.type === "directions") {
         child = (
-            <Route
+            <Directions
                 route={display.route}
                 setRoute={(r) => setDisplay({ ...display, route: r })}
                 setFocused={setFocused}

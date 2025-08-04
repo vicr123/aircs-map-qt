@@ -1,4 +1,4 @@
-import "./route.css";
+import "./directions.css";
 import {
     useCallback,
     useContext,
@@ -6,6 +6,86 @@ import {
     type StateUpdater,
 } from "preact/hooks";
 import { eta, StationsDataContext, type StationsData } from "./stations";
+
+export function Directions({
+    setFocused,
+    setRoute,
+    route,
+    focused,
+}: {
+    setFocused: (s: StateUpdater<number>) => void;
+    route: string[];
+    setRoute: (s: string[]) => void;
+    focused: number;
+}) {
+    const data = useContext(StationsDataContext);
+
+    const addAnotherStop = useCallback(() => setRoute([...route, ""]), [route]);
+    const xButton = useCallback(
+        (i: number) => {
+            const val = [...route];
+            val.splice(i, 1);
+
+            setRoute(val);
+        },
+        [route],
+    );
+
+    const path = useMemo(() => findPathThrough(route, data), [route, data]);
+
+    return (
+        <>
+            <h1 class="sidebarTitle">Get Directions</h1>
+            <div class="route">
+                {route.map((x, i) => (
+                    <div class="routeInputs">
+                        <input
+                            class={i === focused ? "focused" : ""}
+                            onFocus={() => setFocused(i)}
+                            value={x}
+                            list="stationsDatalist"
+                        ></input>
+                        {i >= 2 && (
+                            <button onClick={() => xButton(i)}>❌</button>
+                        )}
+                    </div>
+                ))}
+                <button onClick={addAnotherStop}>Add another stop</button>
+            </div>
+            <div class="path">
+                <Path path={path} />
+            </div>
+        </>
+    );
+}
+
+function Path({ path }: { path: Path[] }) {
+    if (path.length === 0) return null;
+
+    return (
+        <ol>
+            {path.map((a) => (
+                <PathEl el={a} />
+            ))}
+        </ol>
+    );
+}
+
+function PathEl({ el }: { el: Path }) {
+    const data = useContext(StationsDataContext);
+    const infos = [
+        el.via === null ? "Arrive at destination" : `Take Platform ${el.via}`,
+    ];
+    if (el.blocks !== 0) {
+        infos.push(`ETA: ${eta(el.blocks)}`);
+    }
+    return (
+        <li class="pathElement">
+            <span class="pathStation">{data.stations[el.station].name}</span>
+            {infos.join(" ∙ ")}
+        </li>
+    );
+}
 
 interface Path {
     station: string;
@@ -93,7 +173,6 @@ function dijkstra(from: string, to: string, data: StationsData): Path[] {
     if (nodes.get(to)?.previous !== null) {
         let x: string | null = to;
         let via: string | null = null;
-        debugger;
         while (x !== null) {
             const xNode = nodes.get(x);
             path.push({ station: x, blocks: xNode!.dist, via: via });
@@ -103,57 +182,4 @@ function dijkstra(from: string, to: string, data: StationsData): Path[] {
     }
     path.reverse();
     return path;
-}
-
-export function Route({
-    setFocused,
-    setRoute,
-    route,
-    focused,
-}: {
-    setFocused: (s: StateUpdater<number>) => void;
-    route: string[];
-    setRoute: (s: string[]) => void;
-    focused: number;
-}) {
-    const data = useContext(StationsDataContext);
-
-    const addAnotherStop = useCallback(() => setRoute([...route, ""]), [route]);
-    const xButton = useCallback(
-        (i: number) => {
-            const val = [...route];
-            val.splice(i, 1);
-            setRoute(val);
-        },
-        [route],
-    );
-
-    const path = useMemo(() => findPathThrough(route, data), [route, data]);
-
-    return (
-        <>
-            <h1 class="sidebarTitle">Get Directions</h1>
-            <div class="route">
-                {route.map((x, i) => (
-                    <div class="routeInputs">
-                        <input
-                            class={i === focused ? "focused" : ""}
-                            onFocus={() => setFocused(i)}
-                            value={x}
-                            list="stationsDatalist"
-                        ></input>
-                        {i >= 2 && (
-                            <button onClick={() => xButton(i)}>×</button>
-                        )}
-                    </div>
-                ))}
-                <button onClick={addAnotherStop}>Add another stop</button>
-            </div>
-            <ul>
-                {path.map((a) => (
-                    <li>{`${a.station} take ${a.via} eta ${eta(a.blocks)}`}</li>
-                ))}
-            </ul>
-        </>
-    );
 }

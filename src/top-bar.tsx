@@ -14,8 +14,7 @@ export function TopBar({
     const inputRef = useRef<HTMLInputElement>(null);
     const onInputSubmit = (e: SubmitEvent) => {
         e.preventDefault();
-        if (inputRef.current === null)
-            return;
+        if (inputRef.current === null) return;
         const val = inputRef.current.value;
 
         if (val in data.stations) {
@@ -27,8 +26,8 @@ export function TopBar({
         <div class="topBar">
             <img className="logo" src={logo} alt="AirCS Logo" />
             <form onSubmit={onInputSubmit}>
-            <input type="search" list="stationsDatalist" ref={inputRef} />
-            <input type="submit" hidden/>
+                <input type="search" list="stationsDatalist" ref={inputRef} />
+                <input type="submit" hidden />
             </form>
             <button onClick={onGetDirection}>Get Directions</button>
         </div>

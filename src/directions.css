@@ -20,3 +20,22 @@
 .focused {
     box-shadow: 0px 0px 2px 1px red inset;
 }
+
+.path {
+    margin-top: 10px;
+}
+
+.pathStation {
+    font-size: 16pt;
+}
+
+.pathElement {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7px;
+}
+
+.path ol {
+    padding: 0;
+    margin: 0;
+}
