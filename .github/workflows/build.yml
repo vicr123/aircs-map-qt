@@ -1,0 +1,50 @@
+name: Build and deploy Preact website
+
+on:
+    push:
+        branches: [preact]
+    pull_request:
+        branches: [preact]
+
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v4
+            - name: Setup node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "20"
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  version: 10
+            - name: Acquire latest station information
+              run: |
+                  node generate-json.js
+            - name: Install
+              run: |
+                  pnpm install
+            - name: Build
+              run: |
+                  pnpm build
+            - uses: actions/upload-pages-artifact@v3
+              with:
+                  path: dist/
+
+    deploy:
+        runs-on: ubuntu-latest
+        needs: build
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        permissions:
+            pages: write
+            id-token: write
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
