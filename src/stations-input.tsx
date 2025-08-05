@@ -10,12 +10,12 @@ export function StationsInput({
     onSubmit,
     onFocus,
     value,
-    className,
+    class: className,
     placeholder,
 }: {
     onSubmit?: (id: string) => void;
     value?: string;
-    className?: string;
+    class?: string;
     onFocus?: (e: FocusEvent) => void;
     placeholder?: string;
 }) {

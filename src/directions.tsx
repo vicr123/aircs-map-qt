@@ -7,6 +7,8 @@ import {
 } from "preact/hooks";
 import { eta, StationsDataContext, type StationsData } from "./stations";
 import { StationsInput } from "./stations-input";
+import { IconButton } from "./icon-button";
+import cancelIcon from "./assets/cancel.svg";
 
 function placeholderText(index: number) {
     switch (index) {
@@ -65,7 +67,7 @@ export function Directions({
                 {route.map((value, index) => (
                     <div class="routeInputs">
                         <StationsInput
-                            className={index === focused ? "focused" : ""}
+                            class={index === focused ? "focused" : ""}
                             placeholder={placeholderText(index)}
                             onFocus={() => setFocused(index)}
                             value={value}
@@ -74,12 +76,11 @@ export function Directions({
                             }}
                         />
                         {index >= 2 && (
-                            <button
+                            <IconButton
+                                src={cancelIcon}
+                                alt="Delete"
                                 onClick={() => xButton(index)}
-                                aria-description="Delete"
-                            >
-                                🗙
-                            </button>
+                            />
                         )}
                     </div>
                 ))}
