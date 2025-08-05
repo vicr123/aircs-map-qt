@@ -1,4 +1,3 @@
-import "./stations-input.css";
 import { useContext, useRef } from "preact/hooks";
 import { StationsDataContext } from "./stations";
 
@@ -48,7 +47,7 @@ export function StationsInput({
             ref={inputRef}
             onFocus={onFocus}
             placeholder={placeholder}
-            class={["stationsInputForm", className].join(" ")}
+            class={className}
         />
     );
 }

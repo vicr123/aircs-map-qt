@@ -48,12 +48,16 @@ button {
     display: inline-flex;
     justify-content: center;
     align-items: baseline;
-    background-color: #c9c9c9;
+    background-color: #ccc;
     border-color: transparent;
 }
 
+button:hover {
+    background-color: #bbb;
+}
+
 button:active {
-    background-color: #b9b9b9;
+    background-color: #aaa;
 }
 
 input {

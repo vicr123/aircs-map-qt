@@ -2,26 +2,11 @@
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
         url("assets/1920x1080.png");
-    background-position: 75% top;
-    background-size: auto 100%;
-    transition: 0.3s ease width;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-wrap: nowrap;
+    transition: 0.3s ease;
     text-overflow: ellipsis;
     position: absolute;
     z-index: 1;
-    border-inline-end: 1px solid rgba(0, 0, 0, 0.5);
-    height: 100%;
     box-sizing: content-box;
-}
-
-.sidebar.open {
-    width: 400px;
-}
-
-.sidebar.closed {
-    width: 0;
 }
 
 .sidebarContainer {
@@ -42,4 +27,46 @@
 
 .sidebarTable {
     width: 100%;
+}
+
+@media screen and (orientation: landscape) {
+    .sidebar {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-inline-end: 1px solid rgba(0, 0, 0, 0.5);
+        background-position: 75% top;
+        background-size: auto 100%;
+        text-wrap: nowrap;
+    }
+
+    .sidebar.open {
+        width: 400px;
+        overflow-x: auto;
+    }
+
+    .sidebar.closed {
+        width: 0;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .sidebar {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border-block-end: 1px solid rgba(0, 0, 0, 0.5);
+        background-size: cover;
+        background-position: right;
+    }
+
+    .sidebar.open {
+        height: 40lvh;
+        overflow-y: auto;
+
+    }
+
+    .sidebar.closed {
+        height: 0;
+    }
 }

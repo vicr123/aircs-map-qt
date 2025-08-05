@@ -10,7 +10,5 @@
 .mapAndSidebar {
     flex-grow: 1;
     width: 100%;
-    flex-direction: row;
-    display: flex;
     position: relative;
 }
