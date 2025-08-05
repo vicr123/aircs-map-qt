@@ -102,18 +102,6 @@
                 }
             }
         },
-        "AEC": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "AKI": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "AKL": {
             "name": "Auckland",
             "cx": 55,
@@ -132,12 +120,6 @@
                     "blocks": 588
                 }
             }
-        },
-        "AKY": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "ALI": {
             "name": "Alee Isle",
@@ -197,24 +179,6 @@
                 }
             }
         },
-        "ANK": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "APS": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "ASA": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "ATI": {
             "name": "Anatoli Park & Ride",
             "cx": 756,
@@ -256,12 +220,6 @@
                     "blocks": 656
                 }
             }
-        },
-        "BAP": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "BAX": {
             "name": "Baxford Central",
@@ -328,12 +286,6 @@
                 }
             }
         },
-        "BDR": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "BDV": {
             "name": "Baldivis",
             "cx": null,
@@ -391,12 +343,6 @@
                 }
             }
         },
-        "BFW": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "BGC": {
             "name": "BingoCity",
             "cx": -327,
@@ -441,12 +387,6 @@
             "cz": null,
             "platforms": {}
         },
-        "BIL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "BLH": {
             "name": "Blake Hospital",
             "cx": 296,
@@ -484,12 +424,6 @@
                     "blocks": 635
                 }
             }
-        },
-        "BWA": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "BXF": {
             "name": "Baxford International Terminal 1",
@@ -529,44 +463,8 @@
                 }
             }
         },
-        "CCW": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "CDY": {
             "name": "Chomedey",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "CHL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "CLP": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "CLW": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "CPL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "CTA": {
-            "name": "",
             "cx": null,
             "cz": null,
             "platforms": {}
@@ -612,12 +510,6 @@
                     "blocks": 670
                 }
             }
-        },
-        "CVL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "DCI": {
             "name": "Derek City",
@@ -671,12 +563,6 @@
                     "blocks": 683
                 }
             }
-        },
-        "DLI": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "DLK": {
             "name": "Old Kibbutz",
@@ -739,18 +625,6 @@
                 }
             }
         },
-        "DOK": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "DT": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "ECO": {
             "name": "Energy Cove",
             "cx": -1230,
@@ -773,12 +647,6 @@
                     "blocks": 1337
                 }
             }
-        },
-        "EGL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "ETD": {
             "name": "Estend",
@@ -814,12 +682,6 @@
                 }
             }
         },
-        "FKT": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "FQC": {
             "name": "Forêt Quebec",
             "cx": -1380,
@@ -839,12 +701,6 @@
                 }
             }
         },
-        "FVL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "FVW": {
             "name": "Fairview",
             "cx": -215,
@@ -860,12 +716,6 @@
                 }
             }
         },
-        "FWH": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "GAO": {
             "name": "Shishiro",
             "cx": null,
@@ -877,24 +727,6 @@
                 }
             }
         },
-        "HTN": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "IGK": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "IGN": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "III": {
             "name": "Incredibly Cold Environment",
             "cx": null,
@@ -905,12 +737,6 @@
                     "blocks": 648
                 }
             }
-        },
-        "IMR": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "INK": {
             "name": "Inkytown",
@@ -946,12 +772,6 @@
                 }
             }
         },
-        "IVL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "KAY": {
             "name": "Kasky",
             "cx": 894,
@@ -985,12 +805,6 @@
                     "blocks": 323
                 }
             }
-        },
-        "KNU": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "KTY": {
             "name": "Katyusha",
@@ -1096,12 +910,6 @@
             "cz": null,
             "platforms": {}
         },
-        "LVN": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "MDA": {
             "name": "Midcity Airport",
             "cx": null,
@@ -1166,12 +974,6 @@
                     "blocks": 1267
                 }
             }
-        },
-        "MDN": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "MOD": {
             "name": "Hebrith",
@@ -1272,50 +1074,8 @@
                 }
             }
         },
-        "MUR": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NCA": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NCB": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "NCD": {
             "name": "New Canadelgium",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NCH": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NCL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NCM": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NCN": {
-            "name": "",
             "cx": null,
             "cz": null,
             "platforms": {}
@@ -1324,24 +1084,6 @@
             "name": "NCC Central Orb",
             "cx": 2048,
             "cz": 142,
-            "platforms": {}
-        },
-        "NCP": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NCR": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NCS": {
-            "name": "",
-            "cx": null,
-            "cz": null,
             "platforms": {}
         },
         "NCT": {
@@ -1359,24 +1101,6 @@
                 }
             }
         },
-        "NCTS": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NCU": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NCW": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "NEW": {
             "name": "New City",
             "cx": null,
@@ -1387,42 +1111,6 @@
                     "blocks": 766
                 }
             }
-        },
-        "NHC": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NHP": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NIE": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NSW": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NVY": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "NWC": {
-            "name": "",
-            "cx": 1454,
-            "cz": 579,
-            "platforms": {}
         },
         "NXF": {
             "name": "Nextford",
@@ -1465,12 +1153,6 @@
                 }
             }
         },
-        "OMN": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "OSFT": {
             "name": "Old Shiftania",
             "cx": null,
@@ -1481,12 +1163,6 @@
                     "blocks": 478
                 }
             }
-        },
-        "OVL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "OWO": {
             "name": "Lower Furryburg",
@@ -1518,24 +1194,6 @@
                 }
             }
         },
-        "PHL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "PIL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "PKI": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "PLC": {
             "name": "PLC Central",
             "cx": -1027,
@@ -1546,24 +1204,6 @@
                     "blocks": 916
                 }
             }
-        },
-        "PLK": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "PLM": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "PLN": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "PND": {
             "name": "Palinode",
@@ -1661,12 +1301,6 @@
                 }
             }
         },
-        "RCO": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "RED": {
             "name": "Red Island City",
             "cx": null,
@@ -1685,12 +1319,6 @@
                     "blocks": 114
                 }
             }
-        },
-        "REDI": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "RFX": {
             "name": "Seven Eleven Rainforest",
@@ -1824,18 +1452,6 @@
                 }
             }
         },
-        "SFN": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "SHB": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "SHC": {
             "name": "ShiftCity",
             "cx": 180,
@@ -1878,12 +1494,6 @@
                 }
             }
         },
-        "SKM": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "SKY": {
             "name": "SkyCity",
             "cx": -394,
@@ -1910,18 +1520,6 @@
                 }
             }
         },
-        "SML": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "SMT": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "SNK": {
             "name": "Snicket",
             "cx": null,
@@ -1936,18 +1534,6 @@
                     "blocks": 319
                 }
             }
-        },
-        "SNS": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "SNW": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "SPA": {
             "name": "Senpeken Airport",
@@ -1974,12 +1560,6 @@
                     "blocks": 475
                 }
             }
-        },
-        "SPI": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "SPK": {
             "name": "Senpeken",
@@ -2027,30 +1607,6 @@
                 }
             }
         },
-        "SRC": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "SSA": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "SSP": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "SST": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "STA": {
             "name": "Vremya",
             "cx": 228,
@@ -2085,18 +1641,6 @@
                     "blocks": 50
                 }
             }
-        },
-        "SVL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
-        "SWI": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "SWN": {
             "name": "Slowtown",
@@ -2202,12 +1746,6 @@
                 }
             }
         },
-        "TSG": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "TTU": {
             "name": "Turing Town",
             "cx": -5360,
@@ -2251,12 +1789,6 @@
                     "blocks": 79
                 }
             }
-        },
-        "UKR": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "UOA": {
             "name": "University of Anatoli",
@@ -2479,12 +2011,6 @@
                 }
             }
         },
-        "WCL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "WCR": {
             "name": "Whale City Residential",
             "cx": 194,
@@ -2515,12 +2041,6 @@
                 }
             }
         },
-        "WIL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "WOVR": {
             "name": "Westover",
             "cx": -755,
@@ -2542,12 +2062,6 @@
             "cz": null,
             "platforms": {}
         },
-        "WSW": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
-        },
         "WTL": {
             "name": "Wetlands",
             "cx": null,
@@ -2558,12 +2072,6 @@
                     "blocks": 297
                 }
             }
-        },
-        "WVL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         },
         "YAV": {
             "name": "Yavno City",
@@ -2587,12 +2095,6 @@
                     "blocks": 623
                 }
             }
-        },
-        "YLL": {
-            "name": "",
-            "cx": null,
-            "cz": null,
-            "platforms": {}
         }
     }
 }
