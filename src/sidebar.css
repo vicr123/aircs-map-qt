@@ -2,7 +2,6 @@
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
         url("assets/1920x1080.png");
-    transition: 0.3s ease;
     text-overflow: ellipsis;
     position: absolute;
     z-index: 1;
@@ -43,9 +42,16 @@
     .sidebar.open {
         width: 400px;
         overflow-x: auto;
+        transition:
+            width 0.3s ease,
+            border-inline-end-width 0.3s step-start;
     }
 
     .sidebar.closed {
+        transition:
+            width 0.3s ease,
+            border-inline-end-width 0.3s step-end;
+        border-inline-end-width: 0;
         width: 0;
     }
 }
@@ -55,18 +61,24 @@
         width: 100%;
         overflow-x: auto;
         overflow-y: hidden;
-        border-block-end: 1px solid rgba(0, 0, 0, 0.5);
         background-size: cover;
         background-position: right;
+        border-block-end: 1px solid rgba(0, 0, 0, 0.5);
     }
 
     .sidebar.open {
         height: 40lvh;
         overflow-y: auto;
-
+        transition:
+            height 0.3s ease,
+            border-block-end-width 0.3s step-start;
     }
 
     .sidebar.closed {
         height: 0;
+        transition:
+            height 0.3s ease,
+            border-block-end-width 0.3s step-end;
+        border-block-end-width: 0;
     }
 }

@@ -13,7 +13,9 @@ export function TopBar({
         <div class="topBar">
             <img className="topBarLogo" src={logo} alt="AirCS Logo" />
             <StationsInput onSubmit={setStation} className="topBarInput" />
-            <button onClick={onGetDirection} class="topBarButton">Get Directions</button>
+            <button onClick={onGetDirection} class="topBarButton">
+                Get Directions
+            </button>
         </div>
     );
 }
