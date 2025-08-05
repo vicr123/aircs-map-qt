@@ -107,9 +107,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="32"
-     inkscape:cx="465.32813"
-     inkscape:cy="52.296875"
+     inkscape:zoom="22.627417"
+     inkscape:cx="-10.363534"
+     inkscape:cy="65.91561"
      inkscape:document-units="px"
      inkscape:current-layer="map"
      inkscape:document-rotation="0"
@@ -884,11 +884,6 @@
          id="path51" />
       <path
          style="fill:none;stroke:#c3a431;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         d="M -67.072092,1.0515295 V 5.0202796 11.105696"
-         id="path49"
-         sodipodi:nodetypes="ccc" />
-      <path
-         style="fill:none;stroke:#c3a431;stroke-width:0.264583;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          d="m 22.357086,12.164029 v 0.926042 l 1.322915,1.322917 h 1.058333 l 0.264584,0.264583 v 1.455209"
          id="path29"
          sodipodi:nodetypes="cccccc" />
@@ -1074,9 +1069,37 @@
          sodipodi:nodetypes="cccc" />
       <path
          style="fill:none;stroke:#ffc800;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 57.546671,-0.80055411 V 36.373405 l -9.789584,9.789583 h -67.204174 l -4.233333,-4.233333 1.86e-4,-24.341459 3.96875,-3.96875 16.2718791,-10e-7 1.455208,-1.058333 h 0.5291727 L 0.66144249,10.444446 H 1.7197758"
+         d="m 65.087295,-0.40367849 h -6.217709 l -1.322916,1.3229167 1e-6,35.45416679 -9.789584,9.789583 h -67.204174 l -4.233333,-4.233333 1.86e-4,-24.341459 3.96875,-3.96875 16.2718791,-10e-7 1.455208,-1.058333 h 0.5291727 L 0.66144249,10.444446 H 1.7197758"
          id="path1875"
-         sodipodi:nodetypes="cccccccccccc" />
+         sodipodi:nodetypes="cccccccccccccc" />
+      <g
+         id="LLD"
+         transform="translate(39.687296,-3.9755536)">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.780902px;line-height:0.6;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582"
+           x="24.305149"
+           y="4.7893357"
+           id="text19-9"><tspan
+             sodipodi:role="line"
+             x="24.305149"
+             y="4.7893357"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582"
+             id="tspan18-3">LOVE</tspan><tspan
+             sodipodi:role="line"
+             x="24.305149"
+             y="5.2578769"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.533957px;font-family:Overpass;-inkscape-font-specification:Overpass;stroke-width:0.264582"
+             id="tspan19-6">LAND</tspan></text>
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           id="rect19-0"
+           width="0.52916628"
+           height="0.52916628"
+           x="24.473957"
+           y="3.3072922"
+           ry="0.25440353" />
+      </g>
       <g
          id="MDB"
          transform="translate(17.462298,7.4015292)">
@@ -1312,9 +1335,9 @@
          sodipodi:nodetypes="cccccc" />
       <path
          style="fill:none;fill-opacity:1;stroke:#b49c6d;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m -64.558345,18.646735 33.734364,-2.06e-4"
+         d="m -67.072092,9.8067951 10e-7,7.3843189 1.719791,1.455208 34.528319,2.07e-4"
          id="path2860"
-         sodipodi:nodetypes="cc" />
+         sodipodi:nodetypes="cccc" />
       <path
          style="fill:none;stroke:#5a4091;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 25.664581,24.467361 h 5.953125 l 2.645833,-2.645833 5.159171,-2.06e-4"
@@ -5579,7 +5602,7 @@
       </g>
       <g
          id="DLP"
-         transform="translate(17.727076,-1.8588871)">
+         transform="translate(17.727076,-0.27138628)">
         <g
            aria-label="DLPHECITY"
            id="text17275"
@@ -6222,11 +6245,11 @@
         <rect
            style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.264999;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
            id="awdadw-1-361"
-           width="1.058334"
-           height="0.52916646"
-           x="39.290215"
-           y="1.4552088"
-           ry="0.25424793" />
+           width="0.79375035"
+           height="0.5291661"
+           x="39.554798"
+           y="1.4552091"
+           ry="0.2528902" />
       </g>
       <g
          id="KTY"
