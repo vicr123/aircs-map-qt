@@ -10,17 +10,44 @@ import { StationsDataContext, type StationsData } from "./stations";
 import "./map.css";
 import type { RefObject } from "preact";
 
+function fingerDistance(touches: TouchList) {
+    const dx = touches[0].clientX - touches[1].clientX;
+    const dy = touches[0].clientY - touches[1].clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+}
+
+function getCenter(touches: TouchList) {
+    const x = (touches[0].clientX + touches[1].clientX) / 2;
+    const y = (touches[0].clientY + touches[1].clientY) / 2;
+    return [x, y] as const;
+}
+
 export function SvgMap({
     onStationClick,
 }: {
     onStationClick: (s: string | null) => void;
 }) {
-    const [pan, setPan] = useState([0, 0]);
+    const [pan, setPan] = useState<readonly [number, number]>([0, 0]);
     const [scale, setScale] = useState(5);
     const [isPanning, setIsPanning] = useState(false);
+    const [isPinching, setIsPinching] = useState(false);
+
     const distancePanned = useRef(0);
     const clickedStation = useRef(false);
-    const data = useContext(StationsDataContext);
+
+    const lastTouchPosition = useRef<readonly [number, number]>([0, 0]);
+
+    const initialDistance = useRef(0);
+    const lastScale = useRef(1);
+    const pinchCenter = useRef<readonly [number, number]>([0, 0]);
+
+    const updatePan = (movementX: number, movementY: number) => {
+        setPan(prevPan => [
+            prevPan[0] + movementX,
+            prevPan[1] + movementY,
+        ]);
+        distancePanned.current += Math.abs(movementX) + Math.abs(movementY);
+    };
 
     const handleMouseDown = () => {
         setIsPanning(true);
@@ -32,34 +59,13 @@ export function SvgMap({
         if (!isPanning) {
             return;
         }
-        setPan((prevPan) => [
-            prevPan[0] + e.movementX,
-            prevPan[1] + e.movementY,
-        ]);
-        distancePanned.current += Math.abs(e.movementX) + Math.abs(e.movementY);
+        updatePan(e.movementX, e.movementY);
     };
 
-    const handleMouseUp = (_e: MouseEvent) => {
+    const handleMouseUp = () => {
         setIsPanning(false);
     };
 
-    const handleClick = useCallback(() => {
-        if (!clickedStation.current && distancePanned.current < 10) {
-            onStationClick(null);
-        }
-    }, [onStationClick]);
-
-    const onNodeClicked = useRef((_e: MouseEvent, _s: string) => {});
-
-    useEffect(() => {
-        onNodeClicked.current = (_e: MouseEvent, str: string) => {
-            if (distancePanned.current > 10) {
-                return;
-            }
-            clickedStation.current = true;
-            onStationClick(str);
-        };
-    }, [onStationClick]);
 
     const handleWheel = (e: WheelEvent) => {
         e.preventDefault();
@@ -88,6 +94,76 @@ export function SvgMap({
         setPan([newPanX, newPanY]);
     };
 
+    const handleTouchStart = (e: TouchEvent) => {
+        if (e.touches.length === 2) {
+            setIsPinching(true);
+            setIsPanning(false); 
+            initialDistance.current = fingerDistance(e.touches);
+            lastScale.current = scale;
+            pinchCenter.current = getCenter(e.touches);
+            return;
+        } else if (e.touches.length === 1) {
+            setIsPinching(false);
+            setIsPanning(true);
+            distancePanned.current = 0;
+            const touch = e.touches[0];
+            lastTouchPosition.current = [touch.clientX, touch.clientY];
+        }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+        e.preventDefault();
+        if (isPinching && e.touches.length === 2) {
+            const distance = fingerDistance(e.touches);
+            const zoom = distance / initialDistance.current;
+            let newScale = lastScale.current * zoom;
+            if (newScale < 1) {
+                newScale = 1;
+            } else if (newScale > 20) {
+                newScale = 20;
+            }
+            setScale(newScale);
+
+            const [centerX, centerY] = pinchCenter.current;
+            const newPanX = centerX - (centerX - pan[0]) * (newScale / scale);
+            const newPanY = centerY - (centerY - pan[1]) * (newScale / scale);
+            setPan([newPanX, newPanY]);
+        } else if (isPanning && e.touches.length === 1) {
+            const touch = e.touches[0];
+            const movementX = touch.clientX - lastTouchPosition.current[0];
+            const movementY = touch.clientY - lastTouchPosition.current[1];
+            lastTouchPosition.current = [touch.clientX, touch.clientY];
+            updatePan(movementX, movementY);
+        } else {
+            handleTouchStart(e);
+        }
+    };
+
+    const handleTouchEnd = () => {
+        setIsPanning(false);
+        setIsPinching(false);
+        lastScale.current = scale;
+    }
+
+    const handleClick = useCallback(() => {
+        if (!clickedStation.current && distancePanned.current < 10) {
+            onStationClick(null);
+        }
+    }, [onStationClick]);
+
+    const onNodeClicked = useRef((_e: MouseEvent, _s: string) => {});
+
+    useEffect(() => {
+        onNodeClicked.current = (_e: MouseEvent, str: string) => {
+            if (distancePanned.current > 10) {
+                return;
+            }
+            clickedStation.current = true;
+            onStationClick(str);
+        };
+    }, [onStationClick]); // Evil schmevil: reassigning all the events, every time, seems much worse than doing this.
+
+    const data = useContext(StationsDataContext);
     const svg = useMemo(
         () => <Svg onNodeClicked={onNodeClicked} data={data} />,
         [],
@@ -100,6 +176,11 @@ export function SvgMap({
             onMouseMove={handleMouseMove}
             onWheel={handleWheel}
             onMouseLeave={handleMouseUp}
+
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+
             onClick={handleClick}
         >
             <div
