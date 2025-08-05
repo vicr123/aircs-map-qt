@@ -60,8 +60,7 @@ let endData = {};
             case "Stations": {
                 //Stations
                 endData.stations = rows.reduce((acc, row) => {
-                    if (row[1] === "")
-                        return acc;
+                    if (row[1] === "") {return acc;}
 
                     return {
                         ...acc,

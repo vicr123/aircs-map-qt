@@ -12,11 +12,13 @@ export function StationsInput({
     onFocus,
     value,
     className,
+    placeholder,
 }: {
     onSubmit?: (id: string) => void;
     value?: string;
     className?: string;
     onFocus?: (e: FocusEvent) => void;
+    placeholder?: string;
 }) {
     const data = useContext(StationsDataContext);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -45,6 +47,7 @@ export function StationsInput({
             value={value === undefined ? undefined : data.stations[value]?.name}
             ref={inputRef}
             onFocus={onFocus}
+            placeholder={placeholder}
             class={["stationsInputForm", className].join(" ")}
         />
     );

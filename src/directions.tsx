@@ -8,6 +8,17 @@ import {
 import { eta, StationsDataContext, type StationsData } from "./stations";
 import { StationsInput } from "./stations-input";
 
+function placeholderText(index: number) {
+    switch (index) {
+        case 0:
+            return "How do I get from...";
+        case 1:
+            return "to...";
+        default:
+            return "then...";
+    }
+}
+
 export function Directions({
     setFocused,
     setRoute,
@@ -51,19 +62,20 @@ export function Directions({
         <>
             <h1 class="sidebarTitle">Get Directions</h1>
             <div class="route">
-                {route.map((x, i) => (
+                {route.map((value, index) => (
                     <div class="routeInputs">
                         <StationsInput
-                            className={i === focused ? "focused" : ""}
-                            onFocus={() => setFocused(i)}
-                            value={x}
+                            className={index === focused ? "focused" : ""}
+                            placeholder={placeholderText(index)}
+                            onFocus={() => setFocused(index)}
+                            value={value}
                             onSubmit={(val) => {
-                                textBoxOnChange(val, i);
+                                textBoxOnChange(val, index);
                             }}
                         />
-                        {i >= 2 && (
+                        {index >= 2 && (
                             <button
-                                onClick={() => xButton(i)}
+                                onClick={() => xButton(index)}
                                 aria-description="Delete"
                             >
                                 🗙

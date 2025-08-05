@@ -42,10 +42,7 @@ export function SvgMap({
     const pinchCenter = useRef<readonly [number, number]>([0, 0]);
 
     const updatePan = (movementX: number, movementY: number) => {
-        setPan(prevPan => [
-            prevPan[0] + movementX,
-            prevPan[1] + movementY,
-        ]);
+        setPan((prevPan) => [prevPan[0] + movementX, prevPan[1] + movementY]);
         distancePanned.current += Math.abs(movementX) + Math.abs(movementY);
     };
 
@@ -65,7 +62,6 @@ export function SvgMap({
     const handleMouseUp = () => {
         setIsPanning(false);
     };
-
 
     const handleWheel = (e: WheelEvent) => {
         e.preventDefault();
@@ -97,7 +93,7 @@ export function SvgMap({
     const handleTouchStart = (e: TouchEvent) => {
         if (e.touches.length === 2) {
             setIsPinching(true);
-            setIsPanning(false); 
+            setIsPanning(false);
             initialDistance.current = fingerDistance(e.touches);
             lastScale.current = scale;
             pinchCenter.current = getCenter(e.touches);
@@ -143,7 +139,7 @@ export function SvgMap({
         setIsPanning(false);
         setIsPinching(false);
         lastScale.current = scale;
-    }
+    };
 
     const handleClick = useCallback(() => {
         if (!clickedStation.current && distancePanned.current < 10) {
@@ -176,11 +172,9 @@ export function SvgMap({
             onMouseMove={handleMouseMove}
             onWheel={handleWheel}
             onMouseLeave={handleMouseUp}
-
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-
             onClick={handleClick}
         >
             <div
