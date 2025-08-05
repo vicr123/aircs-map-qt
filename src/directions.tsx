@@ -9,6 +9,7 @@ import { eta, StationsDataContext, type StationsData } from "./stations";
 import { StationsInput } from "./stations-input";
 import { IconButton } from "./icon-button";
 import cancelIcon from "./assets/cancel.svg";
+import trashIcon from "./assets/delete.svg";
 
 function placeholderText(index: number) {
     switch (index) {
@@ -39,7 +40,7 @@ export function Directions({
         setFocused(route.length);
     }, [route]);
 
-    const xButton = useCallback(
+    const removeWaypointButton = useCallback(
         (i: number) => {
             const val = [...route];
             val.splice(i, 1);
@@ -78,13 +79,24 @@ export function Directions({
                         {index >= 2 && (
                             <IconButton
                                 src={cancelIcon}
-                                alt="Delete"
-                                onClick={() => xButton(index)}
+                                alt="Remove waypoint"
+                                onClick={() => removeWaypointButton(index)}
+                                class="removeButton"
                             />
                         )}
                     </div>
                 ))}
-                <button onClick={addAnotherStop}>Add another stop</button>
+                <div class="deleteAndAdd">
+                    <button class="addButton" onClick={addAnotherStop}>
+                        Add another stop
+                    </button>
+                    <IconButton
+                        class="removeButton"
+                        src={trashIcon}
+                        onClick={() => setRoute(["", ""])}
+                        alt="Delete all"
+                    />
+                </div>
             </div>
             <div class="path">
                 {paths.map((path, index) => (

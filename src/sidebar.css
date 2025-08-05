@@ -40,19 +40,23 @@
     }
 
     .sidebar.open {
-        width: 400px;
+        min-width: 330px;
+        width: 40%;
+        max-width: 410px;
         overflow-x: auto;
         transition:
-            width 0.3s ease,
+            all 0.3s ease,
             border-inline-end-width 0.3s step-start;
     }
 
     .sidebar.closed {
         transition:
-            width 0.3s ease,
+            all 0.3s ease,
             border-inline-end-width 0.3s step-end;
         border-inline-end-width: 0;
         width: 0;
+        min-width: 0;
+        max-width: 0;
     }
 }
 

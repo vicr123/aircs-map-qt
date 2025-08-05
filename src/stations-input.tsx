@@ -43,7 +43,11 @@ export function StationsInput({
             onChange={onInputChange}
             type="search"
             list="stationsDatalist"
-            value={value === undefined ? undefined : data.stations[value]?.name}
+            value={
+                value === undefined
+                    ? undefined
+                    : (data.stations[value]?.name ?? "")
+            }
             ref={inputRef}
             onFocus={onFocus}
             placeholder={placeholder}

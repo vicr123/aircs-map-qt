@@ -10,11 +10,21 @@
 }
 
 .routeInputs input {
-    flex-grow: 1;
+    flex: 1;
 }
 
-.routeInputs button {
+.deleteAndAdd {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+.removeButton {
     margin-inline-start: 5px;
+}
+
+.addButton {
+    flex: 1;
 }
 
 .focused {

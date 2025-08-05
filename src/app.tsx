@@ -7,12 +7,16 @@ import { type Display, Sidebar } from "./sidebar.tsx";
 import { StationsDatalist } from "./stations-datalist.tsx";
 
 export function App({ stationsData }: { stationsData: StationsData }) {
+    const [rememberRoute, setRememberRoute] = useState<string[]>(["", ""]);
     const [sidebar, setSidebar] = useState<Display | null>(null);
     const [focused, setFocused] = useState<number>(0);
 
     const onStationClick = useCallback(
         (id: string | null) => {
             if (id === null) {
+                if (sidebar?.type === "directions") {
+                    setRememberRoute(sidebar.route);
+                }
                 setSidebar(null);
             } else if (sidebar !== null && sidebar.type === "directions") {
                 if (focused < sidebar.route.length) {
@@ -31,7 +35,7 @@ export function App({ stationsData }: { stationsData: StationsData }) {
     );
 
     const onGetDirection = () => {
-        setSidebar({ type: "directions", route: ["", ""] });
+        setSidebar({ type: "directions", route: rememberRoute });
         setFocused(0);
     };
 
