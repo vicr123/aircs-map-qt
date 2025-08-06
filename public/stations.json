@@ -1084,7 +1084,12 @@
             "name": "NCC Central Orb",
             "cx": 2048,
             "cz": 142,
-            "platforms": {}
+            "platforms": {
+                "1": {
+                    "station": "NCT",
+                    "blocks": 975
+                }
+            }
         },
         "NCT": {
             "name": "New Clygro Town",
@@ -1098,6 +1103,10 @@
                 "2": {
                     "station": "INK",
                     "blocks": 1090
+                },
+                "3": {
+                    "station": "NCO",
+                    "blocks": 975
                 }
             }
         },
