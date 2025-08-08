@@ -13,10 +13,12 @@
     margin: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     font-weight: bold;
+    cursor: pointer;
 }
 
 .contextMenu a {
     display: block;
+    cursor: pointer;
     padding: 5px 10px;
 }
 .contextMenu a:hover {
