@@ -1,7 +1,7 @@
 .sidebar {
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-        url("assets/1920x1080.png");
+        url("./assets/1920x1080.png");
     text-overflow: ellipsis;
     position: absolute;
     z-index: 1;
@@ -40,7 +40,7 @@
     }
 
     .sidebar.open {
-        min-width: 330px;
+        min-width: 380px;
         width: 40%;
         max-width: 410px;
         overflow-x: auto;
