@@ -13,12 +13,12 @@ const fuzzyCollator = new Intl.Collator(undefined, {
 
 export function StationsInput({
     onChangeToValidStation: onChange,
-    onSubmit,
+    onSubmitValidStation: onSubmit,
     value,
     ...rest
 }: {
     onChangeToValidStation?: (id: string) => void;
-    onSubmit?: (id: string) => void;
+    onSubmitValidStation?: (id: string) => void;
     value?: string;
 } & InputHTMLAttributes) {
     const data = useContext(StationsDataContext);
