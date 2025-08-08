@@ -23,7 +23,7 @@
     box-sizing: border-box;
 }
 
-@media screen and (orientation: portrait) {
+@media (orientation: portrait), (width <= 700px) {
     .topBarLogo {
         display: none;
     }

@@ -210,25 +210,24 @@ function Svg({
     onNodeClicked: RefObject<(e: MouseEvent, s: string) => void>;
     data: StationsData;
 }) {
+    const [svg, setSvg] = useState<SVGSVGElement | null>(null);
     const divRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
         (async () => {
             const req = await fetch("/map.svg");
-            const data = await req.text();
+            const reqText = await req.text();
             const parse = new DOMParser().parseFromString(
-                data,
+                reqText,
                 "image/svg+xml",
             ) as XMLDocument;
 
-            if (parse.firstElementChild instanceof SVGSVGElement) {
-                return parse.firstElementChild;
+            const svg = parse.firstElementChild;
+            if (!(svg instanceof SVGSVGElement)) {
+                throw new Error("Failed to parse image");
             }
-            throw new Error("Failed to parse image");
-        })().then((svg) => {
-            if (divRef.current === null) {
-                throw new Error("null div");
-            }
-
+            console.log("a");
+            
             const layer1 = svg.getElementById("layer1")!;
             for (const child of [...layer1.children]) {
                 if (child.id !== "map") {
@@ -252,17 +251,25 @@ function Svg({
                 });
             }
 
-            if (divRef.current.firstElementChild !== null) {
-                divRef.current.firstElementChild.replaceWith(svg);
-            } else {
-                divRef.current!.appendChild(svg);
-            }
-        });
+            setSvg(svg);
+        })()
+    }, []);
 
+    useEffect(() => {
+        if (divRef.current === null) {
+            throw new Error("null div");
+        }
+
+        if (svg === null) {
+            return;
+        }
+
+        const div = divRef.current;
+        div.appendChild(svg);
         return () => {
-            console.warn("I shouldn't be unmounted!");
-        };
-    });
+            div.removeChild(svg);
+        }
+    }, [svg, divRef.current]);
 
     return <div ref={divRef} />;
 }

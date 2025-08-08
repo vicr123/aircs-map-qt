@@ -29,7 +29,7 @@
     font-size: 10pt;
 }
 
-@media screen and (orientation: landscape) {
+@media (orientation: landscape) and (width > 700px) {
     .sidebar {
         height: 100%;
         overflow-x: hidden;
@@ -57,7 +57,7 @@
     }
 }
 
-@media screen and (orientation: portrait) {
+@media (orientation: portrait), (width <= 700px) {
     .sidebar {
         width: 100%;
         overflow-x: auto;
