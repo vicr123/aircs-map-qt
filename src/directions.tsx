@@ -72,7 +72,7 @@ export function Directions({
                             placeholder={placeholderText(index)}
                             onFocus={() => setFocused(index)}
                             value={value}
-                            onChange={(val) => {
+                            onChangeToValidStation={(val) => {
                                 textBoxOnChange(val, index);
                             }}
                         />

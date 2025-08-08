@@ -15,17 +15,18 @@
 }
 
 .sidebarTitle {
-    font-size: 1.5em;
+    font-size: 16pt;
     text-overflow: ellipsis;
     border-bottom: 2px solid red;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     margin: 0;
     margin-bottom: 10px;
 }
 
 .sidebarTable {
     width: 100%;
+    font-size: 10pt;
 }
 
 @media screen and (orientation: landscape) {
@@ -40,9 +41,7 @@
     }
 
     .sidebar.open {
-        min-width: 380px;
-        width: 40%;
-        max-width: 410px;
+        width: 400px;
         overflow-x: auto;
         transition:
             all 0.3s ease,
@@ -55,8 +54,6 @@
             border-inline-end-width 0.3s step-end;
         border-inline-end-width: 0;
         width: 0;
-        min-width: 0;
-        max-width: 0;
     }
 }
 

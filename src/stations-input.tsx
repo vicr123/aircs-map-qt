@@ -1,6 +1,10 @@
 import { useContext } from "preact/hooks";
 import { StationsDataContext, type StationsData } from "./stations";
-import type { KeyboardEvent, TargetedEvent } from "preact/compat";
+import type {
+    InputHTMLAttributes,
+    KeyboardEvent,
+    TargetedEvent,
+} from "preact/compat";
 
 const fuzzyCollator = new Intl.Collator(undefined, {
     sensitivity: "base",
@@ -8,20 +12,15 @@ const fuzzyCollator = new Intl.Collator(undefined, {
 });
 
 export function StationsInput({
-    onChange,
+    onChangeToValidStation: onChange,
     onSubmit,
-    onFocus,
     value,
-    class: className,
-    placeholder,
+    ...rest
 }: {
-    onChange?: (id: string) => void;
+    onChangeToValidStation?: (id: string) => void;
     onSubmit?: (id: string) => void;
     value?: string;
-    class?: string;
-    onFocus?: (e: FocusEvent) => void;
-    placeholder?: string;
-}) {
+} & InputHTMLAttributes) {
     const data = useContext(StationsDataContext);
 
     const onInputChange = (e: TargetedEvent<HTMLInputElement>) => {
@@ -42,6 +41,7 @@ export function StationsInput({
 
     return (
         <input
+            {...rest}
             onChange={onInputChange}
             onKeyUp={onKeyPress}
             type="search"
@@ -51,9 +51,6 @@ export function StationsInput({
                     ? undefined
                     : (data.stations[value]?.name ?? "")
             }
-            onFocus={onFocus}
-            placeholder={placeholder}
-            class={className}
         />
     );
 }
