@@ -72,7 +72,7 @@ export function Directions({
                             placeholder={placeholderText(index)}
                             onFocus={() => setFocused(index)}
                             value={value}
-                            onSubmit={(val) => {
+                            onChange={(val) => {
                                 textBoxOnChange(val, index);
                             }}
                         />
@@ -240,7 +240,9 @@ function dijkstra(from: string, to: string, data: StationsData): Path[] {
         let dist = 0;
         while (x !== null) {
             const xNode = nodes.get(x);
-            if (xNode === undefined) throw new Error("get failed");
+            if (xNode === undefined) {
+                throw new Error("get failed");
+            }
 
             path.push({
                 station: x,
