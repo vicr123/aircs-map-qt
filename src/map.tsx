@@ -9,6 +9,8 @@ import {
 import { StationsDataContext, type StationsData } from "./stations";
 import "./map.css";
 import type { RefObject } from "preact";
+import { openContextMenu } from "preact-context-menu";
+import { MapContextMenu } from "./map-context-menu.tsx";
 
 function fingerDistance(touches: TouchList) {
     const dx = touches[0].clientX - touches[1].clientX;
@@ -24,8 +26,12 @@ function getCenter(touches: TouchList) {
 
 export function SvgMap({
     onStationClick,
+    onFromStation,
+    onToStation,
 }: {
     onStationClick: (s: string | null) => void;
+    onFromStation: (s: string) => void;
+    onToStation: (s: string) => void;
 }) {
     const [pan, setPan] = useState<readonly [number, number]>([0, 0]);
     const [scale, setScale] = useState(5);
@@ -187,6 +193,12 @@ export function SvgMap({
                     cursor: isPanning ? "grabbing" : "unset",
                 }}
             />
+
+            <MapContextMenu
+                id="mapContext"
+                onFromHere={onFromStation}
+                onToHere={onToStation}
+            />
         </main>
     );
 }
@@ -233,6 +245,11 @@ function Svg({
                 el.addEventListener("click", (e) =>
                     onNodeClicked.current!(e as MouseEvent, id),
                 );
+
+                el.addEventListener("contextmenu", (e) => {
+                    e.preventDefault();
+                    openContextMenu("mapContext", id, e);
+                });
             }
 
             if (divRef.current.firstElementChild !== null) {

@@ -8,8 +8,12 @@ export function IconButton({
     ...buttonProps
 }: { src: string; alt: string } & ButtonHTMLAttributes) {
     return (
-        <button {...buttonProps} class={`iconButton ${className ?? ""}`} title={alt}>
-            <img src={src} alt={alt}/>
+        <button
+            {...buttonProps}
+            class={`iconButton ${className ?? ""}`}
+            title={alt}
+        >
+            <img src={src} alt={alt} />
         </button>
     );
 }

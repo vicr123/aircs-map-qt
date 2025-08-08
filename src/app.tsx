@@ -34,6 +34,17 @@ export function App({ stationsData }: { stationsData: StationsData }) {
         [sidebar, focused],
     );
 
+    const onFromTo = useCallback(
+        (station: string, index: number) => {
+            const route =
+                sidebar?.type === "directions" ? [...sidebar.route] : ["", ""];
+            route[index] = station;
+            setSidebar({ type: "directions", route });
+            setFocused((focused) => Math.min(focused + 1, route.length - 1));
+        },
+        [sidebar, focused],
+    );
+
     const onGetDirection = () => {
         setSidebar({ type: "directions", route: rememberRoute });
         setFocused(0);
@@ -58,7 +69,11 @@ export function App({ stationsData }: { stationsData: StationsData }) {
                         focused={focused}
                         setFocused={setFocused}
                     />
-                    <SvgMap onStationClick={onStationClick} />
+                    <SvgMap
+                        onStationClick={onStationClick}
+                        onFromStation={(s) => onFromTo(s, 0)}
+                        onToStation={(s) => onFromTo(s, 1)}
+                    />
                 </div>
             </div>
 
